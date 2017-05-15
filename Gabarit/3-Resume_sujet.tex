@@ -1,0 +1,43 @@
+% Résumé du mémoire.
+%
+%   Le résumé est un bref exposé du sujet traité, des objectifs visés,
+% des hypothèses émises, des méthodes expérimentales utilisées et de
+% l'analyse des résultats obtenus. On y présente également les
+% principales conclusions de la recherche ainsi que ses applications
+% éventuelles. En général, un résumé ne dépasse pas quatre pages.
+%
+%   Le résumé doit donner une idée exacte du contenu du mémoire ou de la thèse. Ce ne
+% peut pas être une simple énumération des parties du document, car il
+% doit faire ressortir l'originalité de la recherche, son aspect
+% créatif et sa contribution au développement de la technologie ou à
+% l'avancement des connaissances en génie et en sciences appliquées.
+% Un résumé ne doit jamais comporter de références ou de figures.
+
+\chapter*{RÉSUMÉ}\thispagestyle{headings}
+\addcontentsline{toc}{compteur}{RÉSUMÉ}
+
+TOTAL = 4 pages
+
+\setlength{\parindent}{5ex} Technical debts (TD) are temporary solutions, or workarounds, introduced in portions of software systems in order to fix a problem rapidly at the expense of quality. Such practices are widespread for various reasons: rapidity of implementation, initial conception of components, lack of system's knowledge, developer inexperience or deadline pressure. Even though technical debts can be useful on a short term basis, they can be excessively damaging and time consuming in the long run. Indeed, the time required to fix problems and design code is frequently not compatible with the development life cycle of a project. This is why the issue has been tackled in various studies, specifically in the aim of detecting these harmful debts.
+
+\setlength{\parindent}{5ex} One recent and popular approach is to identify technical debts which are self-admitted. The particularity of these debts, in comparison to TD, is that they are explicitly documented with comments and intentionally introduced in the source code. SATD are not uncommon in software projects and have already been extensively studied concerning their diffusion, impact on software quality, criticality, evolution and actors. Various detection methods are currently used to identify SATD but are still subject to improvement. For example, using keywords (\emph{e.g.: hack, fixme, todo, ugly, etc.}) in comments linking to a technical debt or using Natural Language Processing (NLP) in addition to machine learners. Therefore, this study investigates to what extent previously self-admitted technical debts can be used to provide recommendations to developers writing new source code. The goal is to be able to suggest when to "self-admit" technical debts or when to improve new code being written.
+
+\setlength{\parindent}{5ex} To achieve this goal, a machine learning approach was conceived, named TEDIOUS (TEchnical Debt IdentificatiOn System), using various types of method-level input features as independent variables to classify design technical debts using self-admitted technical debts as oracle. The model was trained and assessed on nine open source java projects which contained previously tagged SATD. In other words, our proposed machine learning approach aims to accurately predict technical debts in software projects.
+
+\setlength{\parindent}{5ex} TEDIOUS works at method-level granularity, in other words, it can detect whether a method contains a design debt or not. It was designed this way because developers are more likely to self-admit technical debt for methods or block. TD can be classified in different types: design, requirement, test, code or documentation. Only design debts were considered because they represent the largest fraction and each type would require its own analysis. TEDIOUS is trained with \emph{labeled data}, projects with labeled SATD, and tested with \emph{unlabeled data}. The labeled data contain methods tagged as SATD which were obtained from nine projects manually analyzed by another research group. From the labeled data are extracted various kinds of metrics: source code metrics, readbility metrics and warnings raised by static analysis tools. Nine source code metrics were retained to capture the size, coupling, complexity and number of components in methods. The readability metric takes in consideration indentation, line length and identifier lengths just to name a few features. Two static analysis tools are used to check for poor coding practices. 
+
+\setlength{\parindent}{5ex} Feature preprocessing is applied to remove unnecessary features and only keep h
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,120 @@
+% -------------------------------------------------------------------------
+%       author:
+%       document name: related works
+%
+%       date:
+%
+% -------------------------------------------------------------------------
+
+The main subjects related to this paper can be divided in four sections: technical debts and self-admitted technical debts, code smell detection, source code comments and static analysis.
+\Max{I reordered a bit. Then, technical debt is fine. Comments are somewhat but not entirely related to this specific paper. I'm not sure the part on machine learning is very related. I suggest we add instead one section on smells and above all use of machine learning for smells, and one on static analysis (we can do the latter)}
+
+\subsection{Technical Debt and Self-Admitted Technical Debt}
+Potdar and Shihab \cite{PotdarS14} carried out an exploratory study on self-admitted technical debt. They defined the term and performed an analysis on the presence of SATD in large open source projects to prove their existence and to what extent. They used comment patterns to identify SATD. They set the basis for this area of software maintenance.
+
+Bavota and Russo \cite{BavotaR16} performed a large-scale empirical study on self-admitted technical debt. They investigated their diffusion and evolution, the actors involved and the relation between code quality and SATD. They found out that SATD are in every projects, they have a long survivability and they increase over projects lifetime. They noticed no correlation between code file internal quality and the number of SATD they contain.
+
+Maldonado and Shihab \cite{MaldonadoS15} detected self-admitted technical debts and classified them in five types: design, defect, documentation, requirement and test debt. They found that the majority are design debts.
+
+Wehabibi \etal \cite{wehaibi2016examining} examined the impact of SATD on software quality. The results showed that there is no clear trend between defects and SATD and that SATD changes induce less future defects and are more difficult to perform. They found that the impact is not related to defects but to the difficulty to change the system in the future.
+
+Nugroho \etal \cite{nugroho2011empirical} defined the notion of technical debt and interest as well as an approach to estimate the amount of technical debt. The method is based on two parts (i) estimation of repair effort; (ii) estimation of maintenance effort.
+
+Maldonado \etal \cite{maldonado2017using} used NLP to detect SATD. Comments were classified into different types of technical debt and were used to train a maximum entropy classifier, which turned out to outperform the previous comment patterns baseline method (Potdar and Shihab). The characteristics of the features used to classify SATD were analyzed, showing that indicators of different types of SATD are different.
+
+Lim \etal \cite{lim2012balancing} interviewed 35 practitioners to find out what people from the industry think of technical debt, the context in which they occur and how they deal with the issue. They learned that project teams recognize that technical debt are unavoidable and necessary in the reality of the industry. Teams established some strategies to deal with them: do nothing, risk management approach, manage the expectations of customers and conduct audits. They also learned that technical debts were mostly intentional.
+
+Alves \etal \cite{alves2014towards} organized the different types of technical debts based on their nature and the existing litterature to propose an ontology.
+
+\subsection{Code Smell Detection}
+\Foutse{I'll complete...}
+\Max{I'm not sure this subsection about machine learning is strictly related. Instead, I would suggest to add a short subsection on code smell detection and above all use of machine learning in code smell detection. Foutse I guess you should have a bit of text for that...}
+
+Fontana \etal \cite{fontana2016comparing} compared 16 machine learning techniques across 74 systems to detect 4 code smells (Data Class, Large Class, Feature Envy, Long Method). Using cross-validation, they found that all methods achieved high performances with J48 and Random Forest providing the best results and SVM the worst. They noticed that imbalance in the dataset can cause issues in performance values.
+
+Hozano \etal \cite{hozano2015using} brought up two concerns about code smell detection techniques : detected smells vary between approaches and code smells are detected without taking into consideration developers' feedback. They proposed a new technique to detect code smells based on existing techniques and developers' feedback, the \textit{Smell Platform}.
+
+Bartosz \etal \cite{walter2015including} analyzed the usefulness of including structural factors to a metrics-based approach to detect code smells (God Class, Brain Class). The standard metrics-based approaches including structural factors performed better in terms of recall but similarly for precision.
+
+Foutse \etal \cite{khomh2009bayesian} proposed a Bayesian approach to tackle the issue of code and design smell detection inherent uncertainty. They used Bayesian Beliefs Networks, which can work with missing data and can be tuned, to detect code and design smells. The BBN showed high precision and recall, and assigned high probabilities to classes that were in fact smells.
+
+Maiga \etal \cite{maiga2012support} proposed an approach, \textit{SVMDetect}, using the machine learning technique Support Vector Machines to detect anti-patterns. They compared the results of their approach with DETEX, another technique. They obtained better accuracy and could detect more anti-patterns. They extended the previous work with SMURF \cite{maiga2012smurf}, a SVM-based approach taking also into consideration practitioners' feedback.
+
+\subsection{Source Code Comments}
+Fluri \etal \cite{fluri2007code} examined the question whether source code and comments co-evolve along the evolution of a software system. They found that new code barely gets commented, class and method declarations get commented the most frequently compared to method calls and 97\% of comment changes are done in the same revision as the corresponding source code changes.
+
+Khamis \etal \cite{khamis2010automatic} proposed an approach to evaluate the quality of source code documentation based on the quality of language and the consistency between comments and associated source code. They showed that maintaining good up to date source code documentation can minimize potential problem areas.
+
+Buse and Weimer \cite{buse2008metric} explored the concept of code readability, constructed a readability measure based on data from human annotators and investigated its relation with software quality. More specifically, they found out that comments are a direct way to communicate through source code. However, they also noticed that the presence of comments does not directly correlate to higher readability.
+
+Padioleau \etal \cite{padioleau2009listening} studied programmers' comments to provide information on how to improve tools and techniques for developers and therefore increase software reliability and productivity. Source code documentation was classified in different types to do so.
+
+Malik \etal \cite{malik2008understanding} studied the rationale and likelihood for updating comments when modifying a function. The characteristic of the change is the most important feature that explains the comment update rationale. Call dependencies, control statements, age of modified functions and number of co-changed functions are the most important features to predict comment updates.
+
+\subsection{Static Analysis}
+Naumovich \etal \\cite{naumovich1997applying} demonstrated how to verify application-specific properties of a software architecture with static concurrency analysis techniques. Two concurrency analysis tools were used, INCA and FLAVERS, to detect errors. Both tools illustrated the potential of static analysis to detect problems early in the lifecycle and to help developers understand and change the code to satisfy correct architectural properties.
+
+Ball and Rajamani \cite{ball2002s} proposed a toolkit, \textit{SLAM}, that statically analyzes a program to verify if it follows or not given usage rules. It does not require programmers' annotations and minimizes false error messages.
+
+Engler and Musuvathi \cite{engler2004static} compared static analysis and software model checking to find bugs. They found that static analysis is clearly better, it performed faster, found more errors, was more straightforward and did not lead to more false errors than model checking.
+
+Ayewah \etal \cite{ayewah2007evaluating} evaluated the accuracy and results of warnings found by FindBugs, a static analysis tools for Java. They found that static analysis tools sometimes report true but trivial issues because they don't know what the code is \textit{supposed} to do. Consequently, they pointed that out that it's oversimplifying the issue to classify defect warnings in true and false positives. They showed that FindBugs detects a substantial amount of defects and that they are generally the same bug patterns. The defects reported are generally issues that developers are willing to fix.
+
+Emmanuelsson and Nilsson \cite{emanuelsson2008comparative} analyzed three static analysis tools (Coverity Prevent, KlocWork K7, PolySpace Verifier) based on research articles and manuals, as well as types of defects, soundess, value and aliasing, incrementality and IDE integration. They divided the static analysis tools in three categories : string and pattern matching approaches, unsound dataflow analysis and sound dataflow analysis. They enumerated each benefits and issues for each type of tool.
+
+%@article{albert2016formal,
+%	title={A formal verification framework for static analysis},
+%	author={Albert, Elvira and Bubel, Richard and Genaim, Samir and H{\"a}hnle, Reiner and Puebla, Germ{\'a}n and Rom{\'a}n-D{\'\i}ez, Guillermo},
+%	journal={Software \& Systems Modeling},
+%	volume={15},
+%	number={4},
+%	pages={987--1012},
+%	year={2016},
+%	publisher={Springer}
+%}
+
+%Albert \etal proposed a verification framework for static analysis that verifies the \textit{results} of tools instead of tools themselves. The framework is based on \textit{COSTA}, a static analysis system for Java programs, and \textit{KeY}, a verification tool to verify the correctness of programs' resource guarantees. The tool proved to be able to automatically produce verified resource guarantees.
+
+%\subsection{Machine Learning}
+%\Max{I'm not sure this subsection about machine learning is strictly related. Instead, I would suggest to add a short subsection on code smell detection and above all use of machine learning in code smell detection. Foutse I guess you should have a bit of text for that...}
+%
+
+%% Shepperd, M. and Kadoda, G., “Comparing software prediction techniques using simulation”, Software Engineering, IEEE Transactions on, Volume: 27 Issue: 11, Nov. 2001, Page(s): 1014 -1022.
+%Shepperd and Kadoda generated different data sets with different characteristics to evaluate prediction techniques. They found a strong relationship between the results of a prediction technique and the characteristics of a problem's context (training set size, nature of the \textit{cost} function and general characteristics of the data set). Also, they noticed that sampling and validation procedures must be repeated a number of times in order to have a good confidence level in the results. Finally, they brought up the issue of false positives, which is an important problem to take into consideration in the future.
+%
+
+%% Challagulla, Venkata UB, et al. "Empirical assessment of machine learning based software defect prediction techniques." Object-Oriented Real-Time Dependable Systems, 2005. WORDS 2005. 10th IEEE International Workshop on. IEEE, 2005.
+%Venkata \etal tested several machine learning models to predict software defects. They showed that no particular machine learner performed the best on all data sets, data context plays a big factor. Machine learning methods and statistical techniques were combined with no real advantages added. They found that \textit{size} and \textit{complexity} metrics solely is not enough for accurate prediction. Dependencies between metrics needs to be included to obtain better results.
+%
+
+%% Al-Jamimi, H.A., Ahmed, M.: ‘Machine learning-based software quality prediction models: state of the art’. Proc. Fourth Int. Conf. on Information Science and Applications, Pattaya, Thailand, 2013
+%Al-Jamini and Ahmed conducted a literature survey of Machine Learning-based software quality prediction models. It lists several machine learning approaches used for quality predictions. Here are several examples.
+
+%% van-Koten, C., Gray, A.R.: ‘An application of Bayesian network for predicting object-oriented software maintainability’, Inf. Softw. Technol., 2006, 48, (1), pp. 59–67
+%van Koten and Gray designed a maintainability prediction model based on a Bayesian network for object-oriented systems. Li and Henry's metric data were used to construct the model, showing promising results in terms of accuracy compared to common regression-based models.
+
+%% Jeet, K., Dhir, R.: ‘Bayesian and fuzzy approach to assess and predict the maintainability of software: acomparative study’ (International Scholarly Research Network ISRN Software Engineering, 2012)
+%Jeet and Dhir used a Fuzzy Logic approach for their prediction model and compared it with a Bayesian network-based model, showing improvements over the latter.
+
+%% Malhotra, R., Kaur, A., Singh, Y.: ‘Empirical validation of object-oriented metrics for predicting fault proneness at different severity levels using support vector machines’, Int. J. Syst. Assurance Eng. Manage., 2010, 1, (3), pp. 269–281
+%Malhotra \etal analyzed the performance of a Support Vector Machine-based method using OO metrics to predict software fault-proneness. The study showed that SVM could predict faulty classes with high accuracy.
+
+%% Thwin, M.M.T., Quah, T.-S.: ‘Application of neural networks for software quality prediction using object-oriented metrics’, J. Syst. Softw., 2005, 76, (2), pp. 147–56
+%Thwin and Quah applied a neural network-based approach to build a software quality prediction model based on OO metrics. Their model predicts the number of faults in a class and the number of lines changed, linked to maintainability. The General Regression Neural Network (GRNN) gave the best results.
+%
+
+%% Malhotra, Ruchika. "Comparative analysis of statistical and machine learning methods for predicting faulty modules." Applied Soft Computing 21 (2014): 286-297.
+%Malhotra conducted a comparative analysis of machine learning methods (Decision Tree, Artificial Neural Network, Cascade Correlation Network, Support Vector Machine, Group Method of Data Handling Method, and Gene Expression Programming) that predict faulty modules based on static code metrics. The analysis showed that the Decision Tree method was the one showing the best results based on the Area Under the Curve.
+%
+
+%% Malhotra, Ruchika. "Comparative analysis of statistical and machine learning methods for predicting faulty modules." Applied Soft Computing 21 (2014): 286-297.
+%Bowes \etal analyzed the defect prediction uncertainty of four classifiers (Random Forest, Naive Bayes, RPart and SVM). The classifiers showed similar predictive performance values but predicted different sets of defects and different levels of consistency.
+%
+
+%% Hall, Tracy, et al. "A systematic literature review on fault prediction performance in software engineering." IEEE Transactions on Software Engineering 38.6 (2012): 1276-1304.
+%Hall \etal analyzed 208 studies on fault prediction to investigate how the models' context, the independent variables and the modelling techniques influence predictions' performance. It showed that most studies were not as useful as they could be because of a lack of contextual and methodological details, models performed better on large systems, maturity or language of systems didn't significantly impact performance, models performed better using a set of metrics as independent variables, and models performed better with simple and easy to use machine learning models (Naive Bayes or Logistic Regression). Also, the methodology seemed to have an impact on predictive performance based on three aspects : data optimisation, independent variables optimisation and modelling technique optimisation.
+ 
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

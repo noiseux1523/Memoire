@@ -1,0 +1,58 @@
+\BOOKMARK [0][-]{chapter*.1}{DEDICATION}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{ACKNOWLEDGEMENTS}{}% 2
+\BOOKMARK [0][-]{chapter*.3}{R\311SUM\311}{}% 3
+\BOOKMARK [0][-]{chapter*.4}{ABSTRACT}{}% 4
+\BOOKMARK [0][-]{chapter*.5}{TABLE OF CONTENTS}{}% 5
+\BOOKMARK [0][-]{chapter*.6}{LIST OF TABLES}{}% 6
+\BOOKMARK [0][-]{chapter*.7}{LIST OF FIGURES}{}% 7
+\BOOKMARK [0][-]{chapter*.8}{LIST OF SYMBOLS AND ABBREVIATION}{}% 8
+\BOOKMARK [0][-]{chapter*.9}{LIST OF APPENDICES}{}% 9
+\BOOKMARK [0][-]{chapter.1}{1 INTRODUCTION}{}% 10
+\BOOKMARK [1][-]{section.1.1}{1.1 Basic Concepts and Defintions}{chapter.1}% 11
+\BOOKMARK [1][-]{section.1.2}{1.2 \311l\351ments de la probl\351matique}{chapter.1}% 12
+\BOOKMARK [1][-]{section.1.3}{1.3 Objectifs de recherche}{chapter.1}% 13
+\BOOKMARK [1][-]{section.1.4}{1.4 Plan du m\351moire}{chapter.1}% 14
+\BOOKMARK [0][-]{chapter.2}{2 LITTERATURE REVIEW}{}% 15
+\BOOKMARK [1][-]{section.2.1}{2.1 Relationship Between Technical Debt and Source Code Metrics}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.2}{2.2 Self-Admitted Technical Debt}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.3}{2.3 Code Smell Detection and Automated Static Analysis Tools}{chapter.2}% 18
+\BOOKMARK [0][-]{chapter.3}{3 THE APPROACH AND STUDY DEFINITION}{}% 19
+\BOOKMARK [1][-]{section.3.1}{3.1 The Approach}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Features}{section.3.1}% 21
+\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Identification of Self-Admitted Technical Debt}{section.3.1}% 22
+\BOOKMARK [2][-]{subsection.3.1.3}{3.1.3 Feature Preprocessing}{section.3.1}% 23
+\BOOKMARK [2][-]{subsection.3.1.4}{3.1.4 Building and Applying Machine Learning Models}{section.3.1}% 24
+\BOOKMARK [1][-]{section.3.2}{3.2 Study Definition}{chapter.3}% 25
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Dataset}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Analysis Method}{section.3.2}% 27
+\BOOKMARK [0][-]{chapter.4}{4 ANALYSIS OF STUDY RESULTS AND THREATS TO VALIDITY}{}% 28
+\BOOKMARK [1][-]{section.4.1}{4.1 Study Results}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 How does TEDIOUS work for recommending SATD within-project?}{section.4.1}% 30
+\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 How does TEDIOUS work for recommending SATD across-project?}{section.4.1}% 31
+\BOOKMARK [2][-]{subsection.4.1.3}{4.1.3 How would a method-level smell detector compare with TEDIOUS?}{section.4.1}% 32
+\BOOKMARK [2][-]{subsection.4.1.4}{4.1.4 Qualitative discussion of false positive and false negatives}{section.4.1}% 33
+\BOOKMARK [1][-]{section.4.2}{4.2 Threats to Validity}{chapter.4}% 34
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Construct validity}{section.4.2}% 35
+\BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Internal validity}{section.4.2}% 36
+\BOOKMARK [2][-]{subsection.4.2.3}{4.2.3 Conclusion validity}{section.4.2}% 37
+\BOOKMARK [2][-]{subsection.4.2.4}{4.2.4 External validity}{section.4.2}% 38
+\BOOKMARK [0][-]{chapter.5}{5 CONVOLUTIONAL NEURAL NETWORK WITH COMMENTS AND SOURCE CODE}{}% 39
+\BOOKMARK [1][-]{section.5.1}{5.1 Convolutional Neural Network}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.2}{5.2 The Approach}{chapter.5}% 41
+\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Features}{section.5.2}% 42
+\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Identification of Self-Admitted Technical Debt}{section.5.2}% 43
+\BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Word Embeddings}{section.5.2}% 44
+\BOOKMARK [2][-]{subsection.5.2.4}{5.2.4 Building and Applying CNN}{section.5.2}% 45
+\BOOKMARK [1][-]{section.5.3}{5.3 Study Definition}{chapter.5}% 46
+\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Dataset}{section.5.3}% 47
+\BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 Analysis Method}{section.5.3}% 48
+\BOOKMARK [1][-]{section.5.4}{5.4 Study Results}{chapter.5}% 49
+\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Source Code With Comments}{section.5.4}% 50
+\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 Source Code Without Comments}{section.5.4}% 51
+\BOOKMARK [2][-]{subsection.5.4.3}{5.4.3 Source Code Partially With Comments}{section.5.4}% 52
+\BOOKMARK [0][-]{chapter.6}{6 CONCLUSION}{}% 53
+\BOOKMARK [1][-]{section.6.1}{6.1 Summary of Work}{chapter.6}% 54
+\BOOKMARK [1][-]{section.6.2}{6.2 Limitations of the Proposed Solution}{chapter.6}% 55
+\BOOKMARK [1][-]{section.6.3}{6.3 Future Work}{chapter.6}% 56
+\BOOKMARK [0][-]{chapter*.10}{BIBLIOGRAPHY}{}% 57
+\BOOKMARK [0][-]{chapter*.10}{APPENDICES}{}% 58

@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Document.aux
+A level-1 auxiliary file: 1-Dedicace.aux
+A level-1 auxiliary file: 2-Remerciements.aux
+A level-1 auxiliary file: 3-Resume_sujet.aux
+A level-1 auxiliary file: 3-Abstract.aux
+A level-1 auxiliary file: 4-Sigles_Abrev.aux
+A level-1 auxiliary file: 5-Introduction.aux
+A level-1 auxiliary file: 6-Revue_litterature.aux
+A level-1 auxiliary file: 7-Theme1.aux
+A level-1 auxiliary file: 7-Theme2.aux
+A level-1 auxiliary file: 7-Theme3.aux
+A level-1 auxiliary file: 8-Conclusion.aux
+The style file: IEEEtranSN-francais.bst
+A level-1 auxiliary file: 9-Annexes.aux
+I found no \citation commands---while reading file Document.aux
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Document.bib
+-- IEEEtranSN.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+
+Done.
+You've used 0 entries,
+            5261 wiz_defined-function locations,
+            1202 strings with 13334 characters,
+and the built_in function-call counts, 113 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 19
+:= -- 30
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 3
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 25
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 24
+(There was 1 error message)
