@@ -2,12 +2,12 @@
 \contentsline {compteur}{DEDICATION}{iii}{chapter*.1}
 \contentsline {compteur}{ACKNOWLEDGEMENTS}{iv}{chapter*.2}
 \contentsline {compteur}{R\IeC {\'E}SUM\IeC {\'E}}{v}{chapter*.3}
-\contentsline {compteur}{ABSTRACT}{vii}{chapter*.4}
-\contentsline {compteur}{TABLE OF CONTENTS}{viii}{chapter*.5}
-\contentsline {compteur}{LIST OF TABLES}{xi}{chapter*.6}
-\contentsline {compteur}{LIST OF FIGURES}{xii}{chapter*.7}
-\contentsline {compteur}{LIST OF SYMBOLS AND ABBREVIATION}{xiii}{chapter*.8}
-\contentsline {compteur}{LIST OF APPENDICES}{xiv}{chapter*.9}
+\contentsline {compteur}{ABSTRACT}{ix}{chapter*.4}
+\contentsline {compteur}{TABLE OF CONTENTS}{x}{chapter*.5}
+\contentsline {compteur}{LIST OF TABLES}{xiii}{chapter*.6}
+\contentsline {compteur}{LIST OF FIGURES}{xiv}{chapter*.7}
+\contentsline {compteur}{LIST OF SYMBOLS AND ABBREVIATION}{xv}{chapter*.8}
+\contentsline {compteur}{LIST OF APPENDICES}{xvi}{chapter*.9}
 \contentsline {chapter}{\numberline {1}INTRODUCTION}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Basic Concepts and Defintions}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}\IeC {\'E}l\IeC {\'e}ments de la probl\IeC {\'e}matique}{1}{section.1.2}
