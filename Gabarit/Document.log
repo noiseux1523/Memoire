@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  15 MAY 2017 17:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 MAY 2017 10:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -946,22 +946,7 @@ although it is yet undefined on input line 25.
 
 
 
-]
-Package acronym Info: Label `acro:TP' newly defined as it shall be overridden
-although it is yet undefined on input line 45.
-Package acronym Info: Label `acro:FP' newly defined as it shall be overridden
-although it is yet undefined on input line 45.
-Package acronym Info: Label `acro:FN' newly defined as it shall be overridden
-although it is yet undefined on input line 45.
-Package acronym Info: Label `acro:MCC' newly defined as it shall be overridden
-although it is yet undefined on input line 45.
-Package acronym Info: Label `acro:ROC' newly defined as it shall be overridden
-although it is yet undefined on input line 45.
-Package acronym Info: Label `acro:AUC' newly defined as it shall be overridden
-although it is yet undefined on input line 45.
-Package acronym Info: Label `acro:TN' newly defined as it shall be overridden
-although it is yet undefined on input line 45.
-
+])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -969,82 +954,96 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [6]
+\openout2 = `3-Abstract.aux'.
+
+ (./3-Abstract.tex [7
+
+
+
+]
+Package acronym Info: Label `acro:TP' newly defined as it shall be overridden
+although it is yet undefined on input line 33.
+Package acronym Info: Label `acro:FP' newly defined as it shall be overridden
+although it is yet undefined on input line 33.
+Package acronym Info: Label `acro:FN' newly defined as it shall be overridden
+although it is yet undefined on input line 33.
+Package acronym Info: Label `acro:MCC' newly defined as it shall be overridden
+although it is yet undefined on input line 33.
+Package acronym Info: Label `acro:ROC' newly defined as it shall be overridden
+although it is yet undefined on input line 33.
+Package acronym Info: Label `acro:AUC' newly defined as it shall be overridden
+although it is yet undefined on input line 33.
+Package acronym Info: Label `acro:TN' newly defined as it shall be overridden
+although it is yet undefined on input line 33.
+ [8]
 Package acronym Info: Label `acro:DECOR' newly defined as it shall be overridde
 n
-although it is yet undefined on input line 47.
+although it is yet undefined on input line 35.
 
-Overfull \hbox (11.59688pt too wide) in paragraph at lines 47--47
+Overfull \hbox (11.59688pt too wide) in paragraph at lines 35--35
 []\T1/lmr/m/n/12 To ad-dress \T1/lmr/bx/n/12 RQ3\T1/lmr/m/n/12 , the per-for-ma
 nce of a smell de-tec-tor, [][]DE-tec-tion & COR-rec-tion ([])[],
  []
 
 Package acronym Info: Label `acro:LM' newly defined as it shall be overridden
-although it is yet undefined on input line 53.
+although it is yet undefined on input line 41.
 Package acronym Info: Label `acro:LP' newly defined as it shall be overridden
-although it is yet undefined on input line 53.
+although it is yet undefined on input line 41.
 Package acronym Info: Label `acro:LOC' newly defined as it shall be overridden
-although it is yet undefined on input line 53.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 53.
+although it is yet undefined on input line 41.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 41.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 53.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 41.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 53.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 41.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 53.
+(Font)              <12> on input line 41.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 53.
+(Font)              <8> on input line 41.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 53.
- [7]) [8]
-\openout2 = `3-Abstract.aux'.
+(Font)              <6> on input line 41.
+ [9]) [10]
+(./Document.toc [11
 
 
-(./3-Abstract.tex) [9
-
-
-
-] (./Document.toc [10
-
-
-] [11])
+] [12])
 \tf@toc=\write5
 \openout5 = `Document.toc'.
 
- [12] (./Document.lot)
+ [13] (./Document.lot)
 \tf@lot=\write6
 \openout6 = `Document.lot'.
 
-
-[13
+ [14
 
 ] (./Document.lof)
 \tf@lof=\write7
 \openout7 = `Document.lof'.
 
- [14
+ [15
 
 ]
 \openout2 = `4-Sigles_Abrev.aux'.
 
- (./4-Sigles_Abrev.tex) [15
+
+(./4-Sigles_Abrev.tex) [16
 
 
 ] (./Document.app)
 \tf@app=\write8
 \openout8 = `Document.app'.
 
-
-[16
+ [17
 
 
 ]
@@ -1142,13 +1141,13 @@ Package rerunfilecheck Info: File `Document.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 172.
  ) 
 Here is how much of TeX's memory you used:
- 10261 strings out of 493014
- 149958 string characters out of 6133351
- 259607 words of memory out of 5000000
+ 10262 strings out of 493014
+ 149967 string characters out of 6133351
+ 259598 words of memory out of 5000000
  13412 multiletter control sequences out of 15000+600000
  32321 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,51p,1099b,570s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,12n,51p,1445b,570s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2016/t
 exmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2016/texmf-dist/
@@ -1156,10 +1155,10 @@ fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/public/lm/lmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm
 /lmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Document.pdf (29 pages, 139329 bytes).
+Output written on Document.pdf (30 pages, 143979 bytes).
 PDF statistics:
- 537 PDF objects out of 1000 (max. 8388607)
- 496 compressed objects within 5 object streams
- 91 named destinations out of 1000 (max. 500000)
+ 541 PDF objects out of 1000 (max. 8388607)
+ 499 compressed objects within 5 object streams
+ 92 named destinations out of 1000 (max. 500000)
  465 words of extra memory for PDF output out of 10000 (max. 10000000)
 
