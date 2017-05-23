@@ -14,7 +14,6 @@ A level-1 auxiliary file: 7-Theme3.aux
 A level-1 auxiliary file: 8-Conclusion.aux
 The style file: IEEEtranSN-francais.bst
 A level-1 auxiliary file: 9-Annexes.aux
-I found no \citation commands---while reading file Document.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -27,47 +26,49 @@ Database file #1: Document.bib
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Name 2 in "Suryanarayana, Girish and , and Samarthyam, Ganesh and Sharma, Tushar" has a comma at the end for entry Suryanarayana20151
+while executing---line 2900 of file IEEEtranSN-francais.bst
 
 Done.
-You've used 0 entries,
+You've used 6 entries,
             5261 wiz_defined-function locations,
-            1202 strings with 13334 characters,
-and the built_in function-call counts, 113 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 19
-:= -- 30
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 3
+            1255 strings with 15113 characters,
+and the built_in function-call counts, 7427 in all, are:
+= -- 663
+> -- 290
+< -- 42
++ -- 119
+- -- 73
+* -- 458
+:= -- 1127
+add.period$ -- 20
+call.type$ -- 6
+change.case$ -- 37
+chr.to.int$ -- 105
+cite$ -- 12
+duplicate$ -- 428
+empty$ -- 523
+format.name$ -- 85
+if$ -- 1648
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 25
-num.names$ -- 0
-pop$ -- 0
+missing$ -- 72
+newline$ -- 49
+num.names$ -- 26
+pop$ -- 219
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 29
 quote$ -- 2
-skip$ -- 1
+skip$ -- 519
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 249
+swap$ -- 312
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 0
+type$ -- 149
 warning$ -- 0
-while$ -- 0
+while$ -- 42
 width$ -- 0
-write$ -- 24
+write$ -- 107
 (There was 1 error message)

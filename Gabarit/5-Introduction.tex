@@ -7,87 +7,59 @@
 % qu'il doit savoir pour comprendre la recherche et en connaître la
 % portée.
 
+%TOTAL = 8 pages
+
 \Chapter{INTRODUCTION}\label{sec:Introduction}  
+%%
+%% BRINGING THE SUBJECT
+%%
 
-TOTAL = 8 pages
+%0.5 page
 
-0.5 page
-
-Base sur abstract de l'article
-VOIR PROPOSITION DE RECHERCHE
-
-
-%Texte en \emph{italique}, \textsc{petites majuscules}, mot \mbox{insécable}.\\
-%Texte \ul{souligné}, \hl{surligné}, \textbf{gras}.\\
-%Texte entre ``guillemets''.\\
-%Police \texttt{monospace}.\\
-%Un mot courant en réseautique mobile: n\oe{}ud\footnote{Note de bas de page.}.\\
-%L'objet RSVP \texttt{SENDER\_TEMPLATE}.\\
-%Nom d'un auteur: \citeauthor{RFC_IPv4}.\\
-%Une architecture 32~bits.\\
-
+\setlength{\parindent}{5ex} In today's consumer society, products have to be designed and ready to hit the market as fast as possible in order to stand out from other similar products and generate sells. This pressure to produce can affect the quality, maintainability and functionality of the design. In software engineering, the repercussion of this mindset can be measured with the amount of technical debts present in a project. These \ac{TD} can go unnoticed, which is the danger behind them, or may be admitted by developers. In fact, studies have been conducted on technical debts that are "self-admitted" by developers, commenting why such code represent an issue or a temporary solution. The subject of this paper is to study how previously self-admitted technical debts can be used to recommend when to admit a newly introduced \ac{TD}.
 
 %%
 %%  CONCEPTS DE BASE
 %%
 \section{Basic Concepts and Defintions}  
 
-environ 3 pages
+%environ 3 pages
 
-Technical debt
-	Defintion TD (Cunningham 15)
-	Definition classes TD (3 et 22)
-	Nature intentionnelle des TD (24)
-	Awareness des TD est un probleme (17)
-	
-Self admitted technical debt
-	Definition SATD (Potdar 16 et 35)
-	Presence des SATD (Potdar 16 et 35)
-	Acteurs des SATD (Potdar 16 et 35)
-	Correlation qualite/SATD (Bavota et Russo 8, 10)
-	Taxonomie des SATD (Bavota et Russo 8)
-	
-Features
-	Structural metrics of methods
-	Method readability
-	Warnings of static analysis tools (Checkstyle 1, PMD 2)	
-	
-Dataset
-	9 java open source projects from (27), only design debts
-	
-Machine Learners
-	5 machine learners, with fold validation and cross project
-	
-Results
-	50\% precision and 52\% recall within project with RandomForest
-	67\% precision, 55\% recall, 92\% accuracy cross project
-	Can be applied on new projects and be good
+\setlength{\parindent}{5ex} Technical debts are temporary and less than optimal solutions introduced in the code. They are portions of code that still need to be worked on even though they accomplish the purpose they were written for. As Cunningham first described them, \ac{TD} is "not quite right code which we postpone making it right" \citep{Cunningham:1992:WPM:157709.157715}. For example, \ac{TD} could be workarounds which don't follow good coding practices, poorly structured or hard-to-read code. By definition, technical debts don't typically cause errors, preventing the code from working, but they can in some circumstances. Various reasons can motivate the introduction of technical debts: to rapidly fix an issue, development team is at the early stages of conception, lack of comprehension, skills or experience \citep{Suryanarayana20151}. \ac{TD} are introduced throughout the whole development life cycle and under various forms. An ontology and landscape have been built to better define the subject. Design, requirement, code, test and documentation debts represent the main branches of the classification tree \citep{alves2014towards,izurieta2012organizing}. Each branch can be linked to a specific development stage and to specific criteria. For example, design debt "refers to debt that can be discovered by analyzing the source code by identifying the use of practices which violated the principles of good object-oriented design (e.g. very large or tightly coupled classes)" \citep{alves2014towards}. \par
+
+Other work investigated the perception of developers on technical debts. It was found that the most important source of \ac{TD} is architectural decisions, that recognizing the phenomenon is essential for communication and that there is a lack of tools to manage those debts \citep{Ernst:2015:MMI:2786805.2786848}. Additionally, project teams recognize that this issue is unavoidable and necessary \citep{lim2012balancing}.
+
+
+%Technical debt
+%	Defintion TD (Cunningham 15)
+%	Definition classes TD (3 et 22)
+%	Nature intentionnelle des TD (24)
+%	Awareness des TD est un probleme (17)
+%	
+%Self admitted technical debt
+%	Definition SATD (Potdar 16 et 35)
+%	Presence des SATD (Potdar 16 et 35)
+%	Acteurs des SATD (Potdar 16 et 35)
+%	Correlation qualite/SATD (Bavota et Russo 8, 10)
+%	Taxonomie des SATD (Bavota et Russo 8)
+%	
+%Features
+%	Structural metrics of methods
+%	Method readability
+%	Warnings of static analysis tools (Checkstyle 1, PMD 2)	
+%	
+%Dataset
+%	9 java open source projects from (27), only design debts
+%	
+%Machine Learners
+%	5 machine learners, with fold validation and cross project
+%	
+%Results
+%	50\% precision and 52\% recall within project with RandomForest
+%	67\% precision, 55\% recall, 92\% accuracy cross project
+%	Can be applied on new projects and be good
 		
 
-%\begin{flushleft}
-%1\iere{} utilisation d'un acronyme: \ac{IETF}.\\
-%2\ieme{} utilisation d'un acronyme: \ac{IETF}.\\
-%Acronyme au long: \acl{IETF}.\\
-%\end{flushleft}
-
-%\subsection{Une sous-section}
-%Un URL: \href{http://www.polymtl.ca}{École Polytechnique de Montréal}.
-
-%\subsubsection{Une sous-sous-section}
-%Les besoins des flots de données peuvent être catégorisés selon
-%quatre paramètres importants \citep[voir][sect.\,5.4]{Tanenbaum} ou:
-%\begin{itemize}
-%\item la fiabilité (acheminement des données avec succès)~;
-%\item le délai de \mbox{bout-en-bout} de la source vers la destination~;
-%\item la variation du délai de \mbox{bout-en-bout} (\emph{jitter})~;
-%\item la bande passante requise (le débit des informations).
-%\end{itemize}
-
-%\paragraph{Le niveau paragraphe} est plus bas encore dans la hiérarchie\ldots
-%Une citation entre parenthèses \citep[voir][]{ART_ARTP}.
-%ou des citations entre parenthèses \citep[][]{nichols2010,PHD_HPMRSVP,ART_HMRSVP}.
-
-%\clearpage
 
 %%
 %% ELEMENTS DE LA PROBLEMATIQUE
