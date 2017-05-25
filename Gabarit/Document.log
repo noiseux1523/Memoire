@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  23 MAY 2017 16:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  25 MAY 2017 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -23,6 +23,14 @@ File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip43
+\fb@frw=\dimen103
+\fb@frh=\dimen104
+\FrameRule=\dimen105
+\FrameSep=\dimen106
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
@@ -389,28 +397,28 @@ Language: frenchb 2016/05/14 v3.2c French support from the babel system
 (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count88
-\U@D=\dimen103
+\U@D=\dimen107
 )
 \l@acadian = a dialect from \language\l@french 
 \l@canadien = a dialect from \language\l@french 
 \FB@nonchar=\count89
-\FBcolonskip=\skip43
-\FBthinskip=\skip44
+\FBcolonskip=\skip44
+\FBthinskip=\skip45
 Package babel Info: Making : an active character on input line 365.
 Package babel Info: Making ; an active character on input line 366.
 Package babel Info: Making ! an active character on input line 367.
 Package babel Info: Making ? an active character on input line 368.
-\FBguillskip=\skip45
+\FBguillskip=\skip46
 \FBguill@level=\count90
 \FB@everypar=\toks16
-\FB@Mht=\dimen104
+\FB@Mht=\dimen108
 \std@mcc=\count91
 \dec@mcc=\count92
-\listindentFB=\skip46
-\labelwidthFB=\skip47
-\leftmarginFB=\skip48
-\parindentFFN=\dimen105
-\FBfnindent=\skip49
+\listindentFB=\skip47
+\labelwidthFB=\skip48
+\leftmarginFB=\skip49
+\parindentFFN=\dimen109
+\FBfnindent=\skip50
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2012/08/20 v3.3p English support from the babel system
@@ -448,8 +456,8 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count93
 ))
-\Gin@req@height=\dimen106
-\Gin@req@width=\dimen107
+\Gin@req@height=\dimen110
+\Gin@req@width=\dimen111
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
@@ -512,14 +520,14 @@ Package: placeins 2005/04/18  v 2.2
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip50
-\bibsep=\skip51
+\bibhang=\skip51
+\bibsep=\skip52
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count94
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/03/10 v2.15b AMS math features
-\@mathmargin=\skip52
+\@mathmargin=\skip53
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -528,11 +536,11 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
-\ex@=\dimen108
+\ex@=\dimen112
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen109
+\pmbraise@=\dimen113
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
@@ -549,7 +557,7 @@ LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen110
+\big@size=\dimen114
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \macc@depth=\count100
@@ -562,15 +570,15 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \column@=\count105
 \maxfields@=\count106
 \andhelp@=\toks20
-\eqnshift@=\dimen111
-\alignsep@=\dimen112
-\tagshift@=\dimen113
-\tagwidth@=\dimen114
-\totwidth@=\dimen115
-\lineht@=\dimen116
+\eqnshift@=\dimen115
+\alignsep@=\dimen116
+\tagshift@=\dimen117
+\tagwidth@=\dimen118
+\totwidth@=\dimen119
+\lineht@=\dimen120
 \@envbody=\toks21
-\multlinegap=\skip53
-\multlinetaggap=\skip54
+\multlinegap=\skip54
+\multlinetaggap=\skip55
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
@@ -593,19 +601,19 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@cmds=\toks25
 \SOUL@buffer=\toks26
 \SOUL@token=\toks27
-\SOUL@spaceskip=\skip55
-\SOUL@ttwidth=\dimen117
-\SOUL@uldp=\dimen118
-\SOUL@ulht=\dimen119
+\SOUL@spaceskip=\skip56
+\SOUL@ttwidth=\dimen121
+\SOUL@uldp=\dimen122
+\SOUL@ulht=\dimen123
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip56
-\LTright=\skip57
-\LTpre=\skip58
-\LTpost=\skip59
+\LTleft=\skip57
+\LTright=\skip58
+\LTpre=\skip59
+\LTpost=\skip60
 \LTchunksize=\count107
-\LTcapwidth=\dimen120
+\LTcapwidth=\dimen124
 \LT@head=\box28
 \LT@firsthead=\box29
 \LT@foot=\box30
@@ -621,14 +629,14 @@ Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen121
-\extrarowheight=\dimen122
+\col@sep=\dimen125
+\extrarowheight=\dimen126
 \NC@list=\toks29
-\extratabsurround=\skip60
-\backup@length=\skip61
+\extratabsurround=\skip61
+\backup@length=\skip62
 )
 \everycr=\toks30
-\minrowclearance=\skip62
+\minrowclearance=\skip63
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -671,15 +679,15 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 \AC@clearlist=\toks31
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip63
-\f@ncyO@elh=\skip64
-\f@ncyO@erh=\skip65
-\f@ncyO@olh=\skip66
-\f@ncyO@orh=\skip67
-\f@ncyO@elf=\skip68
-\f@ncyO@erf=\skip69
-\f@ncyO@olf=\skip70
-\f@ncyO@orf=\skip71
+\fancy@headwidth=\skip64
+\f@ncyO@elh=\skip65
+\f@ncyO@erh=\skip66
+\f@ncyO@olh=\skip67
+\f@ncyO@orh=\skip68
+\f@ncyO@elf=\skip69
+\f@ncyO@erf=\skip70
+\f@ncyO@olf=\skip71
+\f@ncyO@orf=\skip72
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2016/05/05 v6.83n Hypertext links for LaTeX
@@ -721,7 +729,7 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen123
+\@linkdim=\dimen127
 \Hy@linkcounter=\count114
 \Hy@pagecounter=\count115
 
@@ -745,10 +753,10 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4691.
 \c@Hy@tempcnt=\count117
 LaTeX Info: Redefining \url on input line 5044.
-\XeTeXLinkMargin=\dimen124
+\XeTeXLinkMargin=\dimen128
 \Fld@menulength=\count118
-\Field@Width=\dimen125
-\Fld@charsize=\dimen126
+\Field@Width=\dimen129
+\Fld@charsize=\dimen130
 Package hyperref Info: Hyper figures OFF on input line 6298.
 Package hyperref Info: Link nesting OFF on input line 6303.
 Package hyperref Info: Hyper index ON on input line 6306.
@@ -775,7 +783,7 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip72
+\Hy@SectionHShift=\skip73
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
@@ -783,13 +791,13 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen127
-\captionmargin@=\dimen128
-\captionwidth=\dimen129
-\caption@tempdima=\dimen130
-\caption@indent=\dimen131
-\caption@parindent=\dimen132
-\caption@hangindent=\dimen133
+\captionmargin=\dimen131
+\captionmargin@=\dimen132
+\captionwidth=\dimen133
+\caption@tempdima=\dimen134
+\caption@indent=\dimen135
+\caption@parindent=\dimen136
+\caption@hangindent=\dimen137
 )
 \c@ContinuedFloat=\count124
 Package caption Info: hyperref package is loaded.
@@ -806,7 +814,7 @@ ter titles)
 \openout2 = `0-Definitions_Etudiant.aux'.
 
 (./0-Definitions_Etudiant.tex)
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 79.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 80.
  (./Document.aux (./1-Dedicace.aux)
 (./2-Remerciements.aux) (./3-Resume_sujet.aux) (./3-Abstract.aux)
 (./4-Sigles_Abrev.aux) (./5-Introduction.aux) (./6-Revue_litterature.aux)
@@ -814,54 +822,54 @@ Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 79.
 (./9-Annexes.aux))
 \openout1 = `Document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 83.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 84.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \degres on input line 83.
+LaTeX Info: Redefining \degres on input line 84.
 
 
 Package frenchb.ldf Warning: Figures' and tables' captions might look like
 (frenchb.ldf)                `Figure 1:' which is wrong in French.
 (frenchb.ldf)                Check your class or packages to change this;
-(frenchb.ldf)                reported on input line 83.
+(frenchb.ldf)                reported on input line 84.
 
-LaTeX Info: Redefining \dots on input line 83.
+LaTeX Info: Redefining \dots on input line 84.
 
 Package frenchb.ldf Warning: Please load the "natbib" package
-(frenchb.ldf)                BEFORE babel/frenchb; reported on input line 83.
+(frenchb.ldf)                BEFORE babel/frenchb; reported on input line 84.
 
-LaTeX Info: Redefining \up on input line 83.
+LaTeX Info: Redefining \up on input line 84.
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count125
-\scratchdimen=\dimen134
+\scratchdimen=\dimen138
 \scratchbox=\box32
 \nofMPsegments=\count126
 \nofMParguments=\count127
 \everyMPshowfont=\toks32
 \MPscratchCnt=\count128
-\MPscratchDim=\dimen135
+\MPscratchDim=\dimen139
 \MPnumerator=\count129
 \makeMPintoPDFobject=\count130
 \everyMPtoPDFconversion=\toks33
 )
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 83.
+Package hyperref Info: Link coloring OFF on input line 84.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -870,9 +878,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count131
 )
-LaTeX Info: Redefining \ref on input line 83.
-LaTeX Info: Redefining \pageref on input line 83.
-LaTeX Info: Redefining \nameref on input line 83.
+LaTeX Info: Redefining \ref on input line 84.
+LaTeX Info: Redefining \pageref on input line 84.
+LaTeX Info: Redefining \nameref on input line 84.
 
 (./Document.out) (./Document.out)
 \@outlinefile=\write4
@@ -896,19 +904,19 @@ Package caption Warning: \caption will not be redefined since it's already
 See the caption package documentation for explanation.
 
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 106.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 107.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 106
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 107
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 106.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 107.
  [1
 
 
@@ -1056,12 +1064,20 @@ Chapter 1.
 
 
 
-]) [2]
+]
+Package acronym Info: Label `acro:WMC' newly defined as it shall be overridden
+although it is yet undefined on input line 36.
+Package acronym Info: Label `acro:CBO' newly defined as it shall be overridden
+although it is yet undefined on input line 36.
+ [2] [3] [4] [5]
+Package acronym Info: Label `acro:CNN' newly defined as it shall be overridden
+although it is yet undefined on input line 99.
+) [6]
 \openout2 = `6-Revue_litterature.aux'.
 
  (./6-Revue_litterature.tex
 Chapter 2.
-) [3
+) [7
 
 
 
@@ -1070,7 +1086,7 @@ Chapter 2.
 
  (./7-Theme1.tex
 Chapter 3.
-) [4
+) [8
 
 
 
@@ -1079,37 +1095,37 @@ Chapter 3.
 
  (./7-Theme2.tex
 Chapter 4.
-) [5
-
-
-
-] [6]
-\openout2 = `7-Theme3.aux'.
-
- (./7-Theme3.tex
-Chapter 5.
-[7
-
-
-
-]) [8]
-\openout2 = `8-Conclusion.aux'.
-
- (./8-Conclusion.tex
-Chapter 6.
 ) [9
 
 
 
+] [10]
+\openout2 = `7-Theme3.aux'.
+
+ (./7-Theme3.tex
+Chapter 5.
+[11
+
+
+
+]) [12]
+\openout2 = `8-Conclusion.aux'.
+
+ (./8-Conclusion.tex
+Chapter 6.
+) [13
+
+
+
 ] (./Document.bbl
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 39.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 40.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) [10
+) [14
 
 
-]
+]) [15]
 \openout2 = `9-Annexes.aux'.
 
 
@@ -1117,40 +1133,40 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Appendix A.
 Package hyperref Info: bookmark level for unknown annexe defaults to 0 on input
  line 10.
-[11
+[16
 
 
 ]
 Appendix B.
-[12
+[17
 
 
 ]
 Appendix C.
-) [13
+) [18
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 172.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
  (./Document.aux (./1-Dedicace.aux) (./2-Remerciements.aux)
 (./3-Resume_sujet.aux) (./3-Abstract.aux) (./4-Sigles_Abrev.aux)
 (./5-Introduction.aux) (./6-Revue_litterature.aux) (./7-Theme1.aux)
 (./7-Theme2.aux) (./7-Theme3.aux) (./8-Conclusion.aux) (./9-Annexes.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 172.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 172.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `Document.out' has not changed.
-(rerunfilecheck)             Checksum: 1ABC5CEF132A59E07FD58E0EBC4C4E19;4366.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 172.
+(rerunfilecheck)             Checksum: EC56363F08AD34E83244DF973489002C;4350.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 10329 strings out of 493014
- 151351 string characters out of 6133351
- 260006 words of memory out of 5000000
- 13466 multiletter control sequences out of 15000+600000
+ 10444 strings out of 493014
+ 153123 string characters out of 6133351
+ 262339 words of memory out of 5000000
+ 13558 multiletter control sequences out of 15000+600000
  32639 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,51p,1649b,570s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,12n,51p,1445b,570s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2016/t
 exmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2016/texmf-dist/
@@ -1159,10 +1175,10 @@ fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 /lmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/loca
 l/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Document.pdf (33 pages, 183308 bytes).
+Output written on Document.pdf (38 pages, 201137 bytes).
 PDF statistics:
- 587 PDF objects out of 1000 (max. 8388607)
- 540 compressed objects within 6 object streams
- 101 named destinations out of 1000 (max. 500000)
+ 674 PDF objects out of 1000 (max. 8388607)
+ 621 compressed objects within 7 object streams
+ 120 named destinations out of 1000 (max. 500000)
  465 words of extra memory for PDF output out of 10000 (max. 10000000)
 

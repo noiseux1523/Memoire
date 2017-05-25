@@ -8,11 +8,11 @@
 \BOOKMARK [0][-]{chapter*.8}{LIST OF SYMBOLS AND ABBREVIATION}{}% 8
 \BOOKMARK [0][-]{chapter*.9}{LIST OF APPENDICES}{}% 9
 \BOOKMARK [0][-]{chapter.1}{1 INTRODUCTION}{}% 10
-\BOOKMARK [1][-]{section.1.1}{1.1 Basic Concepts and Defintions}{chapter.1}% 11
-\BOOKMARK [1][-]{section.1.2}{1.2 \311l\351ments de la probl\351matique}{chapter.1}% 12
-\BOOKMARK [1][-]{section.1.3}{1.3 Objectifs de recherche}{chapter.1}% 13
-\BOOKMARK [1][-]{section.1.4}{1.4 Plan du m\351moire}{chapter.1}% 14
-\BOOKMARK [0][-]{chapter.2}{2 LITTERATURE REVIEW}{}% 15
+\BOOKMARK [1][-]{section.1.1}{1.1 Basic Concepts and Definitions}{chapter.1}% 11
+\BOOKMARK [1][-]{section.1.2}{1.2 Elements of the Problematic}{chapter.1}% 12
+\BOOKMARK [1][-]{section.1.3}{1.3 Research Objectives}{chapter.1}% 13
+\BOOKMARK [1][-]{section.1.4}{1.4 Thesis Overview}{chapter.1}% 14
+\BOOKMARK [0][-]{chapter.2}{2 LITERATURE REVIEW}{}% 15
 \BOOKMARK [1][-]{section.2.1}{2.1 Relationship Between Technical Debt and Source Code Metrics}{chapter.2}% 16
 \BOOKMARK [1][-]{section.2.2}{2.2 Self-Admitted Technical Debt}{chapter.2}% 17
 \BOOKMARK [1][-]{section.2.3}{2.3 Code Smell Detection and Automated Static Analysis Tools}{chapter.2}% 18
@@ -54,5 +54,5 @@
 \BOOKMARK [1][-]{section.6.1}{6.1 Summary of Work}{chapter.6}% 54
 \BOOKMARK [1][-]{section.6.2}{6.2 Limitations of the Proposed Solution}{chapter.6}% 55
 \BOOKMARK [1][-]{section.6.3}{6.3 Future Work}{chapter.6}% 56
-\BOOKMARK [0][-]{chapter*.10}{BIBLIOGRAPHY}{}% 57
-\BOOKMARK [0][-]{chapter*.10}{APPENDICES}{}% 58
+\BOOKMARK [0][-]{chapter*.14}{BIBLIOGRAPHY}{}% 57
+\BOOKMARK [0][-]{chapter*.14}{APPENDICES}{}% 58

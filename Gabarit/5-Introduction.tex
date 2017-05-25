@@ -7,261 +7,102 @@
 % qu'il doit savoir pour comprendre la recherche et en connaître la
 % portée.
 
-%TOTAL = 8 pages
+% TOTAL = 8 pages
 
-\Chapter{INTRODUCTION}\label{sec:Introduction}  
 %%
 %% BRINGING THE SUBJECT
 %%
+\Chapter{INTRODUCTION}\label{sec:Introduction}  
 
-%0.5 page
+% 0.5 page
 
 \setlength{\parindent}{5ex} In today's consumer society, products have to be designed and ready to hit the market as fast as possible in order to stand out from other similar products and generate sells. This pressure to produce can affect the quality, maintainability and functionality of the design. In software engineering, the repercussion of this mindset can be measured with the amount of technical debts present in a project. These \ac{TD} can go unnoticed, which is the danger behind them, or may be admitted by developers. In fact, studies have been conducted on technical debts that are "self-admitted" by developers, commenting why such code represent an issue or a temporary solution. The subject of this paper is to study how previously self-admitted technical debts can be used to recommend when to admit a newly introduced \ac{TD}.
 
 %%
 %%  CONCEPTS DE BASE
 %%
-\section{Basic Concepts and Defintions}  
+\section{Basic Concepts and Definitions}  
 
-%environ 3 pages
+% environ 3 pages
 
-\setlength{\parindent}{5ex} Technical debts are temporary and less than optimal solutions introduced in the code. They are portions of code that still need to be worked on even though they accomplish the purpose they were written for. As Cunningham first described them, \ac{TD} is "not quite right code which we postpone making it right" \citep{Cunningham:1992:WPM:157709.157715}. For example, \ac{TD} could be workarounds which don't follow good coding practices, poorly structured or hard-to-read code. By definition, technical debts don't typically cause errors, preventing the code from working, but they can in some circumstances. Various reasons can motivate the introduction of technical debts: to rapidly fix an issue, development team is at the early stages of conception, lack of comprehension, skills or experience \citep{Suryanarayana20151}. \ac{TD} are introduced throughout the whole development life cycle and under various forms. An ontology and landscape have been built to better define the subject. Design, requirement, code, test and documentation debts represent the main branches of the classification tree \citep{alves2014towards,izurieta2012organizing}. Each branch can be linked to a specific development stage and to specific criteria. For example, design debt "refers to debt that can be discovered by analyzing the source code by identifying the use of practices which violated the principles of good object-oriented design (e.g. very large or tightly coupled classes)" \citep{alves2014towards}. \par
+\setlength{\parindent}{5ex} Technical debts are temporary and less than optimal solutions introduced in the code. They are portions of code that still need to be worked on even though they accomplish the purpose they were written for. As Cunningham first described them, \ac{TD} is "not quite right code which we postpone making it right" \citep{Cunningham:1992:WPM:157709.157715}. For example, \ac{TD} could be workarounds which don't follow good coding practices, poorly structured or hard-to-read code. By definition, technical debts don't typically cause errors, preventing the code from working, but they can in some circumstances. Various reasons can motivate the introduction of technical debts: to rapidly fix an issue, development team is at the early stages of conception, lack of comprehension, skills or experience \citep{Suryanarayana20151}. \par
 
-Other work investigated the perception of developers on technical debts. It was found that the most important source of \ac{TD} is architectural decisions, that recognizing the phenomenon is essential for communication and that there is a lack of tools to manage those debts \citep{Ernst:2015:MMI:2786805.2786848}. Additionally, project teams recognize that this issue is unavoidable and necessary \citep{lim2012balancing}.
+\ac{TD} are introduced throughout the whole conception timeline and under various forms, partly because writing quality code is not always compatible with the standard development life cycle \citep{brown2010managing}. An ontology and landscape have been built to better define the subject. Design, requirement, code, test and documentation debts represent the main branches of the classification tree \citep{alves2014towards,izurieta2012organizing}. Each branch can be linked to a specific development stage and to specific criteria. For example, design debt "refers to debt that can be discovered by analyzing the source code by identifying the use of practices which violated the principles of good object-oriented design (e.g. very large or tightly coupled classes)" \citep{alves2014towards}. \par
 
+Other work investigated the perception of developers on technical debts. It was found that the most important source of \ac{TD} is architectural decisions, that recognizing the phenomenon is essential for communication and that there is a lack of tools to manage those debts \citep{Ernst:2015:MMI:2786805.2786848}. Additionally, project teams recognize that this issue is unavoidable and necessary \citep{lim2012balancing}. Technical debts cause a lot of problems: slower conception and execution of the software product \citep{allman2012managing}, worse software maintainability and quality \citep{wehaibi2016examining,zazworka2011investigating}, and higher production cost \citep{guo2011tracking}. \par
 
-%Technical debt
-%	Defintion TD (Cunningham 15)
-%	Definition classes TD (3 et 22)
-%	Nature intentionnelle des TD (24)
-%	Awareness des TD est un probleme (17)
-%	
-%Self admitted technical debt
-%	Definition SATD (Potdar 16 et 35)
-%	Presence des SATD (Potdar 16 et 35)
-%	Acteurs des SATD (Potdar 16 et 35)
-%	Correlation qualite/SATD (Bavota et Russo 8, 10)
-%	Taxonomie des SATD (Bavota et Russo 8)
-%	
-%Features
-%	Structural metrics of methods
-%	Method readability
-%	Warnings of static analysis tools (Checkstyle 1, PMD 2)	
-%	
-%Dataset
-%	9 java open source projects from (27), only design debts
-%	
-%Machine Learners
-%	5 machine learners, with fold validation and cross project
-%	
-%Results
-%	50\% precision and 52\% recall within project with RandomForest
-%	67\% precision, 55\% recall, 92\% accuracy cross project
-%	Can be applied on new projects and be good
-		
+Frequently, \ac{TD} are introduced consciously and explicitly by developers. In those cases, they are "self-admitted" and explained in comments, describing what is wrong with the related block of code \citep{PotdarS14}. Like \ac{TD}, self-admitted technical debts are encountered in most software projects. It was found that 31\% of files contain \ac{SATD}, that they remain present for a long period of time and that more experienced developers have the tendency to introduce them \citep{PotdarS14}. This proves that a proper management tool is required to deal with this issue, and that unexperienced developers would greatly benefit from such support in order to decide when code should be reworked and documented as \ac{TD}. The disparity between the experienced and unexperienced workers may also lie in the fact that the unexperienced ones don't want to admit their faults in order to maintain a positive image towards their superiors. \par
+
+Another study found that there is no clear correlation between code quality and \ac{SATD} \citep{BavotaR16}. Code quality metrics such as \ac{WMC}, \ac{CBO} and Buse and Weimer Readability \citep{Buse:tse2010} were computed and analyzed to reach this conclusion. However, the purpose of their work was not mainly to evaluate this relationship but rather to establish a taxonomy of \ac{TD}. Some threats to the validity of their results could also be made concerning the number of manually analyzed \ac{SATD} and the level at which the metrics were computed (class-level). A finer analysis would have been required because a single class can contain methods of different length, complexity, cohesion, coupling and readability. This same study found in the analyzed projects on average 51 instances of \ac{SATD} (0.3\% of all comments), that the developer who introduces a \ac{TD} is generally the same that fixes it and that they aren't all fixed. \par
 
 
 %%
 %% ELEMENTS DE LA PROBLEMATIQUE
 %%
-\section{Éléments de la problématique}  
+\section{Elements of the Problematic}  
 
-environ 3 pages
+% environ 3 pages
 
-%La description de \mbox{l'en-tête} commun de RSVP est détaillée ci-dessous:\\
-%\begin{tabular}{p{1in}p{4.5in}}
-%&\\ % Ligne vide
-%\texttt{Ver}: & \texttt{4 bits}\\
-%          & Version du protocole. La version actuelle est~1.\\[5pt]
-%\texttt{Flags}: & \texttt{4 bits}\\
-%          & Aucun Flag n'est défini. L'émetteur doit (\textbf{MUST})
-%          mettre le champ à zéro et le récepteur doit (\textbf{MUST})
-%          ignorer ce champ.\\[5pt]
-%\texttt{Msg Type}: & \texttt{8 bits}\\
-%          & Type de message\\[5pt]
-%\texttt{Checksum}: & \texttt{16 bits}\\
-%          & Complément à un du complément à un de la somme des champs
-%          de \mbox{l'en-tête}, avec le champ Checksum à~0 pour des
-%          fins de calcul. La valeur~0 signifie qu'aucun Checksum n'a
-%          été transmis. Si le résultat du calcul du Checksum donne~0,
-%          la valeur 0xFFFF doit être stockée dans ce champ.\\[5pt]
-%\texttt{TTL}: & \texttt{8 bits}\\
-%          & Valeur originelle du champ \texttt{TTL} utilisée pour
-%          transmettre ce message.\\[5pt]
-%\texttt{Reserved}: & \texttt{8 bits}\\
-%          & Réservé pour usage futur. L'émetteur doit (\textbf{MUST})
-%          mettre le champ à zéro et le récepteur doit (\textbf{MUST})
-%          ignorer ce champ.\\[5pt]
-%\texttt{Length}: & \texttt{16 bits}\\
-%          & Longueur totale du message en octets, incluant
-%          \mbox{l'en-tête} commun et tous les objets de longueur
-%          variable.
-%\end{tabular}
+It is pretty clear that technical debts account for a lot of issues in the development of software applications. They have been extensively analyzed and classified in order to have a better understanding of their impact. However, the identification, as much as the \emph{correct} identification, of \ac{SATD} remains a struggle for researchers and developers. Current methods can obtain up to 25\% of their total predictions as \ac{FP} \citep{BavotaR16}. This means that a quarter of all automatically identified \ac{TD} are not really technical debts and that the previous studies could be based on wrong information. It is true that many strategies can be employed to reduce and fix the number of \ac{TD} in a software project: take your time when implementing a solution, code refactoring, continuous tracking of \ac{TD}, proactiveness in fixing debts, etc. \citep{Ambler}. However, they are not highly effective and they frequently rely on the willingness of developers to fix the problem and their general knowledge. \par
 
-%\subsection{Autres types de structures de données}
-%L'énumération:
-%\begin{enumerate}
-%\item Un item~;
-%\item Un autre item.
-%\end{enumerate}
+Better automatic approaches have been proposed to improve the detection of \ac{TD}. One of them is to identify comment patterns that relate to self-admitted technical debts \citep{PotdarS14}. Potdar \emph{et al.} manually went through 101 762 comments to determine these patterns, which lead to the identification of 62 \ac{SATD} patterns. Here are some examples: \emph{hack, fixme, is problematic, this isn't very solid, probably a bug}. The main issue with this approach is the the manual process behind it, which introduces human error and subjectivity. Another approach is to use machine learning techniques, such as \ac{NLP}, to automatically identify \ac{SATD} using source code comments \citep{MaldonadoNLP}. This idea is promising because it does not heavily depend on the manual classification of source code comments. In fact, it outperforms the previous approach. Manual classification is still required to build the training set for the NLP classifier. However, the model built from this dataset can then be used to automatically identify \ac{SATD} in any project, thus removing any other manual analysis. \par
 
+It is important to mention that our study does not revolve on proposing a new \ac{SATD} detection method using information contained in comments, but rather using them as a base for our recommendation tool. Consequently, the proper classification of \ac{SATD} used by \ac{TEDIOUS} will directly affect its performance. To properly establish the problematic of our study, several research questions have to be addressed, the main one can be defined like this:  \par
 
-%\subsection{Le protocole IPv6}
-%Voir la Figure~\ref{fig:IPv6} pour plus de détails. Le champs DSCP est
-%décrit dans le Tableau~\ref{tab:RangesDSCP}.
-%
-%\begin{figure}[htb]
-%\centering
-%\includegraphics[width=4in]{IPv6_header}
-%\caption{L'en-tête IPv6}
-%\label{fig:IPv6}
-%\end{figure}
-%
-%\begin{table}[ht]
-%\caption{Plages de valeurs pour le champ \texttt{DSCP}}
-%\centering
-%\begin{tabular}{|c|c|l|}
-%\hline\rowcolor[gray]{0.8}\color{black}
-%Plage & Valeurs & Règle d'assignation\\\hline
-%1 & xxxxx0 & Assignation par une norme de l'IANA\\\hline
-%2 & xxxx11 & Expérimentation/Usage local\\\hline
-%3 & xxxx01 & Expérimentation/Usage local (pourrait être jointe à la plage 1)\\\hline
-%\end{tabular}
-%\label{tab:RangesDSCP}
-%\end{table}
-%
-%% On veut éviter que la figure et le tableau soient placés au-delà de la section courante.
-%\FloatBarrier
+\begin{framed}
+	How can we identify and detect technical debts in a software project using source code features and known self-admitted technical debts in a machine learning approach?
+\end{framed}
+
+This question can be divided into three others: How does \ac{TEDIOUS} work for recommending \ac{SATD} within-project? How does \ac{TEDIOUS} work for recommending SATD across-project? How would a method-level smell detector compare with \ac{TEDIOUS}? This approach is based on the hypothesis that current methods to detect technical debts are limited and inefficient and that a new approach could be beneficial to the improvement of detection performance. We also think that manual analysis and human subjectivity is detrimental to the efficiency of current methods. Consequently, we believe that a well crafted machine learning approach could lead to better results and performance values in identifying technical debts and recommending when they should be self-admitted. \par
 
 
 %%
 %% OBJECTIFS DE RECHERCHE
 %%
-\section{Objectifs de recherche}  
+\section{Research Objectives}  
 
-0.5 page
+% 0.5 page
 
-TEDIOUS (TEchnical Debt IdentificatiOn System)
-	Supervised Machine Learning approach
-	Method-level
-	Using various features of code source (independant)
-	Knowledge of previous SATD (dependant)
-	To recommend developpers with TD to be admitted
-	
-Purpose
-	1) Encourage self admitting TD (mainly done by experienced, want new to do too 35)
-	2) Alternative to smell detectors to give opportunities to improve source code
-	
-Difference
-	1) Method-level instead of class-level metrics (8) because SATD comments at method or block-level mainly
-	2) Only consider certain types of TD (design debt since largest 27)
-		Other types for future since different analysis
-		
+\begin{framed}
+	The main objective of this research is to design a machine learning approach that uses as independent variables various kinds of source code features, and as dependent variables the knowledge of previously self-admitted technical debts, to train machine learners in recommending to developers when a technical debt should be admitted.
+\end{framed}
 
-	
-	
+As mentioned previously, the purpose of this study is not to propose a novel method to identify SATD from source code comments, using patterns or \ac{NLP} \citep{MaldonadoNLP,PotdarS14}. It is more about using results of these methods to build our training dataset. Our approach relies more on source code information and metrics to identify possible \ac{TD} to self-admit. \par
+ 
+The main objective can be divided in two purposes. Firstly, tracking and managing technical debts is considered important but lacking in the industry \citep{Ernst:2015:MMI:2786805.2786848}. Consequently, \ac{TEDIOUS} could be used to encourage developers to self-admit \ac{TD} in order to easily track and fix the issue. This is particularly true for junior developers, who are less prone to doing so than experienced ones \citep{PotdarS14}. Secondly, our tool could be used as an alternative, or a complement, to existing smell detectors in proposing improvements to source code. In other words, \ac{TEDIOUS} could act as a tracking, managing and improvement tool for software projects. \par
 
-%Les objectifs de la recherche sont de concevoir un algorithme $O(n)$.
+The general objective can be divided in specific objectives. The first one aims at \emph{defining and extracting relevant features from methods}. These features are the characteristics that describe each method. In contrary to previous studies \citep{BavotaR16}, \ac{TEDIOUS} works at method-level rather than class-level because we found that \ac{SATD} comments are more frequently related to methods or blocks of code. Features can be: a set of structural metrics extracted from methods, the method's readability or warning raised by static analysis tools. \par
+
+The second specific objective aims at \emph{identifying self-admitted technical debts}. Only a certain type of technical debt is considered, namely design debts, for various reasons. Firstly, it is the most common type of \ac{TD} \citep{MaldonadoNLP}. Secondly, the other types (requirement, code, test and documentation) would require a different analysis and features. However, adding these types is part of our future work. No real detection method is used to detect those \ac{SATD}, instead, design related \ac{TD} from a previously annotated dataset consisting of 9 Java open source projects are used \citep{MaldonadoNLP}. \par
+
+The third specific objective aims at \emph{preprocessing the features}. Strongly correlated features are cleaned up to remove redundancy, metrics that don't vary or vary too much are also removed, a normalization is applied to take into account the different nature of projects and the training set is balanced by oversampling the small number of \ac{SATD} tagged methods. \par
+
+The fourth specific objective aims at \emph{building and applying machine learning models}. Five machine learners are trained and tested, performing \ac{SATD} prediction within-project and across-project. The five retained are: Decision Trees (J48), Bayesian classifiers, Random Forests, Random Trees and Bagging with Decision Trees. \par
+
 
 %%
 %% PLAN DU MEMOIRE
 %%
-\section{Plan du mémoire}  
+\section{Thesis Overview}  
 
-0.5 page
+% 0.5 page
 
-%Un tableau:
-%\begin{table}[htbp]
-%  \centering
-%  \caption{Constantes et variables du modèle analytique}
-%  \begin{tabular}{|c|l|}
-%    \hline\rowcolor[gray]{0.8}\color{black}
-%    Symbole         & Description\\\hline
-%    $\lambda$       & Taux d'arrivée moyen des requêtes de réservation de ressources\\\hline
-%    $\frac{1}{\mu}$ & Durée moyenne d'une session\\\hline
-%    $C$             & Capacité d'une cellule (nombre de sessions supportées)\\\hline
-%    $v_{moy}$       & Vitesse moyenne des MN dans le réseau d'accès\\\hline
-%    $L$             & Longueur d'un côté d'une cellule carrée\\\hline
-%    $n$             & Nombre moyen de MN dans une cellule\\\hline
-%    $\rho$          & Charge d'une cellule\\\hline
-%    $P_b$           & Probabilité de blocage d'une requête de réservation\\\hline
-%    $P_f$           & Probabilité d'interruption forcée d'une session\\\hline
-%    $P_c$           & Probabilité de compléter une session avec succès\\\hline
-%    $\Delta{}T$     & Délai de transmission\\\hline
-%  \end{tabular}
-%  \label{tab:Definitions}
-%\end{table}
-%
-%La formule d'\mbox{Erlang-B}:
-%\begin{equation}
-%  P_b = \frac{\frac{\rho^C}{C!}}{\sum\limits_{x=0}^{C}\frac{\rho^x}{x!}}
-%  \label{eq:Pblock}
-%\end{equation}
-%
-%Une autre équation:
-%\begin{equation}
-%  \begin{split}
-%    P_c &= (1 - P_b) \times (1 -  P_f)^N\\
-%        &= (1 - P_b)^{N+1}
-%  \end{split}
-%  \label{eq:ProbComplete}
-%\end{equation}
-%
-%Enfin, l'expression suivante indique le moment à partir duquel les
-%réservations de ressources sont en place:
-%\begin{equation}
-%  \Delta{}T_{init} =
-%  \begin{cases}
-%    2\Delta{}T_{E2E} & \Delta{}T_{wan} > (\Delta{}T_{rad} + \Delta{}T_{net})\\
-%    \Delta{}T_{E2E} + 3(\Delta{}T_{rad} + \Delta{}T_{net}) & \text{sinon}
-%  \end{cases}
-%  \label{eq:InitCost}
-%\end{equation}
-%
-%\paragraph{Le taux de paquets perdus} correspond au nombre de paquets
-%éliminés à cause d'une erreur de \emph{checksum} à un n\oe{}ud
-%quelconque ou d'une situation de congestion. Le taux de paquets perdus
-%pour un chemin est déterminé de la façon suivante:
-%\begin{equation}
-%  \label{eq:genPLR}
-%  PLR_P = 1 - \prod_{i=1}^N(1 - PLR_i)
-%\end{equation}
-%
-%Toutefois, si les taux d'erreurs sont très faibles, comme c'est
-%généralement le cas pour des liens optiques, on peut approximer
-%$PLR_P$ de façon à le transformer en un paramètre additif:
-%\begin{equation}
-%  \label{eq:approxPLR}
-%  \begin{split}
-%    PLR_{L_1 \oplus L_2} &= 1 - (1 - PLR_1)(1 - PLR_2)\\
-%    &= 1 - (1 - PLR_2 - PLR_1 + \underbrace{PLR_1
-%      \times PLR_2}_\text{négligeable})\qquad PLR_1 \ll 1,
-%    PLR_2 \ll 1\\
-%    &\approx PLR_1 + PLR_2
-%  \end{split}
-%\end{equation}
-%
-%\clearpage
-%
-%Une courbe:
-%\begin{figure}[htb]
-%\centering
-%\includegraphics[width=5in]{LinkUsage}
-%\caption{Délai moyen en fonction du taux d'utilisation d'un lien}
-%\label{fig:LinkUse}
-%\end{figure}
-%
-%\selectlanguage{english}
-%This paragraph is formatted by \LaTeX{} according to the standard rules of the
-%English language (\mbox{e.g.} hyphenation).
-%\selectlanguage{french}
-%
-%L'arithmétique en virgule flottante peut entraîner des erreurs
-%d'approximation et il est important d'en être conscient
-%\citep[voir][]{Goldberg1991}.
-%
-%De même, les calculs effectués sur une carte graphique (GPU) peuvent
-%introduire des erreurs d'approximation \citep{Benz2012, DSilva2012,
-%  Dabrowski2011, DeDinechin2011, DeFigueiredo2004, Filliatre2007,
-%  Fousse2007, Goubault2001, Goubault2008, Harder, Higham2002, Tanenbaum,
-%  Whitehead2011, mpmath, nichols2010, nvidia2012, Benz2012, Bao2013}.
+\paragraph{Chapter 2: Literature Review}
+The literature review provides a current state-of-the-art overview of the knowledge on technical debts and other related topics. It summarizes relevant information extracted from previous studies concerning four main topics: relationship between technical debt and source code metrics, self-admitted technical debt, code smell detection and automated static analysis tools.
+
+\paragraph{Chapter 3: The Approach and Study Definition}
+The approach followed is thoroughly described in four sections. The types of features are described and the way they are extracted is explained. The provenance and identification of the \ac{SATD} tagged comments is shared. The preprocessing that is performed on features is demystified and justified. The machine learning models chosen are revealed as well as their configuration. As for the study definition, the dataset characteristics (number of files, classes, comments, etc.) are shared for each project and the analysis method (cross validation, accuracy, precision, recall, F$_{1}$ score, \ac{MCC}, \ac{ROC}, \ac{AUC}) explained.
+
+\paragraph{Chapter 4: Analysis of Study Results and Threats to Validity}
+The study results are analyzed based on each research question: performance for within-project prediction, performance for across-project prediction and comparison with a method-level smell detector. Results indicate that within-project prediction achieves at best 50\% precision and 52\% recall. Improvement is made for across-project prediction where prediction achieves at best 67\% precision and 55\% recall. The best machine learner turned out to be Random Forest. It was also found that \ac{SATD} predictions made by \ac{TEDIOUS} only weakly relate to method-level code smells. A qualitative discussion on false positives and negatives is also proposed. Following the results analysis, several threats to validity are shared: construct, internal, conclusion and external validity threats.
+
+\paragraph{Chapter 5: Convolutionnal Neural Network with Comments and Source Code} This chapter describes an updated approach to detect \ac{TD} to self-admit and its preliminary results. First, the \ac{CNN} characteristics and features are described. Secondly, the approach is explained: the features used, the identification of \ac{SATD}, the use of word embeddings and the way the \ac{CNN} is built and applied to the context of our study. Thirdly, the study definition is described: the characteristics of the dataset and the analysis method. Finally, the study results are analyzed based on three prediction contexts: source code with comments, without comments and partially with comments. Various \ac{CNN} configurations are also analyzed.
+
+
+
+
+
+
+
+
+
