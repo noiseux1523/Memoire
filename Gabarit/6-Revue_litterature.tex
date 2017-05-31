@@ -1,9 +1,38 @@
 \Chapter{LITERATURE REVIEW}\label{sec:RevLitt}
 
-TOTAL = 4 pages
+% TOTAL = 4 pages
+
+\setlength{\parindent}{5ex}The subject of this study can be divided in four relevant topics, which will be summarized in this chapter. The literature review introduces each topic based on previous studies and research papers. The first one addresses the relationship between technical debt and source code metrics. The second defines the nature of self-admitted technical debts. The last topic combines the code smell detection approaches and automated static analysis tools.
 
 \section{Relationship Between Technical Debt and Source Code Metrics}
 
+Many researchers have tried to relate technical debts, more specifically design and code, to source code metrics in order to detect them. One of the approach is based on a technique for detecting design flaws, built on top of a set of metric rules capturing coupling, cohesion and encapsulation \citep{marinescu2012assessing}. Another study empirically validated the relationship between \ac{TD} and software quality models. Three \ac{TD} detection methods were compared with \ac{QMOOD} \citep{bansiya2002hierarchical} and only one of them had a strong correlation to quality attributes reusability and understandability \citep{griffith2014correspondence}. Another team studied how five different tools detect technical debts, their principal features, differences and missing aspects \citep{fontana2016technical}. They focused on the impact of design smells on code debt to give advices on which design debt should be prioritized for refactoring. These tools all take into account metrics, smells, coding rules and architecture violations but there is only a limited agreement among them and they still ignore some important pieces of information.
+
 \section{Self-Admitted Technical Debt}
 
+Many studies have been conducted in order to describe and classify the nature of self-admitted technical debts. \citet{PotdarS14} investigated technical debts in the source code of open source projects and they found out that developers frequently self-admit \ac{TD} they introduce, explaining why this particular block of code is temporary and needs to be reworked in the form of comments. They are some of the first to acknowledge the existence of \ac{SATD} and to propose a detection method using pattern matching in source code comments. \citet{MaldonadoS15} analyzed developers' comments in order to examine and quantify the different types of \ac{SATD}. A similar approach to \citet{PotdarS14} is followed, using pattern matching, to classify the \ac{SATD} into five types: design, defect, documentation, requirement and test. It was found that design debts are the most common, making up between 42\% and 84\% of all comments. \par
+
+\citet{BavotaR16} performed a large-scale empirical study on self-admitted technical debt in open source projects. They studied its diffusion and evolution, the actors involved in managing \ac{SATD} and the relationship between \ac{SATD} and software quality. They showed that there is on average 51 instances of \ac{SATD} per system, that code debts are the most frequent, followed by defect and requirement debts, that the number of instances increases over time because they are not fixed by developers, and that they normally survive for a long time. Like \citet{griffith2014correspondence}, they found no real correlation between \ac{SATD} and quality metrics (\ac{WMC}, \ac{CBO}, Buse and Weimer readability). \par
+
+\citet{wehaibi2016examining} also studied the relation between self-admitted technical debt and software quality. Their approach is based on investigating if more defects are present in files with more \ac{SATD}, if \ac{SATD} changes are more likely to cause the emergence of future defects and whether they are more difficult to perform. They found that no real trend was noticed between \ac{SATD} and defects, \ac{SATD} changes did not introduce more future defects compared to none \ac{SATD} changes but they are indeed more difficult to perform. \par
+
+A new approach based on \ac{NLP} techniques was used recently to detect self-admitted technical debts, more specifically design and requirement debts \citep{MaldonadoNLP}. They extracted comments from ten open source projects, cleaned them to remove the ones considered irrelevant and manually classified them into the different types of \ac{SATD}. This dataset was then used as the training set for a maximum entropy classifier. It turned out that the model could accurately identify \ac{SATD} and outperform the pattern matching method of \citet{PotdarS14}. Comments mentioning sloppy or mediocre source code were the best indicators of design debts and comments related to partially implemented requirement were the best for requirement debts. \par
+
+The detection of self-admitted technical debts is a major research approach in the study of \ac{SATD}, however, this is not the purpose of our work. We do not propose a new approach using source code comments information, instead, we gather information about the structure of the code at method-level in order to recommend to developers when to self-admit technical debts. \par
+
 \section{Code Smell Detection and Automated Static Analysis Tools}
+
+Several approaches to detect code smells have been proposed in today's literature. Reading techniques have been created to guide developers in identifying \ac{OO} designs \citep{Travassos99-ACM-Inspections}. Some formulate metrics-based rules as a detection strategy that can capture poor design practices \citep{Marinescu04-ICSM-DetectionStrategies} or use these software metrics to characterize bad smells \citep{Munro05-BadSmellIdentification}. \citet{moha2010decor} propose \ac{DECOR}, an approach using rules and thresholds on various metrics.
+
+
+
+
+
+
+
+
+
+
+
+
+

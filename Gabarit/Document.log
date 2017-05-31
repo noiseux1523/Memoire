@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  25 MAY 2017 15:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  30 MAY 2017 13:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -968,42 +968,44 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 Package acronym Info: Label `acro:MCC' newly defined as it shall be overridden
-although it is yet undefined on input line 46.
+although it is yet undefined on input line 45.
 Package acronym Info: Label `acro:ROC' newly defined as it shall be overridden
-although it is yet undefined on input line 46.
+although it is yet undefined on input line 45.
 Package acronym Info: Label `acro:AUC' newly defined as it shall be overridden
-although it is yet undefined on input line 46.
+although it is yet undefined on input line 45.
 Package acronym Info: Label `acro:DECOR' newly defined as it shall be overridde
 n
-although it is yet undefined on input line 48.
+although it is yet undefined on input line 47.
  [7]
 Package acronym Info: Label `acro:LM' newly defined as it shall be overridden
-although it is yet undefined on input line 54.
+although it is yet undefined on input line 53.
 Package acronym Info: Label `acro:LP' newly defined as it shall be overridden
-although it is yet undefined on input line 54.
+although it is yet undefined on input line 53.
 Package acronym Info: Label `acro:LOC' newly defined as it shall be overridden
-although it is yet undefined on input line 54.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 54.
+although it is yet undefined on input line 53.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 53.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 54.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 53.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 54.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 53.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 54.
+(Font)              <12> on input line 53.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 54.
+(Font)              <8> on input line 53.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 54.
+(Font)              <6> on input line 53.
+Package acronym Info: Label `acro:CNN' newly defined as it shall be overridden
+although it is yet undefined on input line 55.
  [8]) [9]
 \openout2 = `3-Abstract.aux'.
 
@@ -1069,24 +1071,27 @@ Package acronym Info: Label `acro:WMC' newly defined as it shall be overridden
 although it is yet undefined on input line 36.
 Package acronym Info: Label `acro:CBO' newly defined as it shall be overridden
 although it is yet undefined on input line 36.
- [2] [3] [4] [5]
-Package acronym Info: Label `acro:CNN' newly defined as it shall be overridden
-although it is yet undefined on input line 99.
-) [6]
+ [2] [3] [4] [5]) [6]
 \openout2 = `6-Revue_litterature.aux'.
 
  (./6-Revue_litterature.tex
 Chapter 2.
-) [7
+Package acronym Info: Label `acro:QMOOD' newly defined as it shall be overridde
+n
+although it is yet undefined on input line 9.
+[7
 
 
 
 ]
+Package acronym Info: Label `acro:OO' newly defined as it shall be overridden
+although it is yet undefined on input line 25.
+ [8]) [9]
 \openout2 = `7-Theme1.aux'.
 
  (./7-Theme1.tex
 Chapter 3.
-) [8
+) [10
 
 
 
@@ -1095,25 +1100,25 @@ Chapter 3.
 
  (./7-Theme2.tex
 Chapter 4.
-) [9
+) [11
 
 
 
-] [10]
+] [12]
 \openout2 = `7-Theme3.aux'.
 
  (./7-Theme3.tex
 Chapter 5.
-[11
+[13
 
 
 
-]) [12]
+]) [14]
 \openout2 = `8-Conclusion.aux'.
 
  (./8-Conclusion.tex
 Chapter 6.
-) [13
+) [15
 
 
 
@@ -1122,10 +1127,10 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 40.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [14
+) [16
 
 
-]) [15]
+] [17]) [18]
 \openout2 = `9-Annexes.aux'.
 
 
@@ -1133,17 +1138,17 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Appendix A.
 Package hyperref Info: bookmark level for unknown annexe defaults to 0 on input
  line 10.
-[16
+[19
 
 
 ]
 Appendix B.
-[17
+[20
 
 
 ]
 Appendix C.
-) [18
+) [21
 
 
 ]
@@ -1160,25 +1165,27 @@ Package rerunfilecheck Info: File `Document.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 10444 strings out of 493014
- 153123 string characters out of 6133351
- 262339 words of memory out of 5000000
- 13558 multiletter control sequences out of 15000+600000
+ 10493 strings out of 493014
+ 154330 string characters out of 6133351
+ 263004 words of memory out of 5000000
+ 13595 multiletter control sequences out of 15000+600000
  32639 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,51p,1445b,570s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,12n,51p,1510b,582s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2016/t
-exmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2016/texmf-dist/
-fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
-1/public/lm/lmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm
-/lmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Document.pdf (38 pages, 201137 bytes).
+texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
+16/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2016/texmf-dist/
+fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2016/texmf-dist/fonts/type
+1/public/lm/lmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/l
+m/lmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr12.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Document.pdf (41 pages, 215771 bytes).
 PDF statistics:
- 674 PDF objects out of 1000 (max. 8388607)
- 621 compressed objects within 7 object streams
- 120 named destinations out of 1000 (max. 500000)
+ 737 PDF objects out of 1000 (max. 8388607)
+ 680 compressed objects within 7 object streams
+ 132 named destinations out of 1000 (max. 500000)
  465 words of extra memory for PDF output out of 10000 (max. 10000000)
 
