@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  30 MAY 2017 13:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 MAY 2017 16:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1086,39 +1086,56 @@ although it is yet undefined on input line 9.
 ]
 Package acronym Info: Label `acro:OO' newly defined as it shall be overridden
 although it is yet undefined on input line 25.
- [8]) [9]
+Package acronym Info: Label `acro:HIST' newly defined as it shall be overridden
+
+although it is yet undefined on input line 25.
+Package acronym Info: Label `acro:SVM' newly defined as it shall be overridden
+although it is yet undefined on input line 25.
+ [8]
+Package acronym Info: Label `acro:ASAT' newly defined as it shall be overridden
+
+although it is yet undefined on input line 27.
+Package acronym Info: Label `acro:OSS' newly defined as it shall be overridden
+although it is yet undefined on input line 29.
+ [9]) [10]
 \openout2 = `7-Theme1.aux'.
 
  (./7-Theme1.tex
 Chapter 3.
-) [10
+<figs/approach.pdf, id=651, 232.36812pt x 128.48pt>
+File: figs/approach.pdf Graphic file (type pdf)
+ <use figs/approach.pdf>
+Package pdftex.def Info: figs/approach.pdf used on input line 13.
+(pdftex.def)             Requested size: 472.03111pt x 261.01942pt.
+
+[11
 
 
 
-]
+] [12 <./figs/approach.pdf>]) [13]
 \openout2 = `7-Theme2.aux'.
 
  (./7-Theme2.tex
 Chapter 4.
-) [11
+) [14
 
 
 
-] [12]
+] [15]
 \openout2 = `7-Theme3.aux'.
 
  (./7-Theme3.tex
 Chapter 5.
-[13
+[16
 
 
 
-]) [14]
+]) [17]
 \openout2 = `8-Conclusion.aux'.
 
  (./8-Conclusion.tex
 Chapter 6.
-) [15
+) [18
 
 
 
@@ -1127,28 +1144,28 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 40.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [16
+) [19
 
 
-] [17]) [18]
+] [20] [21])
+[22]
 \openout2 = `9-Annexes.aux'.
 
-
-(./9-Annexes.tex
+ (./9-Annexes.tex
 Appendix A.
 Package hyperref Info: bookmark level for unknown annexe defaults to 0 on input
  line 10.
-[19
+[23
 
 
 ]
 Appendix B.
-[20
+[24
 
 
 ]
 Appendix C.
-) [21
+) [25
 
 
 ]
@@ -1165,13 +1182,13 @@ Package rerunfilecheck Info: File `Document.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 10493 strings out of 493014
- 154330 string characters out of 6133351
- 263004 words of memory out of 5000000
- 13595 multiletter control sequences out of 15000+600000
+ 10568 strings out of 493014
+ 155666 string characters out of 6133351
+ 264331 words of memory out of 5000000
+ 13653 multiletter control sequences out of 15000+600000
  32639 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,51p,1510b,582s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,12n,51p,1627b,600s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 16/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2016/texmf-dist/
@@ -1182,10 +1199,10 @@ m/lmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 /texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2
 016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-
 dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Document.pdf (41 pages, 215771 bytes).
+Output written on Document.pdf (45 pages, 260551 bytes).
 PDF statistics:
- 737 PDF objects out of 1000 (max. 8388607)
- 680 compressed objects within 7 object streams
- 132 named destinations out of 1000 (max. 500000)
- 465 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 854 PDF objects out of 1000 (max. 8388607)
+ 767 compressed objects within 8 object streams
+ 147 named destinations out of 1000 (max. 500000)
+ 470 words of extra memory for PDF output out of 10000 (max. 10000000)
 
