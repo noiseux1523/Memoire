@@ -20,55 +20,61 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Document.bib
+Repeated entry---line 1733 of file Document.bib
+ : @article{chawla2002smote
+ :                         ,
+I'm skipping whatever remains of this entry
 -- IEEEtranSN.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Warning--to sort, need author, organization, or key in checkstyle
+Warning--to sort, need author, organization, or key in pmd
 Name 2 in "Suryanarayana, Girish and , and Samarthyam, Ganesh and Sharma, Tushar" has a comma at the end for entry Suryanarayana20151
 while executing---line 2900 of file IEEEtranSN-francais.bst
 
 Done.
-You've used 35 entries,
+You've used 44 entries,
             5261 wiz_defined-function locations,
-            1429 strings with 21891 characters,
-and the built_in function-call counts, 40740 in all, are:
-= -- 3686
-> -- 1558
-< -- 283
-+ -- 669
-- -- 385
-* -- 2320
-:= -- 5867
-add.period$ -- 92
-call.type$ -- 35
-change.case$ -- 198
-chr.to.int$ -- 679
-cite$ -- 70
-duplicate$ -- 2413
-empty$ -- 2880
-format.name$ -- 462
-if$ -- 9222
+            1474 strings with 23189 characters,
+and the built_in function-call counts, 48569 in all, are:
+= -- 4417
+> -- 1808
+< -- 338
++ -- 778
+- -- 445
+* -- 2732
+:= -- 6994
+add.period$ -- 110
+call.type$ -- 44
+change.case$ -- 236
+chr.to.int$ -- 808
+cite$ -- 92
+duplicate$ -- 2917
+empty$ -- 3450
+format.name$ -- 536
+if$ -- 10988
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 383
-newline$ -- 138
-num.names$ -- 142
-pop$ -- 1164
+missing$ -- 457
+newline$ -- 165
+num.names$ -- 170
+pop$ -- 1400
 preamble$ -- 1
-purify$ -- 161
+purify$ -- 190
 quote$ -- 2
-skip$ -- 2932
+skip$ -- 3511
 stack$ -- 0
-substring$ -- 1606
-swap$ -- 1785
-text.length$ -- 56
+substring$ -- 1900
+swap$ -- 2120
+text.length$ -- 68
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 863
-warning$ -- 0
-while$ -- 232
+type$ -- 1065
+warning$ -- 2
+while$ -- 274
 width$ -- 0
-write$ -- 448
-(There was 1 error message)
+write$ -- 543
+(There were 2 error messages)

@@ -1,0 +1,26 @@
+HEADER FOR METHOD-LEVEL-METRICS-AND-APs
+--------------------------------
+
+FileName
+MethodName
+BeginAt
+EndAt
+Size 
+ParNbr
+CalledNbr
+DeclNbr
+ExprStmtNbr
+ExprNbr
+CommentNbr
+VarsNbr
+McCabe
+Readability
+Satd
+SatdType
+PercMatch
+MatchedRule
+MatchedCmtNbr
+LongMethod
+LongParameterList
+SpaghettiCode
+
