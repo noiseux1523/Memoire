@@ -1,1 +1,5 @@
 \select@language {english}
+\contentsline {table}{\numberline {Table\nobreakspace 3.1}{\ignorespaces Characteristics of the studied projects.}}{21}{table.3.1}
+\contentsline {table}{\numberline {Table\nobreakspace 4.1}{\ignorespaces Average performance of different machine learners for within-project prediction.}}{26}{table.4.1}
+\contentsline {table}{\numberline {Table\nobreakspace 4.2}{\ignorespaces Within-project prediction: results of Random Forests for each system, without and with SMOTE balancing.}}{27}{table.4.2}
+\contentsline {table}{\numberline {Table\nobreakspace 4.3}{\ignorespaces Top 10 discriminant features (within-project prediction). (M): source code metrics, (CS): CheckStyle checks, (P): PMD checks.}}{29}{table.4.3}

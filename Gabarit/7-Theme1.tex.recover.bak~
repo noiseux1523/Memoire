@@ -40,18 +40,18 @@ Firstly, to extract those source code metrics, an XML representation of the Java
 
 %Using  the {\em  srcML} tool, we processed each Java file, and stored the XML Java representation. We then used the Python ElementTree XML package to build the file level document object model; visiting the DOM and extracting methods along with  the attached comments and computing a set of structural metrics \Foutse{are these metrics different from those described in the approach section?}. We assigned to a method the method proceeding comments not separated from the method definition by any other statement. Then, as also described in Section \ref{sec:approach}, for each method we extracted source code structural metrics, the Buse and Weimer readability metric, and then we executed CheckStyle and PMD on each source code file. Finally, we mapped CheckStyle and PMD warnings onto methods, by knowing the line(s) in which a warning occurred and the line span of each method.
 
-Secondly, to extract the code readability metric, we use the one proposed by \citet{Buse:tse2010} and its related tool, based on a machine learning approach. This metric is based on specific characteristics of the source code: indentation, line length, identifier length, comment density, and the use of keywords and operators. The tool was also designed using feedback from human annotators, they were asked to rate the readability of code snippets, that was then used to classify snippets as "less" or "more" readable. A value between 0 and 1 is then computed based on these characteristics, 1 being the highest readability. The readability metric was considered relevant because, as mentioned by \citet{BavotaR16}, code readability is strongly correlated with the introduction of technical debts. Code that is difficult to read is consequently difficult to maintain and understand \citep{Buse:tse2010} thus more likely to contain \ac{TD}. Finally, here are the nine source-code metrics we extracted: \par
+Secondly, to extract the code readability metric, we use the one proposed by \citet{Buse:tse2010} and its related tool, based on a machine learning approach. This metric is based on specific characteristics of the source code: indentation, line length, identifier length, comment density, and the use of keywords and operators. The tool was also designed using feedback from human annotators, they were asked to rate the readability of code snippets, that was then used to classify snippets as "less" or "more" readable. A value between 0 and 1 is then computed based on these characteristics, 1 being the highest readability. The readability metric was considered relevant because, as mentioned by \citet{BavotaR16}, code readability is strongly correlated with the introduction of technical debts. Code that is difficult to read is consequently difficult to maintain and understand \citep{Buse:tse2010} thus more likely to contain \ac{TD}. Finally, here are the nine source-code metrics we extracted:
 
 \begin{itemize}
-\item \textit{LOC}: Number of lines of code in the body of a method. % (excluding comments).
-\item \textit{Number of statements}: Number of occurrences of expression statements in a method. In case of local class definitions, the number of statements in the enclosing method is increased by the total number of statements of the local class.
-\item \textit{Number of comments}: Number of single-line and multi-line comments in a method.
-\item \textit{McCabe cyclomatic complexity}: Number of linearly independent paths of a method \citep{mccabe90}.
-\item \textit{Number of passed parameters}: Number of parameters of a method.
-\item \textit{Number of identifiers}: Number of unique identifiers in a method.
-\item \textit{Number of call sites}: Number of locations in the code where zero or more arguments are passed to a method, or zero or more return values are received from the method.
-\item \textit{Number of declarations}: Number of variable and class declaration in a method.
-\item \textit{Number of expressions}: Number of expressions contained in a method.
+\item \textit{LOC:} Number of lines of code in the body of a method. % (excluding comments).
+\item \textit{Number of statements: } Number of occurrences of expression statements in a method. In case of local class definitions, the number of statements in the enclosing method is increased by the total number of statements of the local class.
+\item \textit{Number of comments:} Number of single-line and multi-line comments in a method.
+\item \textit{McCabe cyclomatic complexity:} Number of linearly independent paths of a method \citep{mccabe90}.
+\item \textit{Number of passed parameters:} Number of parameters of a method.
+\item \textit{Number of identifiers:} Number of unique identifiers in a method.
+\item \textit{Number of call sites:} Number of locations in the code where zero or more arguments are passed to a method, or zero or more return values are received from the method.
+\item \textit{Number of declarations:} Number of variable and class declaration in a method.
+\item \textit{Number of expressions:} Number of expressions contained in a method.
 \end{itemize}
 
 \subsubsection{Warnings Raised by Static Analysis Tools}
@@ -62,9 +62,11 @@ Warnings raised by static analysis tools are essential to detect poor coding pra
 
 %0.5 page
 
-As mentioned previously, the purpose of this study is not to propose a novel approach to detect \ac{SATD} using information from comments. Previous work has been completed aiming to address this issue by using  matching \citep{MaldonadoS15}, \citep{PotdarS14} or \ac{NLP} combined with machine learners \citep{maldonado17}. However, we still needed a dataset with methods tagged as design debt to train our machine learning models. \citet{maldonado17}, which worked on the \ac{NLP} approach, published a dataset of 10 open source projects annotated with methods tagged as technical debt or not. We used this dataset for our machine learning models and only the design debts were retained. \par
+As mentioned previously, the purpose of this study is not to propose a novel approach to detect \ac{SATD} using information from comments. Previous work has been completed aiming to address this issue by using pattern matching \citep{MaldonadoS15}, \citep{PotdarS14} or \ac{NLP} combined with machine learners \citep{maldonado17}. However, we still needed a dataset with methods tagged as design debt to train our machine learning models. \citet{maldonado17}, which worked on the \ac{NLP} approach, published a dataset of 10 open source projects annotated with methods tagged as technical debt or not. We used this dataset for our machine learning models and only the design debts were retained. \par
 
 Some preprocessing had to be done on the dataset since it reported \ac{SATD} at file-level and not method-level. To link \ac{SATD} to methods, we matched the \ac{SATD} comment string to the comments attached to methods. We used pattern matching in order to achieve this result, making sure that method comment strings completely matched \ac{SATD} comments before tagging it as a technical debt.
+
+%Since the dataset reports SATD at file level, we attributed SATDs to methods by matching the SATD comment strings  onto comments attached to methods. In doing so we relied on pattern patching making sure that the SATD prone comment was exactly matched including the line order.
 
 \subsection{Feature Preprocessing}
 
@@ -91,14 +93,14 @@ To build performing predictors, a quality training set must be fed to the machin
 \subsection{Building and Applying Machine Learning Models}
 
 %0.5 page
- We extracted various metrics, we identified \ac{SATD} methods and we performed a preprocessing on features, the only remaining step is building and applying the machine learning models. Two sets are required: the training set and testing set. The training set contains the methods with their corresponding features and an additional variable to tag them as positive or negative (\ac{SATD} or not). It is used to build the models. The testing set contains the same methods with the corresponding features, but not the variable tagging the methods because we want to test the prediction performance from a blank dataset. We experimented with five types of machine learners in Weka \citep{hall2009weka}: Decision Trees (J48), Bayesian classifiers, Random Forests, Random Trees, and Bagging with Decision Trees. Only the default configurations were used, however, further work could be made by trying to optimize these configurations. Here is a little overview of each algorithms: \par 
+ We extracted various metrics, we identified \ac{SATD} methods and we performed a preprocessing on features, the only remaining step is building and applying the machine learning models. Two sets are required: the training set and testing set. The training set contains the methods with their corresponding features and an additional variable to tag them as positive or negative (\ac{SATD} or not). It is used to build the models. The testing set contains the same methods with the corresponding features, but not the variable tagging the methods because we want to test the prediction performance from a blank dataset. We experimented with five types of machine learners in Weka \citep{hall2009weka}: Decision Trees (J48), Bayesian classifiers, Random Forests, Random Trees, and Bagging with Decision Trees. Only the default configurations were used, however, further work could be made by trying to optimize these configurations. \par 
 
 \begin{itemize}
-\item \textit{Decision trees}, namely J48, which implements the standard C4.5 algorithm using the concept of information entropy \citep{Quinlan1993}.
-\item \textit{Bayesian classifiers}, which apply the Bayes' theorem to classify observations, assuming strong independence between features. More specifically, we use BayesNet in Weka, which is the base class for Bayes Network classifiers. It provides datastructures and facilities common to learning algorithms K2 and B.
-\item \textit{Random forests}, which averages multiple decision trees trained on different parts of a same training set, with the aim to reduce the variance of the classifications and the risk of overfitting to the training set \citep{Breiman2001}.
+\item \textit{Decision trees}, namely J48, which implements the standard C4.5 algorithm using the concept of information entropy \citep{Quinlan1993};
+\item \textit{Bayesian classifiers}, which apply the Bayes' theorem to classify observations, assuming strong independence between features. More specifically, we use BayesNet in Weka, which is the base class for Bayes Network classifiers. It provides datastructures and facilities common to learning algorithms K2 and B;
+\item \textit{Random forests}, which averages multiple decision trees trained on different parts of a same training set, with the aim to reduce the variance of the classifications and the risk of overfitting to the training set \citep{;
 \item \textit{Random trees}, which build decision trees considering a number of randomly chosen attributes at each node.
-\item \textit{Bagging}, which combines multiple classifiers (decision trees in our case) built on random samples of the training set \citep{Breiman1996}. It was designed to improve the stability and accuracy of machine learning algorithms, to reduce the variance and to avoid overfitting.
+\item \textit{Bagging} combines multiple classifiers (decision trees in our case) built on random samples of the training set.
 \end{itemize}
 
  
@@ -134,101 +136,11 @@ The goal of this study is to assess the prediction performance of our machine le
 
 %2 pages
 
-\begin{table*}[htpb]
-	\caption{Characteristics of the studied projects.}
-	\label{tab:projects}
-	\centering
-	\begin{scriptsize}
-		\begin{adjustbox}{center}
-			\begin{tabular}{l r | r r r r | r | r r | r}
-				\hline
-				\multirow{2}{*}{Project} & \multirow{2}{*}{Release} &\multicolumn{4}{c|}{Number of} &\multicolumn{1}{c|}{Number of Comments}
-				&\multicolumn{2}{c|}{Number of Design SATD} & \% of Methods\\
-				&& Files& Classes& Methods& Comments                      & $\in$ Methods& $\notin$ Methods & $\in$ Methods & with design SATD\\
-				\hline
-				Ant&1.7.0 & 1,113 & 1,575 & 11,052 & 20,325               & 13,359        &  1 & 57 & 0.5\% \\
-				ArgoUML&0.34& 1,922 & 2,579 & 14,346 & 64,393       &  17,722       & 203 & 425  & 2\%\\
-				Columba&1.4& 1,549 & 1,884 & 7,035 & 33,415           & 10,305        & 8 & 418 & 5\%  \\
-				Hibernate&3.3.2 GA & 2,129 & 2,529 & 17,405 & 15,901 & 9,073        & 21  &  377  &  2\%\\
-				jEdit & 4.2 & 394 & 889 & 4,785 & 15,468                     &10,894         & 6  & 77  & 2\% \\
-				jFreeChart&1.0.19 & 1,017 & 1,091 & 10,343 & 22,827  & 15,412       &  4  & 1,881  & 18\%\\
-				jMeter&2.1& 1,048 & 1,328 & 8,680 & 19,721                &  12,672      & 95 &  424 & 5\%  \\
-				jRuby&1.4.0 & 970 & 2,063 & 14,163 & 10,599               & 7,809        & 16   & 275  &  2\%\\
-				Squirrel&3.0.3 & 2,325 & 4,123 & 16,648 & 25,216         & 15,574      &35  & 173  & 1\%\\
-				\hline
-			\end{tabular}
-		\end{adjustbox}
-	\end{scriptsize}
-		\vspace{-4mm}
-\end{table*}
-
-To evaluate our approach, we used a dataset that was already analyzed to find \ac{SATD} methods \citep{maldonado17}. It consists of ten open source projects, although we used only nine of them since we could not download the specific version of EMF, where \ac{SATD} were detected using a \ac{NLP} approach. The methods were then manually validated and classified. Table \ref{tab:projects} summarizes the characteristics of all studied projects. It provides information on project releases; number of files, classes, methods and comments in projects; number of comments in methods; number of design \ac{SATD} in methods and not in methods; and percentage of methods with design \ac{SATD}. \par
-
-Some differences were observed with the characteristics extracted from the original paper \citep{maldonado17}, concerning the number of classes, methods and comments. Several reasons can explain these disparities: different extraction tooling, tools characteristics and processing. For example, we considered each comment as a single entity, whereas \citet{maldonado17} regrouped successive line comments. Additionally, we did not establish a separation between classes and their inner classes, and we considered interfaces as classes. Methods related to inner classes were associated to its container. However, these differences are not an issue for our study since they concern classes and our approach is method-level based. Some files from \citet{maldonado17} analysis could have been left aside because of their absence of comments. \par 
-
-We can obtain some interesting information when looking at Table \ref{tab:projects}. As explained previously, we clearly see a prevalence of method-related \ac{SATD} compared to class-level \ac{SATD}. They are at least 2 times more common for \textsc{ArgoUML}, which contains about half of all the class-level \ac{TD} in the dataset, and can be up to 470 times more common for \textsc{jFreeChart}, only 4 out of the 1,885 design \ac{SATD} are at class-level. Globally, we are around 10 times more likely to encounter a method-level design technical debt in our dataset than class-level. We also observe that the dataset is highly unbalanced between \ac{SATD} prone and non \ac{SATD} prone methods. \textsc{jFreeChart} provides a decent ratio with 18\% of methods containing a design \ac{TD} but all other projects have 5\% or less of their methods containing design debts. To put this into perspective, out of the 11,052 methods in \textsc{Ant}, only 57 are \ac{SATD} prone. For \textsc{jEdit}, only 77 instances out of 4,785 are proned to contain a \ac{SATD}. Unsurprisingly, as we will discuss in the analysis of study results, these two projects achieved the lowest performance values. \par 
-
-The replication package provided by \citet{maldonado17} contains information on \ac{SATD} at class-level. However, to build the oracle, we need to assign \ac{SATD} at method-level. To do so, we performed pattern matching between known \ac{SATD} comments and comments attached to methods. If a comment is matched inside a class but not a method, it is attached to the class, if it is matched outside of a class, it is attached to the file. These class-level and file-level technical debts are not considered in our study, which is not a big issue since they represent the minority.
+To evaluate our approach, we used a dataset that was already analyzed to find \ac{SATD} methods \citep{maldonado17}. It consists of ten open source projects, although we used only nine of them since we could not download the specific version of EMF, where \ac{SATD} were detected using a \ac{NLP} approach. The methods were then manually validated and classified. 
 
 \subsection{Analysis Method}
 
-%3.5 pages
-
-For \textbf{RQ1}, we want to know how \ac{TEDIOUS} work for recommending \ac{SATD} within-project. A 10-fold cross validation was performed on each project. In other terms, the dataset of a single project is divided into 10 folds, the machine learner is trained on 9 of them and tested on the remaining one, until all 10 configurations are processed to limit the effect of randomness. The performance values are averaged over the 10 iterations to obtain the most representative picture. For \textbf{RQ2}, we want to know how our approach work for recommending \ac{SATD} across-project. The process is similar to \textbf{RQ1}, but instead we train on 8 projects and test on the remaining one, until all the 9 possible combinations are executed. \par 
-
-Standard performance metrics for evaluating automated classification were computed to analyze our approach: precision, recall and $F_{1}$ score. These metrics were computed for the \ac{SATD} category. \par 
-
-\ac{Pr} is the percentage of relevant instances of methods predicted as \ac{SATD} among all the retrieved instances. \ac{TP} and \ac{FP} are the number of true positives, correct methods predicted as \ac{SATD}, and false positives, incorrect methods predicted as \ac{SATD}.
-
-\[
-Pr=\frac{TP}{TP+FP}
-\]
-
-\ac{Rc} is the percentage of relevant instances of \ac{SATD} methods that have been retrieved over all the relevant instances. \ac{FN} is the number of false negatives, incorrect methods predicted as non \ac{SATD}.
-
-\[
-Rc=\frac{TP}{TP+FN}
-\]
-
-The $F_{1}$ score is the harmonic mean between precision and recall, which provides a single measurement for evaluating a system.
-
-\[
-F_1=2 \cdot \frac{PR \cdot RC}{PR + RC}
-\]
-
-The previous metrics are specific to the \ac{SATD} class, which means true negatives \ac{TN}, correct methods predicted as non \ac{SATD}, are not considered. Consequently, other metrics are required to complement the analysis: accuracy, Matthews Correlation Coefficient (MCC) \citep{matthews1975comparison}, and the Area under the Receiving Operating Characteristics (ROC) Curve (AUC). \par 
-
-\ac{Acc} is the total number of methods correctly predicted, whether it is containing a \ac{SATD} or not, among all the methods analyzed.
-
-\[
-Acc=\frac{TP+TN}{TP+TN+FP+FN}
-\]
-
-The \ac{MCC} is a metric used in machine learning to evaluate the quality of a two-class classifier. It is especially useful when the dataset is unbalanced \citep{matthews1975comparison}. Values vary between -1 for a completely wrong classifier and 1 for a completely correct classifier. 
-
-\[
-MCC=\frac{TP \cdot TN-FP \cdot FN}{\sqrt{(TP+FP)(FN+TN)(FP+TN)(TP+FN)}}
-\]
-
-The \ac{ROC} curve is created by plotting the true positive rate against the false positive rate at various classifier thresholds. The \ac{AUC} is the area under the ROC curve, it provides a value to evaluate the quality of the classifier. A value of AUC=0.5 refers to a random classifier and the higher the value, the better the classifier.
-
-To have a good idea of the performance of each machine learner, each of the previous metrics have to be considered in the evaluation. We want a balance between precision and recall because we want as much as possible to detect real technical debts and all of them. We cannot only use $F_{1}$ score because we want to take into account the effect of chance on the predictions. Thats is why we also computed the MCC and AUC values.
-
-In addition to these performance indicators, we also consider the importance of each features for the training of the predictors. We used a technique implemented in Weka for Random Forests named \ac{MDI} \citep{louppe2013understanding}, which measures the importance of variables on randomized decision trees.
-
-For \textbf{RQ3}, we want to compare \ac{TEDIOUS} with a popular method-level smell detector (DECOR) \citep{moha2010decor} in classifying as technical debt methods labeled as \ac{SATD}. DECOR can detect a large amount of smells, but most of them are at class-level, which are not relevant with the level at which \ac{TEDIOUS} work. Instead of using all of them, we narrowed our analysis on two method-level smells, \textit{Long Method} and \textit{Long Parameter List}. To identify a Long Method smell, DECOR follows the rule {\em LOC}$>th_1$ where $>th_1$ is a threshold for the LOC. To identify a Long Parameter List smell, DECOR follows the rule {\em ParNbr}$>th_2$ where {\em ParNbr}$>th_2$ is a threshold for the number of parameters. Various thresholds for LOC and ParNbr were considered in our study, between percentile 0.5 and 0.95, as well as the default thresholds, namely percentile 0.75 for LOC and outlier (third quartile $+ 1.5 \cdot IQR$ (interquartile range)) for ParNbr.
-
-To finish, we performed a qualitative analysis on false positives and false negatives examples we obtained when evaluating our predictors. Its purpose is to complement our quantitative analysis and discuss the limitations of our approach in recommending \ac{TD} with real examples.
-
-
-
-
-
-
-
-
-
-
+3.5 pages
 
 
 
