@@ -374,11 +374,7 @@ As we see in the table, smell detection's performances are never as good as TEDI
 
 In this section, we discuss some examples out of 100 reported SATD methods that we manually inspected. The purpose behind this analysis is to explain cases where TEDIOUS correctly or incorrectly classified SATD.
 
-As examples of \textbf{true positives}, we have in 
-
-As an example of \textbf{false positive}, we have in
-
-As an example of \textbf{false negative}, we have in
+As an example of \textbf{true positives}, we have in \textsc
 
 \section{Threats to Validity}
 

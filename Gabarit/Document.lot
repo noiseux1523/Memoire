@@ -3,3 +3,7 @@
 \contentsline {table}{\numberline {Table\nobreakspace 4.1}{\ignorespaces Average performance of different machine learners for within-project prediction.}}{26}{table.4.1}
 \contentsline {table}{\numberline {Table\nobreakspace 4.2}{\ignorespaces Within-project prediction: results of Random Forests for each system, without and with SMOTE balancing.}}{27}{table.4.2}
 \contentsline {table}{\numberline {Table\nobreakspace 4.3}{\ignorespaces Top 10 discriminant features (within-project prediction). (M): source code metrics, (CS): CheckStyle checks, (P): PMD checks.}}{29}{table.4.3}
+\contentsline {table}{\numberline {Table\nobreakspace 4.4}{\ignorespaces Average performance of different machine learners for cross-project prediction.}}{30}{table.4.4}
+\contentsline {table}{\numberline {Table\nobreakspace 4.5}{\ignorespaces Cross-project prediction: results of Random Forests for each system, without and with SMOTE balancing.}}{32}{table.4.5}
+\contentsline {table}{\numberline {Table\nobreakspace 4.6}{\ignorespaces Top 10 discriminant features (cross-project prediction). (M): source code metrics, (CS): CheckStyle checks, (P): PMD checks.}}{33}{table.4.6}
+\contentsline {table}{\numberline {Table\nobreakspace 4.7}{\ignorespaces Overall DECOR Performances in predicting SATD (the last line reports results for default thresholds).}}{34}{table.4.7}

@@ -36,45 +36,45 @@ Name 2 in "Suryanarayana, Girish and , and Samarthyam, Ganesh and Sharma, Tushar
 while executing---line 2900 of file IEEEtranSN-francais.bst
 
 Done.
-You've used 50 entries,
+You've used 51 entries,
             5261 wiz_defined-function locations,
-            1512 strings with 23926 characters,
-and the built_in function-call counts, 54026 in all, are:
-= -- 4943
-> -- 1932
-< -- 387
-+ -- 839
-- -- 472
-* -- 2997
-:= -- 7831
-add.period$ -- 122
-call.type$ -- 50
-change.case$ -- 256
-chr.to.int$ -- 909
-cite$ -- 104
-duplicate$ -- 3270
-empty$ -- 3851
-format.name$ -- 570
-if$ -- 12226
+            1518 strings with 24103 characters,
+and the built_in function-call counts, 55136 in all, are:
+= -- 5044
+> -- 1962
+< -- 397
++ -- 853
+- -- 478
+* -- 3051
+:= -- 7981
+add.period$ -- 125
+call.type$ -- 51
+change.case$ -- 260
+chr.to.int$ -- 934
+cite$ -- 106
+duplicate$ -- 3338
+empty$ -- 3940
+format.name$ -- 580
+if$ -- 12486
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 504
-newline$ -- 183
-num.names$ -- 194
-pop$ -- 1512
+missing$ -- 513
+newline$ -- 186
+num.names$ -- 198
+pop$ -- 1539
 preamble$ -- 1
-purify$ -- 205
+purify$ -- 208
 quote$ -- 2
-skip$ -- 3933
+skip$ -- 4018
 stack$ -- 0
-substring$ -- 2139
-swap$ -- 2383
-text.length$ -- 80
+substring$ -- 2198
+swap$ -- 2433
+text.length$ -- 81
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 1196
+type$ -- 1220
 warning$ -- 2
-while$ -- 310
+while$ -- 317
 width$ -- 0
-write$ -- 614
+write$ -- 625
 (There were 2 error messages)
