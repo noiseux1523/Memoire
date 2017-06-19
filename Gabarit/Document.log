@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  16 JUN 2017 15:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 JUN 2017 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1398,7 +1398,7 @@ although it is yet undefined on input line 29.
 
  (./7-Theme1.tex
 Chapter 3.
-<figs/approach.pdf, id=685, 232.36812pt x 128.48pt>
+<figs/approach.pdf, id=691, 232.36812pt x 128.48pt>
 File: figs/approach.pdf Graphic file (type pdf)
  <use figs/approach.pdf>
 Package pdftex.def Info: figs/approach.pdf used on input line 13.
@@ -1413,7 +1413,7 @@ Package acronym Info: Label `acro:SMOTE' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 89.
  [16] [17] [18]
-<figs/MachineLearning.pdf, id=842, 1798.72pt x 1000.73875pt>
+<figs/MachineLearning.pdf, id=848, 1798.72pt x 1000.73875pt>
 File: figs/MachineLearning.pdf Graphic file (type pdf)
 
 <use figs/MachineLearning.pdf>
@@ -1457,45 +1457,45 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 [28] [29] [30] [31] [32] [33]
 Package mdframed Info: Not enough space on this page on input line 369.
-) [34]
+ [34] [35] [36]) [37]
 \openout2 = `7-Theme3.aux'.
 
  (./7-Theme3.tex
 Chapter 5.
-[35
+[38
 
 
 
-]) [36]
+]) [39]
 \openout2 = `8-Conclusion.aux'.
 
  (./8-Conclusion.tex
 Chapter 6.
-) [37
+) [40
 
 
 
-] (./Document.bbl [38
+] (./Document.bbl [41
 
 
-] [39] [40] [41] [42]) [43]
+] [42] [43] [44] [45]) [46]
 \openout2 = `9-Annexes.aux'.
 
  (./9-Annexes.tex
 Appendix A.
 Package hyperref Info: bookmark level for unknown annexe defaults to 0 on input
  line 10.
-[44
+[47
 
 
 ]
 Appendix B.
-[45
+[48
 
 
 ]
 Appendix C.
-) [46
+) [49
 
 
 ]
@@ -1508,13 +1508,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 183.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 183.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 183.
 Package rerunfilecheck Info: File `Document.out' has not changed.
-(rerunfilecheck)             Checksum: 80550B71E9EC38FB6636663D4E82D9F2;4350.
+(rerunfilecheck)             Checksum: 7231A5FC24C69BF1594CD6C1D4728D73;4430.
  ) 
 Here is how much of TeX's memory you used:
- 19482 strings out of 493014
- 331203 string characters out of 6133351
- 460600 words of memory out of 5000000
- 22420 multiletter control sequences out of 15000+600000
+ 19495 strings out of 493014
+ 331404 string characters out of 6133351
+ 460685 words of memory out of 5000000
+ 22427 multiletter control sequences out of 15000+600000
  55516 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,17n,92p,10397b,646s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1536,10 +1536,10 @@ ive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/f
 onts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
 /public/lm/lmtt12.pfb>
-Output written on Document.pdf (66 pages, 478964 bytes).
+Output written on Document.pdf (69 pages, 494837 bytes).
 PDF statistics:
- 1145 PDF objects out of 1200 (max. 8388607)
- 1022 compressed objects within 11 object streams
- 200 named destinations out of 1000 (max. 500000)
- 475 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1183 PDF objects out of 1200 (max. 8388607)
+ 1057 compressed objects within 11 object streams
+ 206 named destinations out of 1000 (max. 500000)
+ 483 words of extra memory for PDF output out of 10000 (max. 10000000)
 

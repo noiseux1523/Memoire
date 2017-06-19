@@ -374,27 +374,60 @@ As we see in the table, smell detection's performances are never as good as TEDI
 
 In this section, we discuss some examples out of 100 reported SATD methods that we manually inspected. The purpose behind this analysis is to explain cases where TEDIOUS correctly or incorrectly classified SATD.
 
-As examples of \textbf{true positives}, we have in 
+As examples of \textbf{true positives}, we have in \textsc{ArgoUML} two methods labeled as SATD with different source code metrics values: \textit{createFlow} in class \textsc{CoreFactoryEUMLImpl} and \textit{invokeFeature} in class \textsc{ModelAccessModelInterpreter}. The first method has a $Readability\approx1$, $LOC=2$ and $McCabe=1$. The second method has a $Readability=0$, $LOC=755$ and $McCabe=178$. Even though both methods have obvious differences in the values of features defining them, TEDIOUS was still able to detect them as being SATD prone. It proves that our approach can detect a wide variety of methods, based on their characteristics, containing a technical debt.
 
-As an example of \textbf{false positive}, we have in
+As an example of \textbf{false positive}, we have in \textsc{jEdit} the method \textit{initialize} in class \textsc{RE} with the following characteristics: $LOC=511$, $NbParameters=5$, $NbCalls=197$, $NbDeclarations=32$, $NbExpressions=618$, $NbComments=97$, $McCabe=102$ and $Readability=0$. The readability is obviously null considering the size of the method. TEDIOUS clearly classified this method has a SATD while it is not, it plays a major role in the class and is intrinsically complex. It may not contain a technical debt, but it may require some improvements to make it more understandable. Recommendations on such long and complex methods should not be worthless or annoying for developers. It should be taken as a hint that this kind of method has to be carefully implemented because of their complex nature, making sure that it is as readable and understandable as it can be. 
 
-As an example of \textbf{false negative}, we have in
+As an example of \textbf{false negative}, we have in \textsc{Columba} the method \textit{start} in class \textsc{ColumbaServer} that is labeled as a design SATD but was classified as a non-SATD method by TEDIOUS. The SATD comment linked to the method is positioned immediately after an "if" statement and it says \textit{"something is very wrong here"}. The developer intentionally mentions that the block of code is problematic, consequently leading external viewers to believe that a technical debt may be present. However, if such viewer analyzes the structure of the method, nothing could be considered as a symptom of a technical debt presence. This means that there is a deeper level to the characteristics defining a technical debt, other than structural and source code metrics. The TD in this case could be justified if we look at the bigger picture of the class or its context, not only its metrics. In other words, there are cases where TEDIOUS could not properly identify the presence of technical debts only using source code and structural metrics, which limits it applicability.
 
 \section{Threats to Validity}
 
+Here are the threats to validity of our study, based on the guidelines for case study research \citep{yin2013case}. We identified 5 threats: construct, internal, conclusion, reliability and external validity threat.
+
 \subsection{Construct validity}
 
-1 page
+%1 page
+
+\textit{Construct validity} threats concern the relationship between theory and observation. These threats are mainly due to measurement errors of metrics and labeled design SATD. Different calculation processes can result in different values of source code metrics, and the same goes for warnings obtained from static analysis tools. We used CheckStyle and PMD, but several other tools are available. 
+
+As for the SATD, we used the dataset from \citet{maldonado17}, where they annotated comments, labeling them as SATD or not. We used this information to build our oracle. Some preprocessing had to be done because the information was gathered at file-level, and not method-level. Pattern matching was performed to link SATD comments to their respective methods, which may have introduced some imprecisions. We established a strict threshold to match SATD comments, which could be revised. Indeed, we only accepted the exact identity of comments from the dataset of \citet{maldonado17} with the ones from the source code. Not all comments were matched using this approach because of a different processing chain, consequently, some methods which are in fact containing a technical debt were not be tagged as such. In the future, we plan to revise those matches which are close to being perfect but are not, to draw a more accurate picture of the systems. 
+
+This aspect can be detrimental and beneficial for TEDIOUS. On one side, the learning phase is more difficult since the process creates more false negatives (methods tagged as non-SATD but that are SATD). On the other side, these false negatives would make a more balanced dataset, if they can be traced back by our approach, leading to improved performance. Additionally, any errors made by \citet{maldonado17} when analyzing the systems would have an impact on the accuracy of our approach. Finally, some comments in the dataset exactly matched more than one comment in the source code. When we encountered such cases, we tagged these comments as \textit{Maybe}, since we could not exactly classify them.
 
 \subsection{Internal validity}
 
-1 page
+%1 page
+
+\textit{Internal Validity} threats concern internal factors that could have influenced our results. Several of them can be identified, (i) machine learners have been applied with default settings, (ii) CheckStyle and PMD were used with default configurations, (iii) source code metrics were computed with \textit{srcML} and (iv) \textsc{EMF} project was not used in our dataset.
+
+The fact that machine learners were built with default configurations only means that better results could have been obtained with a proper parameter optimization. In the worst case, this only means that our results are the lower-bound of what could be obtained. For Checkstyle, the default rules provided by the tool were used, the same goes for PMD. Similarly to the machine learners, a proper calibration of rules could have resulted in a different set of warnings which would have depicted a more accurate view of the systems. Consequently, the usefulness of checks could have been improved for the prediction. In fact, we plan to use SATD to help customize CheckStyle and PMD rules.
+
+Source code metrics were computed using srcML \citep{Collard2013} (except for the readability metric which was computed using the tool of \citet{buse2008metric}), therefore, other metric extractors could provide different results. However, the purpose of this study was not to evaluate our approach for specific static analysis tools and metri extractors. These tools were selected because of their ease of use and their popularity. They were complementary to the realisation of TEDIOUS. The main purpose of our work was to highlight the potential of learning technical debt to self-admit from source code features.
+
+We did not include \textsc{EMF} project to our dataset because we were unable to download the archive release 2.4.1. Since we already have 9 systems, some with similar amounts of classes (\textsc{ArgoUML}, \textsc{Hibernate} and \textsc{Columba}) or a smaller amount (\textsc{Squirrel}), we believe skipping \textsc{EMF} will not bias our results, even though it is the largest in terms of LOC.
 
 \subsection{Conclusion validity}
 
-1 page
+%1 page
+
+\textit{Conclusion Validity} threats concern the relationship between treatments and outcomes. To avoid these threats, we use appropriate metrics to quantify the performance of machine learners (AUC and MCC) and tools to compute the importance of learning features (MDI). We use these diagnostics in addition to thresholds to define the acceptability of our outcomes ($AUC>0.5$ and $MCC>0$, the closer to $1.0$ the better).
+
+\subsection{Reliability validity}
+
+%1 page
+
+\textit{Reliability validity} threats concern the replicability of our study. We attempt to provide, as far as we can, all the necessary information to replicate our study. We plan to share a replication package containing: source code, raw data and scripts.
 
 \subsection{External validity}
 
-1 page
+%1 page
+
+\textit{External validity} threats concern the generalization of our results. We cannot guarantee that our results can be generalized to all Java programs even though we used the same systems from a previous study \citep{maldonado17} and even if the systems cover different domains. Our dataset is somewhat limited since we only have 9 systems. As future work, more studies are required to verify the extent at which TEDIOUS can be employed and how our findings can be generalized to other projects, domains and programming languages.
+
+
+
+
+
+
+
 

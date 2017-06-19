@@ -20,7 +20,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Document.bib
-Repeated entry---line 1827 of file Document.bib
+Repeated entry---line 1841 of file Document.bib
  : @article{chawla2002smote
  :                         ,
 I'm skipping whatever remains of this entry
@@ -36,45 +36,45 @@ Name 2 in "Suryanarayana, Girish and , and Samarthyam, Ganesh and Sharma, Tushar
 while executing---line 2900 of file IEEEtranSN-francais.bst
 
 Done.
-You've used 51 entries,
+You've used 53 entries,
             5261 wiz_defined-function locations,
-            1518 strings with 24103 characters,
-and the built_in function-call counts, 55136 in all, are:
-= -- 5044
-> -- 1962
-< -- 397
-+ -- 853
-- -- 478
-* -- 3051
-:= -- 7981
-add.period$ -- 125
-call.type$ -- 51
-change.case$ -- 260
-chr.to.int$ -- 934
-cite$ -- 106
-duplicate$ -- 3338
-empty$ -- 3940
-format.name$ -- 580
-if$ -- 12486
+            1533 strings with 24574 characters,
+and the built_in function-call counts, 56913 in all, are:
+= -- 5202
+> -- 2012
+< -- 407
++ -- 875
+- -- 490
+* -- 3148
+:= -- 8261
+add.period$ -- 131
+call.type$ -- 53
+change.case$ -- 267
+chr.to.int$ -- 960
+cite$ -- 110
+duplicate$ -- 3449
+empty$ -- 4090
+format.name$ -- 595
+if$ -- 12885
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 513
-newline$ -- 186
-num.names$ -- 198
-pop$ -- 1539
+missing$ -- 530
+newline$ -- 194
+num.names$ -- 206
+pop$ -- 1591
 preamble$ -- 1
-purify$ -- 208
+purify$ -- 214
 quote$ -- 2
-skip$ -- 4018
+skip$ -- 4151
 stack$ -- 0
-substring$ -- 2198
-swap$ -- 2433
-text.length$ -- 81
+substring$ -- 2259
+swap$ -- 2505
+text.length$ -- 82
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 1220
+type$ -- 1255
 warning$ -- 2
-while$ -- 317
+while$ -- 327
 width$ -- 0
-write$ -- 625
+write$ -- 650
 (There were 2 error messages)
