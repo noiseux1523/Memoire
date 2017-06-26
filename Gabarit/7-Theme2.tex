@@ -93,6 +93,7 @@ Table \ref{tab:bysyswithin} highlights the within-project prediction results, fo
 
 If we look at the balanced dataset, the same trend is observed as in the balanced dataset but with lower performance results. Precision is generally lower except for \textsc{Ant} and \textsc{jEdit} which obtain a small improvement. These two systems should normally benefit from balancing but the data from the few SATDs is not even enough to build a decent artificial training set, leading to a negligible gain in precision. However, as expected with balancing, we see a decent increase in their recall and the same goes for the other systems. Generally speaking, the accuracy, $F_1$ score, MCC and AUC is better for \textsc{Ant} and \textsc{jEdit} only, the other systems did not benefit from the balancing.
 
+\begin{landscape}
 \begin{table*}[t]
 	\caption{Top 10 discriminant features (within-project prediction). (M): source code metrics,  (CS): CheckStyle checks, (P): PMD checks.}
 	\label{tab:top10features}
@@ -190,6 +191,7 @@ If we look at the balanced dataset, the same trend is observed as in the balance
 	}
 	\vspace{-2mm}
 \end{table*}
+\end{landscape}
 
 Table \ref{tab:top10features} reports the top 10 features in within-project prediction according to the MDI technique. The importance of each feature is ranked for each system. Four features are in the top 10 of all projects, and they are all source code metrics. The most important one is the readability metric of \citet{buse2008metric}, which is number the top feature for 7 systems. This observation is contrasting with the work of \citet{BavotaR16} where they found that there was little correlation between SATD and code quality metrics as well as readability. The difference may lie in the fact that TEDIOUS works at method-level and not class-level like in the study of \citet{BavotaR16}. A class contains several methods, some can be readable and others not really. The previous work may not have been able to work at granularity fine enough to detect these potential SATDs. The other three features are the number of declarations (\textit{DeclNbr}), of parameters (\textit{ParNbr}) and the number of lines of code (\textit{LOC}). Having \textit{ParNbr} and \textit{LOC} in the top features is interesting because they are typical metrics used in smell detectors. In fact, for \textbf{RQ$_3$}, we study how a smell detector compares with TEDIOUS by relying solely on \textit{Long Method} and \textit{Long Parameter List} smell detection.
 	
@@ -289,6 +291,7 @@ For the balanced dataset, results do not seem to be improving. Some systems bene
 
 To summarize, we can conclude that SMOTE rebalancing does not help a lot because (i) the very limited samples of positive examples is not enough to act as a seed for the generation of articifial instances (ii) static analysis warnings are sparse and have a boolean nature, which is not appropriate for a proper usage of SMOTE. We can also conclude that cross-project prediction can be very beneficial, except for the systems with a small amount of SATDs. The main reason is that, for cross-project prediction, the number of SATD methods in the training set is larger than for within-project prediction.
 
+\begin{landscape}
 \begin{table*}[t]
 	\caption{Top 10 discriminant features (cross-project prediction). (M): source code metrics,  (CS): CheckStyle checks, (P): PMD checks.}
 	\label{tab:top10featuresac}
@@ -319,6 +322,7 @@ To summarize, we can conclude that SMOTE rebalancing does not help a lot because
 	}
 	\vspace{-2mm}
 \end{table*}
+\end{landscape}
 
 Table \ref{tab:top10featuresac} reports the top 10 features in cross-project prediction according to the MDI technique. The same features as in the within-project prediction are at the top, the most important being the source code metrics. \textit{Readability} is still the feature playing the biggest role, for all the systems, followed by \textit{LOC} once again and \textit{CommentNbr} which moves up 4 spots. \textit{ParNbr} drops a couple of spots and becomes less important than other metrics capturing the code size and complexity, namely \textit{DeclNbr}, \textit{ExprStmtNbr} and \textit{McCabe}. In within-project prediction, 22 warning checks were in the top 10 of at least one system, in cross-project prediction, there are only 4 of them (\textit{LocalVariableCouldBeFinal}, \textit{MethodArgumentCouldBeFinal}, \textit{FinalParameters} and \textit{LineLength}). However, these checks are in the top 10 of more systems ($>4$). These checks are related to declaring final variables, parameters not being reassigned and the length of lines. Again, two checks seem correlated, namely \textit{FinalParameters} and \textit{MethodArgumentCouldBeFinal}. Both were kept after the Spearman's analysis because the latter recommends the argument to be \textsc{final} only if it is not reassigned, \\textit{FinalParameters} does not.
 
@@ -330,11 +334,11 @@ Table \ref{tab:top10featuresac} reports the top 10 features in cross-project pre
 
 %1.5 pages
 
+\begin{landscape}
 \begin{table*}[t]
 	\caption{Overall DECOR Performances in predicting SATD (the last line reports results for default thresholds).}
 	\label{tab:decor}
 	\centering
-	\begin{scriptsize}
 		\begin{adjustbox}{center}
 			\begin{tabular}{lccccclccccclccccc}
 				\multirow{2}{*}{Percentile} & \multicolumn{5}{c}{Long Method (LM)} & & \multicolumn{5}{c}{Long Parameter List (LPL)} & & \multicolumn{5}{c}{LM $\cup$ LPL}\\
@@ -356,9 +360,9 @@ Table \ref{tab:top10featuresac} reports the top 10 features in cross-project pre
 				\hline
 			\end{tabular}
 		\end{adjustbox}
-	\end{scriptsize}
 	\vspace{-3mm}
 \end{table*}
+\end{landscape}
 
 Table \ref{tab:decor} reports the overall DECOR performances in predicting SATD. They rely in the detection of \textit{Long Method} and \textit{Long Parameter List} smells by DECOR, and the union of both. In other terms, we want to know how well this smell detector can recommend technical debts based on the detection of these smells. DECOR was tested with thresholds at different percentiles of LOC and number of parameters. The unions of the two smells are done for same threshold values.
 

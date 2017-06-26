@@ -11,7 +11,7 @@ This section will describe the steps followed to design \ac{TEDIOUS}, our propos
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=\linewidth]{figs/approach.pdf}
-	\caption{Proposed approach for recommending SATD.}
+	\caption{Proposed approach for recommending SATD with TEDIOUS.}
 	\label{fig:approach}
 	\vspace{-4mm}
 \end{figure}
@@ -134,11 +134,11 @@ The goal of this study is to assess the prediction performance of our machine le
 
 %2 pages
 
-\begin{table*}[htpb]
+\begin{landscape}
+\begin{table*}[t]
 	\caption{Characteristics of the studied projects.}
 	\label{tab:projects}
 	\centering
-	\begin{scriptsize}
 		\begin{adjustbox}{center}
 			\begin{tabular}{l r | r r r r | r | r r | r}
 				\hline
@@ -158,9 +158,9 @@ The goal of this study is to assess the prediction performance of our machine le
 				\hline
 			\end{tabular}
 		\end{adjustbox}
-	\end{scriptsize}
 		\vspace{-4mm}
 \end{table*}
+\end{landscape}
 
 To evaluate our approach, we used a dataset that was already analyzed to find \ac{SATD} methods \citep{maldonado17}. It consists of ten open source projects, although we used only nine of them since we could not download the specific version of EMF, where \ac{SATD} were detected using a \ac{NLP} approach. The methods were then manually validated and classified. Table \ref{tab:projects} summarizes the characteristics of all studied projects. It provides information on project releases; number of files, classes, methods and comments in projects; number of comments in methods; number of design \ac{SATD} in methods and not in methods; and percentage of methods with design \ac{SATD}. \par
 

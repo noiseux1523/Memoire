@@ -40,20 +40,21 @@
 \BOOKMARK [0][-]{chapter.5}{5 CONVOLUTIONAL NEURAL NETWORK WITH COMMENTS AND SOURCE CODE}{}% 40
 \BOOKMARK [1][-]{section.5.1}{5.1 Convolutional Neural Network}{chapter.5}% 41
 \BOOKMARK [1][-]{section.5.2}{5.2 The Approach}{chapter.5}% 42
-\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Features}{section.5.2}% 43
+\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Source Code}{section.5.2}% 43
 \BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Identification of Self-Admitted Technical Debt}{section.5.2}% 44
-\BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Word Embeddings}{section.5.2}% 45
+\BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Source Code Preprocessing and Word Embeddings}{section.5.2}% 45
 \BOOKMARK [2][-]{subsection.5.2.4}{5.2.4 Building and Applying CNN}{section.5.2}% 46
 \BOOKMARK [1][-]{section.5.3}{5.3 Study Definition}{chapter.5}% 47
 \BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Dataset}{section.5.3}% 48
 \BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 Analysis Method}{section.5.3}% 49
 \BOOKMARK [1][-]{section.5.4}{5.4 Study Results}{chapter.5}% 50
-\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Source Code With Comments}{section.5.4}% 51
-\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 Source Code Without Comments}{section.5.4}% 52
-\BOOKMARK [2][-]{subsection.5.4.3}{5.4.3 Source Code Partially With Comments}{section.5.4}% 53
-\BOOKMARK [0][-]{chapter.6}{6 CONCLUSION}{}% 54
-\BOOKMARK [1][-]{section.6.1}{6.1 Summary of Work}{chapter.6}% 55
-\BOOKMARK [1][-]{section.6.2}{6.2 Limitations of the Proposed Solution}{chapter.6}% 56
-\BOOKMARK [1][-]{section.6.3}{6.3 Future Work}{chapter.6}% 57
-\BOOKMARK [0][-]{chapter*.19}{BIBLIOGRAPHY}{}% 58
-\BOOKMARK [0][-]{chapter*.19}{APPENDICES}{}% 59
+\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Source Code Comments Only}{section.5.4}% 51
+\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 Source Code With Comments}{section.5.4}% 52
+\BOOKMARK [2][-]{subsection.5.4.3}{5.4.3 Source Code Without Comments}{section.5.4}% 53
+\BOOKMARK [2][-]{subsection.5.4.4}{5.4.4 Source Code Partially With Comments}{section.5.4}% 54
+\BOOKMARK [0][-]{chapter.6}{6 CONCLUSION}{}% 55
+\BOOKMARK [1][-]{section.6.1}{6.1 Summary of Work}{chapter.6}% 56
+\BOOKMARK [1][-]{section.6.2}{6.2 Limitations of the Proposed Solution}{chapter.6}% 57
+\BOOKMARK [1][-]{section.6.3}{6.3 Future Work}{chapter.6}% 58
+\BOOKMARK [0][-]{chapter*.19}{BIBLIOGRAPHY}{}% 59
+\BOOKMARK [0][-]{chapter*.19}{APPENDICES}{}% 60

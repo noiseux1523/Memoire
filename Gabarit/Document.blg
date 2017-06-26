@@ -20,7 +20,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Document.bib
-Repeated entry---line 1841 of file Document.bib
+Repeated entry---line 1891 of file Document.bib
  : @article{chawla2002smote
  :                         ,
 I'm skipping whatever remains of this entry
@@ -32,49 +32,50 @@ Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Warning--to sort, need author, organization, or key in checkstyle
 Warning--to sort, need author, organization, or key in pmd
+Warning--to sort, need author, organization, or key in word2vec
 Name 2 in "Suryanarayana, Girish and , and Samarthyam, Ganesh and Sharma, Tushar" has a comma at the end for entry Suryanarayana20151
 while executing---line 2900 of file IEEEtranSN-francais.bst
 
 Done.
-You've used 53 entries,
+You've used 57 entries,
             5261 wiz_defined-function locations,
-            1533 strings with 24574 characters,
-and the built_in function-call counts, 56913 in all, are:
-= -- 5202
-> -- 2012
-< -- 407
-+ -- 875
-- -- 490
-* -- 3148
-:= -- 8261
-add.period$ -- 131
-call.type$ -- 53
-change.case$ -- 267
-chr.to.int$ -- 960
-cite$ -- 110
-duplicate$ -- 3449
-empty$ -- 4090
-format.name$ -- 595
-if$ -- 12885
+            1548 strings with 25084 characters,
+and the built_in function-call counts, 60091 in all, are:
+= -- 5499
+> -- 2092
+< -- 427
++ -- 912
+- -- 508
+* -- 3297
+:= -- 8702
+add.period$ -- 139
+call.type$ -- 57
+change.case$ -- 281
+chr.to.int$ -- 1012
+cite$ -- 120
+duplicate$ -- 3659
+empty$ -- 4355
+format.name$ -- 620
+if$ -- 13614
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 530
-newline$ -- 194
-num.names$ -- 206
-pop$ -- 1591
+missing$ -- 560
+newline$ -- 206
+num.names$ -- 218
+pop$ -- 1693
 preamble$ -- 1
-purify$ -- 214
+purify$ -- 224
 quote$ -- 2
-skip$ -- 4151
+skip$ -- 4399
 stack$ -- 0
-substring$ -- 2259
-swap$ -- 2505
-text.length$ -- 82
+substring$ -- 2384
+swap$ -- 2631
+text.length$ -- 84
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 1255
-warning$ -- 2
-while$ -- 327
+type$ -- 1350
+warning$ -- 3
+while$ -- 344
 width$ -- 0
-write$ -- 650
+write$ -- 689
 (There were 2 error messages)
