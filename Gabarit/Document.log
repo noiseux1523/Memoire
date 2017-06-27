@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  26 JUN 2017 16:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 JUN 2017 16:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1117,8 +1117,14 @@ Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 91.
  (./Document.aux (./1-Dedicace.aux)
 (./2-Remerciements.aux) (./3-Resume_sujet.aux) (./3-Abstract.aux)
 (./4-Sigles_Abrev.aux) (./5-Introduction.aux) (./6-Revue_litterature.aux)
-(./7-Theme1.aux) (./7-Theme2.aux) (./7-Theme3.aux) (./8-Conclusion.aux)
-(./9-Annexes.aux))
+(./7-Theme1.aux) (./7-Theme2.aux) (./7-Theme3.aux
+
+LaTeX Warning: Label `tab:projects' multiply defined.
+
+
+LaTeX Warning: Label `tab:bysyswithin' multiply defined.
+
+) (./8-Conclusion.aux) (./9-Annexes.aux))
 \openout1 = `Document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
@@ -1136,7 +1142,8 @@ LaTeX Font Info:    ... okay on input line 95.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
 LaTeX Font Info:    ... okay on input line 95.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 95.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1401,7 +1408,7 @@ although it is yet undefined on input line 29.
 
  (./7-Theme1.tex
 Chapter 3.
-<figs/approach.pdf, id=704, 232.36812pt x 128.48pt>
+<figs/approach.pdf, id=711, 232.36812pt x 128.48pt>
 File: figs/approach.pdf Graphic file (type pdf)
  <use figs/approach.pdf>
 Package pdftex.def Info: figs/approach.pdf used on input line 13.
@@ -1416,7 +1423,7 @@ Package acronym Info: Label `acro:SMOTE' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 89.
  [16] [17] [18]
-<figs/MachineLearning.pdf, id=860, 1798.72pt x 1000.73875pt>
+<figs/MachineLearning.pdf, id=867, 1798.72pt x 1000.73875pt>
 File: figs/MachineLearning.pdf Graphic file (type pdf)
 
 <use figs/MachineLearning.pdf>
@@ -1486,50 +1493,53 @@ or im-age clas-si-fi-ca-tion ([]Krizhevsky
 
 
 
-] <figs/CNN.png, id=1061, 732.7375pt x 537.00626pt>
+] <figs/CNN.png, id=1068, 732.7375pt x 537.00626pt>
 File: figs/CNN.png Graphic file (type png)
  <use figs/CNN.png>
 Package pdftex.def Info: figs/CNN.png used on input line 31.
 (pdftex.def)             Requested size: 472.03111pt x 345.94438pt.
 
 [44] [45 <./figs/CNN.png>] [46]
-<figs/CNNProcess.png, id=1090, 921.4425pt x 1003.75pt>
+<figs/CNNProcess.png, id=1097, 921.4425pt x 1003.75pt>
 File: figs/CNNProcess.png Graphic file (type png)
 
 <use figs/CNNProcess.png>
-Package pdftex.def Info: figs/CNNProcess.png used on input line 90.
+Package pdftex.def Info: figs/CNNProcess.png used on input line 88.
 (pdftex.def)             Requested size: 472.03111pt x 514.18782pt.
- [47]) [48] [49 <./figs/CNNProcess.png>]
+ [47] [48] [49] [50 <./figs/CNNProcess.png>] [51]
+[52
+
+
+]) [53] [54]
 \openout2 = `8-Conclusion.aux'.
 
-
-(./8-Conclusion.tex
+ (./8-Conclusion.tex
 Chapter 6.
-) [50
+) [55
 
 
 
-] (./Document.bbl [51
+] (./Document.bbl [56
 
 
-] [52] [53] [54] [55]) [56]
+] [57] [58] [59] [60]) [61]
 \openout2 = `9-Annexes.aux'.
 
  (./9-Annexes.tex
 Appendix A.
 Package hyperref Info: bookmark level for unknown annexe defaults to 0 on input
  line 10.
-[57
+[62
 
 
 ]
 Appendix B.
-[58
+[63
 
 
 ]
 Appendix C.
-) [59
+) [64
 
 
 ]
@@ -1543,12 +1553,16 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 184.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 184.
 Package rerunfilecheck Info: File `Document.out' has not changed.
 (rerunfilecheck)             Checksum: 6F12ECBE90927C702C098A885DA0714F;4548.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 19556 strings out of 493014
- 332345 string characters out of 6133351
- 452180 words of memory out of 5000000
- 22465 multiletter control sequences out of 15000+600000
+ 19565 strings out of 493014
+ 332434 string characters out of 6133351
+ 452185 words of memory out of 5000000
+ 22467 multiletter control sequences out of 15000+600000
  55516 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,17n,92p,10412b,646s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1569,10 +1583,10 @@ local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/
 fonts/type1/public/lm/lmtt12.pfb>
-Output written on Document.pdf (79 pages, 582351 bytes).
+Output written on Document.pdf (84 pages, 591088 bytes).
 PDF statistics:
- 1273 PDF objects out of 1440 (max. 8388607)
- 1133 compressed objects within 12 object streams
- 223 named destinations out of 1000 (max. 500000)
+ 1310 PDF objects out of 1440 (max. 8388607)
+ 1165 compressed objects within 12 object streams
+ 230 named destinations out of 1000 (max. 500000)
  501 words of extra memory for PDF output out of 10000 (max. 10000000)
 

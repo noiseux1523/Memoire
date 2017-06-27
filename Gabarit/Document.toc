@@ -55,16 +55,16 @@
 \contentsline {subsection}{\numberline {5.2.3}Source Code Preprocessing and Word Embeddings}{46}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Building and Applying CNN}{47}{subsection.5.2.4}
 \contentsline {section}{\numberline {5.3}Study Definition}{48}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Dataset}{48}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Analysis Method}{48}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Study Results}{48}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Source Code Comments Only}{48}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Source Code With Comments}{48}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Source Code Without Comments}{48}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}Source Code Partially With Comments}{48}{subsection.5.4.4}
-\contentsline {chapter}{\numberline {6}CONCLUSION}{50}{chapter.6}
-\contentsline {section}{\numberline {6.1}Summary of Work}{50}{section.6.1}
-\contentsline {section}{\numberline {6.2}Limitations of the Proposed Solution}{50}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future Work}{50}{section.6.3}
-\contentsline {compteur}{BIBLIOGRAPHY}{51}{chapter*.19}
-\contentsline {compteur}{APPENDICES}{57}{chapter*.19}
+\contentsline {subsection}{\numberline {5.3.1}Dataset}{49}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Analysis Method}{52}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Study Results}{53}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Source Code Comments Only}{53}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Source Code With Comments}{53}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Source Code Without Comments}{53}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Source Code Partially With Comments}{53}{subsection.5.4.4}
+\contentsline {chapter}{\numberline {6}CONCLUSION}{55}{chapter.6}
+\contentsline {section}{\numberline {6.1}Summary of Work}{55}{section.6.1}
+\contentsline {section}{\numberline {6.2}Limitations of the Proposed Solution}{55}{section.6.2}
+\contentsline {section}{\numberline {6.3}Future Work}{55}{section.6.3}
+\contentsline {compteur}{BIBLIOGRAPHY}{56}{chapter*.19}
+\contentsline {compteur}{APPENDICES}{62}{chapter*.19}

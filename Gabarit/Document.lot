@@ -7,3 +7,5 @@
 \contentsline {table}{\numberline {Table\nobreakspace 4.5}{\ignorespaces Cross-project prediction: results of Random Forests for each system, without and with SMOTE balancing.}}{34}{table.4.5}
 \contentsline {table}{\numberline {Table\nobreakspace 4.6}{\ignorespaces Top 10 discriminant features (cross-project prediction). (M): source code metrics, (CS): CheckStyle checks, (P): PMD checks.}}{36}{table.4.6}
 \contentsline {table}{\numberline {Table\nobreakspace 4.7}{\ignorespaces Overall DECOR Performances in predicting SATD (the last line reports results for default thresholds).}}{38}{table.4.7}
+\contentsline {table}{\numberline {Table\nobreakspace 5.1}{\ignorespaces Characteristics of the studied projects.}}{51}{table.5.1}
+\contentsline {table}{\numberline {Table\nobreakspace 5.2}{\ignorespaces Within-project prediction: results of CNN for each system using source code comments only}}{54}{table.5.2}

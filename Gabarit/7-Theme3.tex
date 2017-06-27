@@ -83,8 +83,6 @@ Finally, the methods extracted are all tagged as positive or negative examples. 
 
 % 2 page
 
-So far, we extracted source code from various projects, with or without comments, we identified SATD methods, we preprocessed the dataset and performed a word embedding. The only step remaining is building and applying the convolutional neural network. Four sets are required, as described in the previous section: two sets for training, one containing SATD methods and the other not, and two sets for testing, one of positive and the other of negative examples. The sets contain the tokenized source code of the nine studied projects.
-
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=\linewidth]{figs/CNNProcess.png}
@@ -93,27 +91,105 @@ So far, we extracted source code from various projects, with or without comments
 	\vspace{-4mm}
 \end{figure}
 
+So far, we extracted source code from various projects, with or without comments, we identified SATD methods, we preprocessed the dataset and performed a word embedding. The only step remaining is building and applying the convolutional neural network. Four sets are required, as described in the previous section: two sets for training, one containing SATD methods and the other not, and two sets for testing, one of positive and the other of negative examples. The sets contain the tokenized source code of the nine studied projects.
+
 Figure \ref{fig:CNNProcess} provides an overview of the CNN process. To increase the training speed and to benefit as much as possible from the processing power available, several threads are created. One thread is started for each fold, using a pair of previously generated training files. Up to five threads can be processed at the same time. The next actions are all performed simultaneously on each thread, until we have models trained for all folds. 
 
-The evaluation process consists of two main phases: the training and the testing phase. In the former, some data preparation is required: load the two training sets, build the vocabulary, shuffle, and split the dataset in a training and development set. 
+The evaluation process consists of two main phases: the training and the testing phase. In the former, some data preparation is required: load the two training sets, build the vocabulary, shuffle, and split the dataset in a training and development set. The development set is used to tune parameters of the CNN and to prevent it from over-fitting. Afterwards, the CNN is built using user-defined parameters and default values. In our case, mainly the default configuration is considered. The training procedure is defined and summaries are generated for: loss, accuracy, train, development and model. Then, variables are initialized, such as embedding vectors, and training batches generated. Finally, a training loop is executed where a training and evaluation step are repeated. The trained model is saved multiple times during the loop and the last one is used for the testing. 
+
+The testing phase can start once the training is finished. Data preparation is also required for this step: load the two testing sets and map them into the vocabulary. Afterwards, the meta graph and the variables from the model previously saved are loaded. Testing batches are generated and tensors we want to evaluate are determined. We can then start the testing loop where predictions are made. Once over, performance metrics can be computed,  namely: accuracy, recall, precision, specificity and $F_1$. These metrics are saved in a different file from the predictions made on each method. The final step consists of combining the performance metrics of all models for further analysis.
 
 \section{Study Definition}
 
-0.5 page
+% 0.5 page
+
+The goal of this new approach is to assess the prediction performance of a convolutional neural network in recommending technical debts to self-admit. The focus is the same as for TEDIOUS, enhancing the source code quality by keeping track of TDs. The perspective is to be able to suggest to developers, more accurately than with TEDIOUS, when to admit technical debts. We aim to address four research questions:
+
+\begin{itemize}
+	\item \textbf{RQ1}: How does a CNN work for recommending SATD with source code comments only?
+	\item \textbf{RQ2}: How does a CNN work for recommending SATD with source code  with comments?
+	\item \textbf{RQ3}: How does a CNN work for recommending SATD with source code without comments?
+	\item \textbf{RQ4}: How does a CNN work for recommending SATD with source code partially with comments?
+\end{itemize}
 
 \subsection{Dataset}
 
-1.5 page
+% 1.5 page
+
+\begin{landscape}
+	\begin{table*}[t]
+		\caption{Characteristics of the studied projects.}
+		\label{tab:projects}
+		\centering
+		\begin{adjustbox}{center}
+			\begin{tabular}{l r | r r r r | r | r r | r}
+				\hline
+				\multirow{2}{*}{Project} & \multirow{2}{*}{Release} &\multicolumn{4}{c|}{Number of} &\multicolumn{1}{c|}{Number of Comments}
+				&\multicolumn{2}{c|}{Number of Design SATD} & \% of Methods\\
+				&& Files& Classes& Methods& Comments                      & $\in$ Methods& $\notin$ Methods & $\in$ Methods & with design SATD\\
+				\hline
+				Ant&1.7.0 & 1,113 & 1,575 & 11,052 & 20,325               & 13,359        &  1 & 57 & 0.5\% \\
+				ArgoUML&0.34& 1,922 & 2,579 & 14,346 & 64,393       &  17,722       & 203 & 425  & 2\%\\
+				Columba&1.4& 1,549 & 1,884 & 7,035 & 33,415           & 10,305        & 8 & 418 & 5\%  \\
+				Hibernate&3.3.2 GA & 2,129 & 2,529 & 17,405 & 15,901 & 9,073        & 21  &  377  &  2\%\\
+				jEdit & 4.2 & 394 & 889 & 4,785 & 15,468                     &10,894         & 6  & 77  & 2\% \\
+				jFreeChart&1.0.19 & 1,017 & 1,091 & 10,343 & 22,827  & 15,412       &  4  & 1,881  & 18\%\\
+				jMeter&2.1& 1,048 & 1,328 & 8,680 & 19,721                &  12,672      & 95 &  424 & 5\%  \\
+				jRuby&1.4.0 & 970 & 2,063 & 14,163 & 10,599               & 7,809        & 16   & 275  &  2\%\\
+				Squirrel&3.0.3 & 2,325 & 4,123 & 16,648 & 25,216         & 15,574      &35  & 173  & 1\%\\
+				\hline
+			\end{tabular}
+		\end{adjustbox}
+		\vspace{-4mm}
+	\end{table*}
+\end{landscape}
+
+To evaluate this new approach, the same dataset was used as in TEDIOUS \citep{maldonado17}. The methods are already classified as SATD or not, and Table \ref{tab:projects} summarizes the characteristics of all studied projects. Various information describe the content and nature of each project. This table was already presented in Section 3.2.1. However, a brief overview is still necessary to reiterate important facts. 
+
+There are some disparities between the results we obtained when analyzing the studies and what \citet{maldonado17} obtained. However, this does not really represent an issue since many of these differences concern classes while our CNN approach is method-level based, like TEDIOUS. This aspect is also important since we clearly see a prevalence of method-related rather than class-related SATD. Out of all methods in a project, only a very small amount contains a technical debt, making the dataset highly unbalanced. As we will discuss in the analysis of results, the lower the amount of technical debts in a system, the lower the prediction performance. Since the dataset from \citet{maldonado17} classified classes instead of methods, we performed pattern matching between known SATD comments and comments attached to methods in the dataset.
 
 \subsection{Analysis Method}
 
-2 pages
+% 2 pages
+
+For \textbf{RQ1}, we want to know how a convolutional neural network with source code comments only work for recommending SATD within-project. We also want to compare the results with the within-project predictions of TEDIOUS. A 10-fold cross validation was performed on each project, like for TEDIOUS, and the performance values are averaged over the 10 iterations. The same process is followed for \textbf{RQ2}, \text{RQ3} and \textbf{RQ4}.
+
+Standard performance metrics on the SATD category were computed to evaluate our automated classification approach: precision, recall, $F_1$ score and accuracy. Precision is the percentage of relevant instances of methods predicted as SATD among all retrieved instances. Recall is the percentage of relevant instances of SATD methods that have been retrieved over all relevant instances. $F_1$ score is the harmonic mean between precision and recall. Accuracy is the total number of methods correctly predicted, whether it is SATD-related or not, among all analyzed methods. 
+
+Unfortunately, metrics such as MCC, ROC and importance of features were not computed for this approach. However, we still have enough information to evaluate and compare each approach. The downside is that it will be more difficult to take into account the effect of chance on predictions. Overall, what we look for in a good classifier is a balance between precision and recall while aiming for the highest $F_1$ score. We want to detect as many technical debts as possible while being correct in our predictions.
 
 \section{Study Results}
 
 \subsection{Source Code Comments Only}
 
 1.5 pages 
+
+\begin{table}[t]
+	\caption{Within-project prediction: results of CNN for each system using source code comments only}
+	\label{tab:commentsonly}
+	\centering\scriptsize
+	\resizebox{\linewidth}{!}{
+		
+		\begin{tabular}{lrrrr}
+			%\hline
+			\multicolumn{5}{c}{ \textbf{Source Code Comments Only}}\\
+			\hline
+			\textbf{System} & \textbf{Pr} & \textbf{Rc }&\textbf{F$_{1}$} &\textbf{Acc}\\
+			\hline
+			Ant & 93.33 & 10.77 & 19.31 & 97.02\\
+			ArgoUML &91.21& 90.94 & 91.07 & 97.24\\
+			Columba & 97.12 & 71.05 & 82.07 & 99.08\\
+			Hibernate & 95.29 & 73.19 & 82.79 & 95.12\\
+			jEdit & 82.95 & 29.32 & 43.32 & 98.09\\
+			jFreeChart & 100 & 69.38 & 81.92 & 98.50\\
+			jMeter & 95.25 & 75.95 & 84.51 & 98.71\\
+			jRuby & 96.14 & 87.17 & 91.43 & 97.89\\
+			Squirrel & 95.81 & 65.59 & 77.87 & 98.51\\
+			\hline
+		\end{tabular}
+	}
+	\vspace{-3mm}
+\end{table}
 
 % \Desktop\CNN-results.csv
 % \noiseux1523\cnn-text-classification-tf-w2v 
