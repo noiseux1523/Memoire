@@ -1,20 +1,38 @@
 \Chapter{CONCLUSION}\label{sec:Conclusion}
 
-TOTAL = 3 pages
+%TOTAL = 3 pages
+
+% The conclusion helps draw attention to the thesis or dissertation’s contribution to the advancement of knowledge and the development of technologies, while articulating its limits and constraints. It also serves as a space to identify areas for future research. Recommendations may also be set out here.
+
+
+% Rechercher pour les mots "future/recommendation" pour les projets futurs
+% Voir dans threats to validity pour changements a faire
 
 %%
 %%  SYNTHESE DES TRAVAUX
 %%
 \section{Summary of Work}
 
-1 page
+%1 page
+
+This study describes two approaches to recommend to developers when they should self-admit design technical debts. The main approach is TEDIOUS, a machine learner that uses features extracted from source code as independent variables and knowledge of SATD as dependent variables to recommend TD to be self-admitted. It is based on size, complexity, readability and checks from static analysis tools. The second approach, less developed than TEDIOUS, is a convolutional neural network using source code directly to recommend TD to be self-admitted. It is based on source code and comments.
+
+Both approaches were evaluated on 9 projects manually analyzed and made publicly available by \citet{maldonado17}. For TEDIOUS, the within-project prediction gave on average a precision of 50\%, recall of 52\% and accuracy of 93\% when recommending TDs. Oversampling was performed to compensate the highly unbalanced dataset (very few positive compared to negative instances) but without much benefits; it increased recall at the expense of precision. Cross-project prediction was also performed, with improved results compared to within-project. It gave on average a precision of 67\%, recall of 55\% and accuracy of 92\% when recommending TDs. The best systems achieved a precision and recall rate $> 88\%$, namely \textsc{jFreeChart} and \textsc{ArgoUML}. Code readability, size and complexity played a major role in recommending design SATD, with static analysis tools being less important.
+
+For the CNN approach, four experiments were conducted with no balancing performed. For \textit{source code comments only} within-project prediction, an average precision of 93.63\%, recall of 76.17\% and accuracy 97.99\% were obtained. For \textit{source code with comments} within-project prediction, an average precision of 96.38\%, recall of 82.40\% and accuracy of 99.44\% were obtained. Adding the implemented code to the dataset improved the results. For \textit{source code without comments} within-project prediction, an average precision of 88.18\%, recall of 33.68\% and accuracy of 98.12\% were obtained. Performance metrics were negatively affected by the removal of all comments. For \textit{source code partially with comments} within-project prediction, an average precision of 94.84\%, recall of 58.83\% and accuracy of 98.82\% were obtained, which is a better than no comments but worst than all comments included. \textbf{ADD CROSS PROJECT RESULTS.} Overall, each CNN experiment performed better than TEDIOUS.
 
 %%
 %%  LIMITATIONS
 %%
 \section{Limitations of the Proposed Solution}\label{sec:Limitations}
 
-1 page
+% 1 page
+
+TEDIOUS and our CNN approach have their share of limitations and constraints. The two approaches can't act as perfect classifiers because of the intrinsic nature of technical debts. You can try to describe methods with metrics and static analysis warnings, or use them as a whole, but there will always be a deeper level to their existence and a larger context that can be difficult for a machine learner to understand. We observed this aspect when qualitatively analyzing false negative examples of TEDIOUS. In other terms, the prediction performance of our proposed solution have a ceiling which is difficult to surpass.
+
+For TEDIOUS, we are limited with the number of metrics and warnings we can use to train the machine learner. In addition, there may be differences in values depending on the method to obtain those features; the important preprocessing required to build the dataset can induce errors. However, the main reason behind this limitation is the processing time and computation power required to extract these metrics and to train TEDIOUS. We can't use as many features as we want and hope to have models trained in a decent amount of time.
+
+
 
 %%
 %%  AMELIORATIONS FUTURES
@@ -22,3 +40,17 @@ TOTAL = 3 pages
 \section{Future Work}
 
 1 page
+
+MORE IN DEPTH CNN
+TRY RNN
+
+
+
+
+
+
+
+
+
+
+

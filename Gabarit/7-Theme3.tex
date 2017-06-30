@@ -50,7 +50,9 @@ An overview of the process was described in this section, but more details will 
 
 The main difference between TEDIOUS and this new approach is the nature of the training features. For TEDIOUS, source code metrics and warnings were used. For the CNN, we use the source code itself, transformed into word vectors. The same process was performed as before to extract the source code, an XML representation of the Java source code was generated using the srcML tool \citep{Collard2013}. SATD comments from the dataset of \citet{MaldonadoNLP} were linked to their respective methods in order to classify them as containing a technical debt or not, to build the oracle. The same rules were followed, as explained in section 3.1.1. Once the XML representation is obtained, the different dataset combinations can be generated.
 
-The first combination is the \textit{source code comments only}. They are extracted from the dataset of comments provided by \citet{maldonado17}. Comments can be encountered under different natures: single line, multiple lines or block. The second combination is the \textit{source code with comments} where the complete XML representation of the source code is used. The third combination is the \textit{source code without comments} where the XML representation is parsed to remove comments. The fourth combination is the \textit{source code partially with comments}, which means only comments related to SATD are removed. The reason behind this removal is to be sure to avoid the CNN model being a self-prophecy. The details of the processes will be explained in the Source Code Preprocessing section.
+The first combination is the \textit{source code comments only}. They are extracted from the dataset of comments provided by \citet{maldonado17}. Comments can be encountered under different natures: single line, multiple lines or block. It is important to specify that not only design debts were retained but all of them, namely: defect, design, documentation, implementation and test. We decided to use as many SATD-methods as possible in order to have the best chances at getting good predictions results. By using different types of technical debts, we decrease the unbalance of the dataset by adding more positive examples.
+
+The second combination is the \textit{source code with comments} where the complete XML representation of the source code is used. The third combination is the \textit{source code without comments} where the XML representation is parsed to remove comments. The fourth combination is the \textit{source code partially with comments}, which means only comments related to SATD are removed. The reason behind this removal is to be sure to avoid the CNN model being a self-prophecy. For these three datasets, only design and implementation TDs are retained, to be more in line with the dataset used by TEDIOUS. The details of the process behind the extraction of each combination will be explained in the Source Code Preprocessing section.
 
 \subsection{Identification of Self-Admitted Technical Debt}
 
@@ -152,7 +154,7 @@ There are some disparities between the results we obtained when analyzing the st
 
 % 2 pages
 
-For \textbf{RQ1}, we want to know how a convolutional neural network with source code comments only work for recommending SATD within-project. We also want to compare the results with the within-project predictions of TEDIOUS. A 10-fold cross validation was performed on each project, like for TEDIOUS, and the performance values are averaged over the 10 iterations. The same process is followed for \textbf{RQ2}, \text{RQ3} and \textbf{RQ4}.
+For \textbf{RQ1}, we want to know how a convolutional neural network with source code comments only work for recommending SATD within-project. We also want to compare the results with the within-project predictions of TEDIOUS. A 10-fold cross validation was performed on each project, like for TEDIOUS, and the performance values are averaged over the 10 iterations. The same process is followed for \textbf{RQ2}, \textbf{RQ3} and \textbf{RQ4}.
 
 Standard performance metrics on the SATD category were computed to evaluate our automated classification approach: precision, recall, $F_1$ score and accuracy. Precision is the percentage of relevant instances of methods predicted as SATD among all retrieved instances. Recall is the percentage of relevant instances of SATD methods that have been retrieved over all relevant instances. $F_1$ score is the harmonic mean between precision and recall. Accuracy is the total number of methods correctly predicted, whether it is SATD-related or not, among all analyzed methods. 
 
@@ -160,9 +162,13 @@ Unfortunately, metrics such as MCC, ROC and importance of features were not comp
 
 \section{Study Results}
 
+This section reports the results obtained using various combinations of source code. Performance metrics are presented in tables and further analysis is provided textually, discussing the metrics and comparing them with TEDIOUS.
+
 \subsection{Source Code Comments Only}
 
-1.5 pages 
+%1.5 pages 
+
+Table \ref{tab:commentsonly} reports the within-project performance results of a 10-fold cross validation on each system using our convolutional neural network and source code comments only. We computed the average for the 10 folds of each system and for the complete dataset. Since we already had the comments preprocessed for TEDIOUS, this dataset was a good start to test our CNN approach.
 
 \begin{table}[t]
 	\caption{Within-project prediction: results of CNN for each system using source code comments only}
@@ -181,15 +187,22 @@ Unfortunately, metrics such as MCC, ROC and importance of features were not comp
 			Columba & 97.12 & 71.05 & 82.07 & 99.08\\
 			Hibernate & 95.29 & 73.19 & 82.79 & 95.12\\
 			jEdit & 82.95 & 29.32 & 43.32 & 98.09\\
-			jFreeChart & 100 & 69.38 & 81.92 & 98.50\\
+			jFreeChart & 100.00 & 69.38 & 81.92 & 98.50\\
 			jMeter & 95.25 & 75.95 & 84.51 & 98.71\\
 			jRuby & 96.14 & 87.17 & 91.43 & 97.89\\
 			Squirrel & 95.81 & 65.59 & 77.87 & 98.51\\
+			\textbf{Total} & \textbf{93.63} & \textbf{76.17} & \textbf{84.00} & \textbf{97.99}\\
 			\hline
 		\end{tabular}
 	}
 	\vspace{-3mm}
 \end{table}
+
+Two systems perform significantly worse than the others, namely \textsc{Ant} and \textsc{jEdit}. We face the same problem as in TEDIOUS, where the very low percentage of SATD methods (\textsc{Ant} has 0.5\% and \textsc{jEdit} has 2\%) in some systems directly affects the performance of the CNN. \textsc{Ant} has a precision of 93.33\%, recall of 10.77\% and $F_1$ score of 19.31\%. \textsc{jEdit} is a little better, it has a precision of 82.95\%, recall of 29.32\% and $F_1$ score of 43.32\%. However, if we compare with results from TEDIOUS, we notice a significant improvement in precision while maintaining a similar recall for these two systems.
+
+As for the other systems, the precision is $> 91\%$, the recall is $> 65\%$ and the $F_1$ $> 77\%$. Differently from TEDIOUS where the best results were obtained with \textsc{jFreeChart}, \textsc{ArgoUML} is the system where the CNN performed the best (precision 91.21\%, recall 90.94\% and $F_1$ 91.07\%). \textsc{jFreeChart} still obtained the best precision (100\%) but other projects such as \textsc{jRuby} or \textsc{jMeter} provided more balanced performance values. We have to be careful when comparing results in this scenario because all types of technical debts were considered whereas TEDIOUS only analyzed design debts. 
+
+However, on first look, it seems that the CNN approach using source code is an improvement of TEDIOUS using source code features. The total average precision, recall and $F_1$ score is even higher than the best system using TEDIOUS. Further testing is needed to provide a better understanding of the performance of the CNN, which will be accomplished in the next sections.
 
 % \Desktop\CNN-results.csv
 % \noiseux1523\cnn-text-classification-tf-w2v 
@@ -198,32 +211,152 @@ Unfortunately, metrics such as MCC, ROC and importance of features were not comp
 
 \subsection{Source Code With Comments}
 
-1.5 pages
+%1.5 pages
+
+Using source code comments only is an interesting first step to train a convolutional neural network to predict technical debts, especially if we aim at addressing the issue of self-admitted technical debts. However, it would also be interesting to see how well a CNN can perform using the entirety of a project's source code, code and comments included. We experimented with such a dataset and obtained the results reported in Table \ref{tab:comments} for a within project 10-fold cross validation.
+
+\begin{table}[t]
+	\caption{Within-project prediction: results of CNN for each system using source code with comments}
+	\label{tab:comments}
+	\centering\scriptsize
+	\resizebox{\linewidth}{!}{
+		
+		\begin{tabular}{lrrrr}
+			%\hline
+			\multicolumn{5}{c}{ \textbf{Source Code With Comments}}\\
+			\hline
+			\textbf{System} & \textbf{Pr} & \textbf{Rc }&\textbf{F$_{1}$} &\textbf{Acc}\\
+			\hline
+			Ant & 95.24 & 66.67 & 78.43 & 99.81\\
+			ArgoUML &97.32& 87.88 & 92.36 & 98.84\\
+			Columba & 93.62 & 80.00 & 86.27 & 99.66\\
+			Hibernate & 95.61 & 89.71 & 92.56 & 99.72\\
+			jEdit & 100.00 & 21.00 & 34.71 & 98.25\\
+			jFreeChart & 97.73 & 90.72 & 94.09 & 99.72\\
+			jMeter & 96.45 & 82.61 & 88.99 & 99.45\\
+			jRuby & 94.35 & 76.80 & 84.67 & 98.70\\
+			Squirrel & 98.57 & 85.19 & 91.39 & 99.92\\
+			\textbf{Total} & \textbf{96.38} & \textbf{82.40} & \textbf{88.84} & \textbf{99.44}\\
+			\hline
+		\end{tabular}
+	}
+	\vspace{-3mm}
+\end{table}
+
+Again, the worst results were obtained for \textsc{Ant} and \textsc{jEdit}. However, compared to source code comments only, \textsc{Ant} improved its precision by $+ 1.91\%$, recall by $+ 55.90\%$ and $F_1$ by $+ 59.12$, and \textsc{jEdit} improved its precision to 100\% but suffered some losses in its recall and $F_1$ score. We notice that the unbalance of the dataset is still an issue for the CNN but these results are still better than what we obtained with TEDIOUS.
+
+As for the other systems, the precision varies between $[93.62\%-98.57\%]$, the recall between $[76.80\%-90.72\%]$ and the $F_1$ score between $[84.67\%-94.09\%]$. Precision is generally slightly better and the recall gains a decent improvement compared to the source code comments only dataset. The best results were obtained with \textsc{jFreeChart} (precision $97.73\%$, recall $90.72\%$ and $F_1$ score $94.09\%$), like in TEDIOUS but not the previous dataset. This can be explained by the fact that we only used design and implementation debts, compared to all types of debt for source code comments only. Consequently, results with this dataset should normally be more similar to the results of TEDIOUS.
+
+If we look at the average total performance values, there is an improvement compared to the source code comments only dataset: precision $+ 2.75\%$, recall $+ 6.23\%$ and $F_1$ $+ 4.84\%$. Consequently, using the whole source code is also an improvement compared to TEDIOUS, in a pretty significant manner. We just tested the best case scenario where we have as much information as possible to train on, however, we also want to know how well a CNN can perform on a less than ideal software project.
 
 % \Desktop\stats-baseline-with comments.csv
 % dans \yes-and-no pour le data
 % dans \run-all.v2.sh pour le process
 
-design et implementation
-
 \subsection{Source Code Without Comments}
 
-1.5 pages
+%1.5 pages
+
+\begin{table}[t]
+	\caption{Within-project prediction: results of CNN for each system using source code without comments}
+	\label{tab:withoutcomments}
+	\centering\scriptsize
+	\resizebox{\linewidth}{!}{
+		
+		\begin{tabular}{lrrrr}
+			%\hline
+			\multicolumn{5}{c}{ \textbf{Source Code Without Comments}}\\
+			\hline
+			\textbf{System} & \textbf{Pr} & \textbf{Rc }&\textbf{F$_{1}$} &\textbf{Acc}\\
+			\hline
+			Ant & 50.00 & 1.67 & 3.23 & 99.48\\
+			ArgoUML &89.78& 37.27 & 52.68 & 94.67\\
+			Columba & 84.21 & 14.55 & 24.81 & 98.81\\
+			Hibernate & 79.66 & 27.65 & 41.05 & 98.43\\
+			jEdit & 72.73 & 24.00 & 36.09 & 98.11\\
+			jFreeChart & 73.68 & 17.72 & 28.57 & 97.85\\
+			jMeter & 83.61 & 22.17 & 35.05 & 97.77\\
+			jRuby & 95.27 & 56.40 & 70.85 & 97.84\\
+			Squirrel & 88.89 & 17.78 & 29.63 & 99.56\\
+			\textbf{Total} & \textbf{88.18} & \textbf{33.68} & \textbf{48.75} & \textbf{98.12}\\
+			\hline
+		\end{tabular}
+	}
+	\vspace{-3mm}
+\end{table}
+
+We trained our convolutional neural network on source code comments only and on source code in addition to comments. We obtained promising results, but we want know how well our machine learner can work with less training information. We generated another dataset, this time only containing the source code of the studied projects, eliminating the comments. We built such a dataset to replicate the worst case where a software project is lacking comments and to remove SATD comments related to their respective methods. Table \ref{tab:withoutcomments} reports the performance results for each system using a 10-fold cross validation and source code without comments as the training set.
+
+\textsc{Ant} is still the system where the CNN performs the worst (precision $50.00\%$, recall $1.67\%$ and $F_1$ $3.23\%$), in line with every other experiment we performed so far. However, \textsc{jEdit} is performing decently compared to previously and, surprisingly, \textsc{jFreeChart} is average even though it contains the most design debts. It seems the unbalance of the dataset does not correlate as much with the results since \textsc{jRuby} obtains the best performance (precision 95.27\%, recall 56.40\% and $F_1$ 70.85\%) only with 2\% of methods with design SATD.
+
+As for the other systems, performance metrics all decreased compared to the last two datasets, especially the recall. If we compare the total average, at the most, precision decreases of $- 8.21\%$, recall of $-48.72$ and $F_1$ of $-40.09\%$. Compared to TEDIOUS, the precision is generally better but the recall rate worst. It would be difficult, with the available information, to determine which machine learner performs better between TEDIOUS and CNN with source code without comments. However, it is safe to say that they are at least similar performance wise, with TEDIOUS providing better recall and the CNN better precision.
+
+Overall, it is obvious that removing comments from the dataset impacts the performance of the CNN at all levels. It is clear that they represent an important piece of information for the machine learner to train on and should be kept in the dataset. We also notice that not only the amount of technical debts in a system is important to obtain good performance, but the nature of technical debts and the content of the source code as well. When removing comments, we observed that different systems would perform better than previously and other worst, despite having the same amount of SATD-methods. Knowing the importance of comments, one more experiment would be interesting to complete to better understand why.
 
 % \Desktop\stats-baseline-with-no-comments.csv
 % dans \yes-and-no pour le data
 % dans \run-all.v2.sh pour le process
 
-design et implementation
-
 \subsection{Source Code Partially With Comments}
 
-1.5 pages
+%1.5 pages
+
+So far, the best results were obtained with a dataset consisting of source code with comments. When removing all comments, we observed a significant loss in recall, and a modest one in precision. We now want to test an intermediate dataset where we keep all comments except the SATD comments manually analyzed by \citet{maldonado17}. The main reason behind the generation of this new dataset is to quantify the impact of these specific comments on the prediction performance and to know if they act as a self-prophecy. In other terms, we want to know how well our convolutional neural network can predict technical debts in methods if we remove comments self-admitting them. Table \ref{tab:partialcomments} reports the performance results for each system using a 10-fold cross validation and source code partially with comments.
+
+\textbf{AJOUTER LA TABLE CROSS PROJECT DE GIULIO. LES COMMENTS LIES AUX METHODS SATD SONT ENLEVES POUR EVITER SELF PROPHECY}
+
+\begin{table}[t]
+	\caption{Within-project prediction: results of CNN for each system using source code partially with comments}
+	\label{tab:partialcomments}
+	\centering\scriptsize
+	\resizebox{\linewidth}{!}{
+		
+		\begin{tabular}{lrrrr}
+			%\hline
+			\multicolumn{5}{c}{ \textbf{Source Code Partially With Comments}}\\
+			\hline
+			\textbf{System} & \textbf{Pr} & \textbf{Rc }&\textbf{F$_{1}$} &\textbf{Acc}\\
+			\hline
+			Ant & 96.88 & 51.67 & 67.39 & 99.74\\
+			ArgoUML &95.40& 60.81 & 74.28 & 96.65\\
+			Columba & 100.00 & 39.09 & 56.21 & 99.18\\
+			Hibernate & 87.68 & 54.41 & 67.15 & 98.95\\
+			jEdit & 100.00 & 40.00 & 57.14 & 98.67\\
+			jFreeChart & 93.68 & 68.78 & 79.32 & 99.13\\
+			jMeter & 97.46 & 50.00 & 66.09 & 98.61\\
+			jRuby & 97.44 & 68.60 & 80.52 & 98.45\\
+			Squirrel & 87.23 & 45.56 & 59.85 & 99.68\\
+			\textbf{Total} & \textbf{94.84} & \textbf{58.83} & \textbf{72.61} & \textbf{98.82}\\
+			\hline
+		\end{tabular}
+	}
+	\vspace{-3mm}
+\end{table}
 
 % \Desktop\stats-baseline-no-manually-tagged-comments.csv
 % dans \yes-and-no pour le data
 % dans \run-all.v2.sh pour le process
 
-design et implementation
+All systems perform decently well and previously problematic ones, such as \textsc{Ant} and \textsc{jEdit}, are not outsiders anymore. The precision varies between $[87.23\%-100.00\%]$, the recall between $[39.09\%-68.78\%]$ and the $F_1$ score between $[56.21\%-80.52\%]$. In other terms, the CNN is able to predict at least half of the technical debts in a system with a very high precision. 
+
+Compared to the dataset with all comments where results seemed somewhat dependent on the system, this one provides more balanced but weaker overall results. However, there is a net improvement compared to the dataset without comments. In fact, source code partially with comments positions itself right between the previous two datasets with a precision of 94.84\%, recall of 58.83\% and $F_1$ score of 72.61\%. Compared to TEDIOUS, our CNN with source code partially with comments is also an improvement.
+
+We observe that SATD comments have an important impact on the prediction performance. The amount of comments removed is very small compared to the total, however, the impact on performance is not negligible, mostly on recall. It seems like comments, especially SATD-related, are important features for our machine learner to train on. We observe this fact in the way each system position themselves compared to others, some will benefit from keeping SATD-related comments and others will not. In addition, performance metrics globally decrease when removing comments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

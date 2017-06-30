@@ -259,17 +259,18 @@ A.~Maiga, N.~Ali, N.~Bhattacharya, A.~Saban{\'e}, Y.-G. Gu{\'e}h{\'e}neuc,
   Proceedings of the 27th IEEE/ACM International Conference on}.\hskip 1em plus
   0.5em minus 0.4em\relax IEEE, 2012, pp. 278--281.
 
-\bibitem[Maldonado et~al.(2017)Maldonado, Shihab, and Tsantalis]{MaldonadoNLP}
+\bibitem[Maldonado et~al.(2017{\natexlab{a}})Maldonado, Shihab, and
+  Tsantalis]{MaldonadoNLP}
 E.~Maldonado, E.~Shihab, et N.~Tsantalis, ``Using natural language processing
   to automatically detect self-admitted technical debt'', \emph{IEEE
   Transactions on Software Engineering}, vol.~PP, no.~99, pp. 1--1, 2017. DOI:
   \doi{10.1109/TSE.2017.2654244}
 
-\bibitem[Maldonado et~al.(2017 (to appear))Maldonado, Shihab, and
+\bibitem[Maldonado et~al.(2017{\natexlab{b}})Maldonado, Shihab, and
   Tsantalis]{maldonado17}
 ------, ``Using natural language processing to automatically detect
   self-admitted technical debt'', \emph{IEEE Transactions on Software
-  Engineering}, 2017 (to appear).
+  Engineering}, 2017.
 
 \bibitem[Marinescu(2004)]{Marinescu04-ICSM-DetectionStrategies}
 R.~Marinescu, ``Detection strategies: Metrics-based rules for detecting design
