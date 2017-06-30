@@ -30,19 +30,45 @@ For the CNN approach, four experiments were conducted with no balancing performe
 
 TEDIOUS and our CNN approach have their share of limitations and constraints. The two approaches can't act as perfect classifiers because of the intrinsic nature of technical debts. You can try to describe methods with metrics and static analysis warnings, or use them as a whole, but there will always be a deeper level to their existence and a larger context that can be difficult for a machine learner to understand. We observed this aspect when qualitatively analyzing false negative examples of TEDIOUS. In other terms, the prediction performance of our proposed solution have a ceiling which is difficult to surpass.
 
-For TEDIOUS, we are limited with the number of metrics and warnings we can use to train the machine learner. In addition, there may be differences in values depending on the method to obtain those features; the important preprocessing required to build the dataset can induce errors. However, the main reason behind this limitation is the processing time and computation power required to extract these metrics and to train TEDIOUS. We can't use as many features as we want and hope to have models trained in a decent amount of time.
+For TEDIOUS, we are limited with the number of metrics and warnings we can use to train the machine learners. For the CNN, the number of LOC from the source code used for the dataset is also subject to a limit. The main reason behind this limitation is the processing time and computation power required (i) to extract these metrics and source code, and (ii) to train TEDIOUS and the CNN. We can't use as many training features as we want and have models trained in a decent amount of time with reasonable processing power.
 
+In addition, there may be differences in feature values depending on the method to obtain them; the heavy preprocessing required to build datasets of TEDIOUS and the CNN approach can induce errors, and the manual classification of SATD comments is subject to human error. Also, default configurations only were used to collect warnings and train machine learners. Performance may be limited and could be increased by applying optimization on configuration parameters. Consequently, the results we obtained could be completely different, even though the same features are extracted, only because the process to extract them is different. In other terms, the replicability of our study is limited.
 
+We can't assure that our results can be generalized to all Java projects even though we used systems previously studied \citep{maldonado17} which cover a wide variety of domains. Our dataset is limited, it only consists of 9 systems, and we cannot claim that TEDIOUS and the CNN can be accurate on every possible Java system. We already observe this fact in the various experiments we pursued. In addition, the applicability of our approaches is limited to Java programs only. Finally, the conclusion deduced from the analysis of the CNN results has to be taken with skepticism since it is still in its preliminary steps and the impact of randomness was not taken into account in its evaluation.
 
 %%
 %%  AMELIORATIONS FUTURES
 %%
 \section{Future Work}
 
-1 page
+%1 page
 
-MORE IN DEPTH CNN
-TRY RNN
+Future work can be divided in two themes: applicability scenarios and improvement paths. Applicability scenarios are ideas on how TEDIOUS and the CNN approach could be used concretely by developers in the industry. Improvement paths are tasks that have to be accomplished to improve and extend our work.
+
+For future applications, our approaches could act as recommendation systems for developers, suggesting when to self-admit technical debts with comments, which was the main goal of our work. Also, they could complement static analysis tools by helping to customize warning checks raised by them. Our machine learners could learn rules from previously detected SATDs. Additionally, TEDIOUS and our CNN could complement existing smell and anti pattern detectors, such as DECOR \citep{moha2010decor}, to enhance their performance. Indeed, our study proved that TEDIOUS could outperform a smell detector of Long Methods and Long Parameter List.
+
+Many improvement and work paths are already planned for the future. Both TEDIOUS and the CNN could benefit from configuration optimization. Only default parameters were used by the machine learners and extraction tools. More specifically, CNN results are still preliminary and performance metrics are still lacking. Further testing is required to better understand the real value of this approach. SATD comments were matched to methods with pattern matching, however, we retained only perfect matches, some comments did not match and others were very close to matching but were ultimately ignored. A revision of this process would be necessary to gather a more accurate picture of technical debts in systems.
+
+As mentioned previously, our dataset is small and our approaches would benefit from a larger pool of examples to train on. More information could also be provided by adding other metrics or warnings to define methods. The same idea can be translated to the CNN by adding more source code. TEDIOUS only detects design debts and it would be interesting to see how well it performs for the prediction of all types of technical debts. The CNN already predicts all types of debts and performs better than TEDIOUS. We could also extend the application of our concept to other programing languages and domains. 
+
+Finally, TEDIOUS is based on a Random Forests algorithm and we have a convolutional neural network which gives good prediction results. It would be interesting to test another popular machine learner used with Natural Language Processing, which is a \ac{RNN}.
+
+%OPTIMIZATION
+%MORE IN DEPTH UTILISATION AND ANALYSIS CNN
+%TRY RNN
+%REVIEW MATCHES OF SATD COMMENTS FOR MORE ACCURACY
+%MORE SYSTEMS TO STUDY
+%TRY NEW LANGUAGES/DOMAINS
+%MORE INFORMATION TO TRAIN ON
+%MORE FAMILIES OF TD
+
+
+
+
+
+
+
+
 
 
 

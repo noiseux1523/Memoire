@@ -66,5 +66,5 @@
 \contentsline {section}{\numberline {6.1}Summary of Work}{59}{section.6.1}
 \contentsline {section}{\numberline {6.2}Limitations of the Proposed Solution}{60}{section.6.2}
 \contentsline {section}{\numberline {6.3}Future Work}{60}{section.6.3}
-\contentsline {compteur}{BIBLIOGRAPHY}{61}{chapter*.19}
-\contentsline {compteur}{APPENDICES}{67}{chapter*.19}
+\contentsline {compteur}{BIBLIOGRAPHY}{62}{chapter*.19}
+\contentsline {compteur}{APPENDICES}{68}{chapter*.19}
