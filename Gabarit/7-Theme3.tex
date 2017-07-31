@@ -18,7 +18,7 @@ The idea of using a CNN was inspired by a paper written by \citet{kim2014convolu
 
 Typically, convolutional neural networks were employed for image classification \citep{krizhevsky2012imagenet}, however, as mentioned previously, this type of neural network has been used recently combined with NLP. To describe CNN in further details, we can think of a convolution as a window sliding across a whole matrix, acting as a filter. For images, this matrix contains pixels, for words and sentences, it contains word vectors (word embeddings). In image classification, filters slide over local batches, in NLP, they slide over entire rows since a row is typically a single word embedded into a row matrix of the size of the embedding dimension. To implement a CNN, you just have to add several layers of these convolutions, where each of these layers have a specific task and act as different filters. CNNs are very fast and efficient in terms of representation, which means they give good representations without needing the whole vocabulary of a dataset.
 
-The main purpose of this study was to explain, test and analysis TEDIOUS, our machine learning approach using source code features. The next sections will describe the other approach using a CNN, but at a more general level than for TEDIOUS since we are still at a preliminary stage. Since some steps from Chapter 3 are replicated in our CNN approach, they will be explained rapidly in order to avoid redundancy. However, we still judged interesting to present the initial results of this new promising method.
+The main purpose of this thesis was to explain, test and analysis TEDIOUS, our machine learning approach using source code features. The next sections will describe the other approach using a CNN, but at a more general level than for TEDIOUS since we are still at a preliminary stage. Since some steps from Chapter 3 are replicated in our CNN approach, they will be explained rapidly in order to avoid redundancy. However, we still judged interesting to present the initial results of this new promising method.
 
 \section{The Approach}
 
@@ -99,24 +99,7 @@ Figure \ref{fig:CNNProcess} provides an overview of the CNN process. To increase
 
 The evaluation process consists of two main phases: the training and the testing phase. In the former, some data preparation is required: load the two training sets, build the vocabulary, shuffle, and split the dataset in a training and development set. The development set is used to tune parameters of the CNN and to prevent it from over-fitting. Afterwards, the CNN is built using user-defined parameters and default values. In our case, mainly the default configuration is considered. The training procedure is defined and summaries are generated for: loss, accuracy, train, development and model. Then, variables are initialized, such as embedding vectors, and training batches generated. Finally, a training loop is executed where a training and evaluation step are repeated. The trained model is saved multiple times during the loop and the last one is used for the testing. 
 
-The testing phase can start once the training is finished. Data preparation is also required for this step: load the two testing sets and map them into the vocabulary. Afterwards, the meta graph and the variables from the model previously saved are loaded. Testing batches are generated and tensors we want to evaluate are determined. We can then start the testing loop where predictions are made. Once over, performance metrics can be computed,  namely: accuracy, recall, precision, specificity and $F_1$. These metrics are saved in a different file from the predictions made on each method. The final step consists of combining the performance metrics of all models for further analysis.
-
-\section{Study Definition}
-
-% 0.5 page
-
-The goal of this new approach is to assess the prediction performance of a convolutional neural network in recommending technical debts to self-admit. The focus is the same as for TEDIOUS, enhancing the source code quality by keeping track of TDs. The perspective is to be able to suggest to developers, more accurately than with TEDIOUS, when to admit technical debts. We aim to address four research questions:
-
-\begin{itemize}
-	\item \textbf{RQ1}: How does a CNN work for recommending SATD with source code comments only?
-	\item \textbf{RQ2}: How does a CNN work for recommending SATD with source code  with comments?
-	\item \textbf{RQ3}: How does a CNN work for recommending SATD with source code without comments?
-	\item \textbf{RQ4}: How does a CNN work for recommending SATD with source code partially with comments?
-\end{itemize}
-
-\subsection{Dataset}
-
-% 1.5 page
+We can start the testing phase once the training is finished. Data preparation is also required for this step: load the two testing sets and map them into the vocabulary. Afterwards, the meta graph and the variables from the model previously saved are loaded. Testing batches are generated and tensors we want to evaluate are created. We can then start the testing loop where predictions are made. Once over, performance metrics can be computed,  namely: accuracy, recall, precision, specificity and $F_1$. These metrics are saved in a different file from the predictions made on each method. The final step consists of combining the performance metrics of all models for further analysis.
 
 \begin{landscape}
 	\begin{table*}[t]
@@ -146,6 +129,23 @@ The goal of this new approach is to assess the prediction performance of a convo
 	\end{table*}
 \end{landscape}
 
+\section{Study Definition}
+
+% 0.5 page
+
+The goal of this new approach is to assess the prediction performance of a convolutional neural network in recommending technical debts to self-admit. The focus is the same as for TEDIOUS, enhancing the source code quality by keeping track of TDs. The perspective is to be able to suggest to developers, more accurately than with TEDIOUS, when to admit technical debts. We aim to address four research questions:
+
+\begin{itemize}
+	\item \textbf{RQ1}: How does a CNN work for recommending SATD with source code comments only?
+	\item \textbf{RQ2}: How does a CNN work for recommending SATD with source code  with comments?
+	\item \textbf{RQ3}: How does a CNN work for recommending SATD with source code without comments?
+	\item \textbf{RQ4}: How does a CNN work for recommending SATD with source code partially with comments?
+\end{itemize}
+
+\subsection{Dataset}
+
+% 1.5 page
+
 To evaluate this new approach, the same dataset was used as in TEDIOUS \citep{maldonado17}. The methods are already classified as SATD or not, and Table \ref{tab:projects} summarizes the characteristics of all studied projects. Various information describe the content and nature of each project. This table was already presented in Section 3.2.1. However, a brief overview is still necessary to reiterate important facts. 
 
 There are some disparities between the results we obtained when analyzing the studies and what \citet{maldonado17} obtained. However, this does not really represent an issue since many of these differences concern classes while our CNN approach is method-level based, like TEDIOUS. This aspect is also important since we clearly see a prevalence of method-related rather than class-related SATD. Out of all methods in a project, only a very small amount contains a technical debt, making the dataset highly unbalanced. As we will discuss in the analysis of results, the lower the amount of technical debts in a system, the lower the prediction performance. Since the dataset from \citet{maldonado17} classified classes instead of methods, we performed pattern matching between known SATD comments and comments attached to methods in the dataset.
@@ -173,7 +173,7 @@ Table \ref{tab:commentsonly} reports the within-project performance results of a
 \begin{table}[t]
 	\caption{Within-project prediction: results of CNN for each system using source code comments only}
 	\label{tab:commentsonly}
-	\centering\scriptsize
+	\centering\tiny
 	\resizebox{\linewidth}{!}{
 		
 		\begin{tabular}{lrrrr}
@@ -218,7 +218,7 @@ Using source code comments only is an interesting first step to train a convolut
 \begin{table}[t]
 	\caption{Within-project prediction: results of CNN for each system using source code with comments}
 	\label{tab:comments}
-	\centering\scriptsize
+	\centering\tiny
 	\resizebox{\linewidth}{!}{
 		
 		\begin{tabular}{lrrrr}
@@ -260,7 +260,7 @@ If we look at the average total performance values, there is an improvement comp
 \begin{table}[t]
 	\caption{Within-project prediction: results of CNN for each system using source code without comments}
 	\label{tab:withoutcomments}
-	\centering\scriptsize
+	\centering\tiny
 	\resizebox{\linewidth}{!}{
 		
 		\begin{tabular}{lrrrr}
@@ -308,7 +308,7 @@ So far, the best results were obtained with a dataset consisting of source code 
 \begin{table}[t]
 	\caption{Within-project prediction: results of CNN for each system using source code partially with comments}
 	\label{tab:partialcomments}
-	\centering\scriptsize
+	\centering\tiny
 	\resizebox{\linewidth}{!}{
 		
 		\begin{tabular}{lrrrr}

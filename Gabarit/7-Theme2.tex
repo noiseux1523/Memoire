@@ -13,8 +13,8 @@ This section reports the study results in the context of each research question.
 \begin{table}[t]
 	\caption{Average performance of different machine learners for within-project prediction.}
 	\label{tab:avgWithin}
-	\centering
-	\resizebox{\linewidth}{!}{
+	\centering\tiny
+	\resizebox{\textwidth}{!}{
 		\begin{tabular}{lrrrrrr}
 			\multicolumn{7}{c}{ \textbf{Without Balancing}}\\
 			\hline
@@ -41,7 +41,7 @@ This section reports the study results in the context of each research question.
 	\vspace{-3mm}
 \end{table}
 
-Table \ref{tab:avgWithin} presents the average performance results of a 10-fold cross validation within-project executed 10 times and on different machine learners. The average was computed for the 9 studied projects. The 10-fold cross validation was performed with balancing using SMOTE and without balancing.
+Table \ref{tab:avgWithin} presents the average performance results of a 10-fold cross validation within-project executed 10 times and with five different machine learners. The average was computed for the 9 studied projects. The 10-fold cross validation was performed with balancing using SMOTE and without balancing.
 
 On the unbalanced dataset, the best classifier is the one using the Random Forests algorithm. It achieves the best balance between precision ($49.97\%$) and recall ($52.19\%$), obtaining a $F_{1}$ score of $47.15\%$, the highest of all machine learners. We also notice that the Bagging algorithm is performing almost as well as Random Forests, even obtaining a slightly better precision but a weaker $F_{1}$ score. The accuracy of Random Forests, which includes the correct classification of negatives (the vast majority of the data), is $93.32\%$ and almost all the other machine learners obtain an accuracy higher than $90\%$, between $[89.01\%-93.35\%]$. MCC is on average $>0.4$, which is translated into a moderate correlation, and AUC is $>0.9$ (close to a perfect classifier) for Random Forests, Bagging and Bayesian and $>0.7$ for j48 and Random Trees.
 
@@ -50,8 +50,8 @@ On the balanced dataset, the best classifier is still Random Forests, with a pre
 \begin{table}[t]
 	\caption{Within-project prediction: results of Random Forests for each system, without and with SMOTE balancing.}
 	\label{tab:bysyswithin}
-	\centering\scriptsize
-	\resizebox{\linewidth}{!}{
+	\centering\tiny
+	\resizebox{\textwidth}{!}{
 		
 		\begin{tabular}{lrrrrrr}
 			%\hline
@@ -93,7 +93,7 @@ Table \ref{tab:bysyswithin} highlights the within-project prediction results, fo
 
 If we look at the balanced dataset, the same trend is observed as in the balanced dataset but with lower performance results. Precision is generally lower except for \textsc{Ant} and \textsc{jEdit} which obtain a small improvement. These two systems should normally benefit from balancing but the data from the few SATDs is not even enough to build a decent artificial training set, leading to a negligible gain in precision. However, as expected with balancing, we see a decent increase in their recall and the same goes for the other systems. Generally speaking, the accuracy, $F_1$ score, MCC and AUC is better for \textsc{Ant} and \textsc{jEdit} only, the other systems did not benefit from the balancing.
 
-\begin{landscape}
+%\begin{landscape}
 \begin{table*}[t]
 	\caption{Top 10 discriminant features (within-project prediction). (M): source code metrics,  (CS): CheckStyle checks, (P): PMD checks.}
 	\label{tab:top10features}
@@ -191,7 +191,7 @@ If we look at the balanced dataset, the same trend is observed as in the balance
 	}
 	\vspace{-2mm}
 \end{table*}
-\end{landscape}
+%\end{landscape}
 
 Table \ref{tab:top10features} reports the top 10 features in within-project prediction according to the MDI technique. The importance of each feature is ranked for each system. Four features are in the top 10 of all projects, and they are all source code metrics. The most important one is the readability metric of \citet{buse2008metric}, which is number the top feature for 7 systems. This observation is contrasting with the work of \citet{BavotaR16} where they found that there was little correlation between SATD and code quality metrics as well as readability. The difference may lie in the fact that TEDIOUS works at method-level and not class-level like in the study of \citet{BavotaR16}. A class contains several methods, some can be readable and others not really. The previous work may not have been able to work at granularity fine enough to detect these potential SATDs. The other three features are the number of declarations (\textit{DeclNbr}), of parameters (\textit{ParNbr}) and the number of lines of code (\textit{LOC}). Having \textit{ParNbr} and \textit{LOC} in the top features is interesting because they are typical metrics used in smell detectors. In fact, for \textbf{RQ$_3$}, we study how a smell detector compares with TEDIOUS by relying solely on \textit{Long Method} and \textit{Long Parameter List} smell detection.
 	
@@ -212,7 +212,7 @@ We notice that two Checkstyle warnings, \textit{ParameterNumber} and \textit{Met
 \begin{table}[t]
 	\caption{Average performance of different machine learners for cross-project prediction.}
 	\label{tab:avgCross}
-	\centering
+	\centering\tiny
 	\resizebox{\linewidth}{!}{
 		\begin{tabular}{lrrrrrr}
 			\multicolumn{7}{c}{ \textbf{Without Balancing}}\\
@@ -249,7 +249,7 @@ On the balanced dataset, the best classifier is still Random Forests, with a pre
 \begin{table}[t]
 	\caption{Cross-project prediction: results of Random Forests for each system, without and with SMOTE balancing.}
 	\label{tab:bysyscross}
-	\centering\scriptsize
+	\centering\tiny
 	\resizebox{\linewidth}{!}{
 		
 		\begin{tabular}{lrrrrrr}
@@ -291,38 +291,9 @@ For the balanced dataset, results do not seem to be improving. Some systems bene
 
 To summarize, we can conclude that SMOTE rebalancing does not help a lot because (i) the very limited samples of positive examples is not enough to act as a seed for the generation of articifial instances (ii) static analysis warnings are sparse and have a boolean nature, which is not appropriate for a proper usage of SMOTE. We can also conclude that cross-project prediction can be very beneficial, except for the systems with a small amount of SATDs. The main reason is that, for cross-project prediction, the number of SATD methods in the training set is larger than for within-project prediction.
 
-\begin{landscape}
-\begin{table*}[t]
-	\caption{Top 10 discriminant features (cross-project prediction). (M): source code metrics,  (CS): CheckStyle checks, (P): PMD checks.}
-	\label{tab:top10featuresac}
-	\centering\scriptsize
-	\resizebox{\linewidth}{!}{
-	\begin{tabular}{lcccccccccc}
-		Metric&Ant&ArgoUML&Columba&Hibernate&jEdit&jFreeChart&jMeter&jRuby&Squirrel\\
-		\hline
-		\rowcolor{grey}
-		Readability (M)&1&1&1&1&1&1&1&1&1\\
-		LOC (M) &2&2&3&2&2&2&2&2&2\\
-		\rowcolor{grey}
-		CommentNbr (M) &7&3&4&3&3&4&4&3&3\\
-		DeclNbr (M) &4&4&2&4&4&3&3&4&4\\
-		\rowcolor{grey}
-		ExprStmtNbr (M) &5&5&5&5&5&5&5&5&5\\
-		McCabe (M) &6&6&6&6&6&6&6&6&6\\
-		\rowcolor{grey}
-		ParNbr (M)&3&7&7&7&7&7&7&7&7\\
-		LocalVariableCouldBeFinal (P) &10&9&9&8&10&8&10&10&8\\
-		\rowcolor{grey}
-		MethodArgumentCouldBeFinal (P) &---&10&10&10&8&9&8&8&7\\
-		FinalParameters (CS) & 8&---&8&9&9&---&8&8&8\\
-		\rowcolor{grey}
-		LineLength (CS) & 9&8&---&---&---&10&---&---&10\\
-		\hline
-	\end{tabular}
-	}
-	\vspace{-2mm}
-\end{table*}
-\end{landscape}
+%\begin{landscape}
+
+%\end{landscape}
 
 Table \ref{tab:top10featuresac} reports the top 10 features in cross-project prediction according to the MDI technique. The same features as in the within-project prediction are at the top, the most important being the source code metrics. \textit{Readability} is still the feature playing the biggest role, for all the systems, followed by \textit{LOC} once again and \textit{CommentNbr} which moves up 4 spots. \textit{ParNbr} drops a couple of spots and becomes less important than other metrics capturing the code size and complexity, namely \textit{DeclNbr}, \textit{ExprStmtNbr} and \textit{McCabe}. In within-project prediction, 22 warning checks were in the top 10 of at least one system, in cross-project prediction, there are only 4 of them (\textit{LocalVariableCouldBeFinal}, \textit{MethodArgumentCouldBeFinal}, \textit{FinalParameters} and \textit{LineLength}). However, these checks are in the top 10 of more systems ($>4$). These checks are related to declaring final variables, parameters not being reassigned and the length of lines. Again, two checks seem correlated, namely \textit{FinalParameters} and \textit{MethodArgumentCouldBeFinal}. Both were kept after the Spearman's analysis because the latter recommends the argument to be \textsc{final} only if it is not reassigned, \\textit{FinalParameters} does not.
 
@@ -335,6 +306,36 @@ Table \ref{tab:top10featuresac} reports the top 10 features in cross-project pre
 %1.5 pages
 
 \begin{landscape}
+\begin{table*}[t]
+	\caption{Top 10 discriminant features (cross-project prediction). (M): source code metrics,  (CS): CheckStyle checks, (P): PMD checks.}
+	\label{tab:top10featuresac}
+	\centering\scriptsize
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{lcccccccccc}
+			Metric&Ant&ArgoUML&Columba&Hibernate&jEdit&jFreeChart&jMeter&jRuby&Squirrel\\
+			\hline
+			\rowcolor{grey}
+			Readability (M)&1&1&1&1&1&1&1&1&1\\
+			LOC (M) &2&2&3&2&2&2&2&2&2\\
+			\rowcolor{grey}
+			CommentNbr (M) &7&3&4&3&3&4&4&3&3\\
+			DeclNbr (M) &4&4&2&4&4&3&3&4&4\\
+			\rowcolor{grey}
+			ExprStmtNbr (M) &5&5&5&5&5&5&5&5&5\\
+			McCabe (M) &6&6&6&6&6&6&6&6&6\\
+			\rowcolor{grey}
+			ParNbr (M)&3&7&7&7&7&7&7&7&7\\
+			LocalVariableCouldBeFinal (P) &10&9&9&8&10&8&10&10&8\\
+			\rowcolor{grey}
+			MethodArgumentCouldBeFinal (P) &---&10&10&10&8&9&8&8&7\\
+			FinalParameters (CS) & 8&---&8&9&9&---&8&8&8\\
+			\rowcolor{grey}
+			LineLength (CS) & 9&8&---&---&---&10&---&---&10\\
+			\hline
+		\end{tabular}
+	}
+	\vspace{-2mm}
+\end{table*}
 \begin{table*}[t]
 	\caption{Overall DECOR Performances in predicting SATD (the last line reports results for default thresholds).}
 	\label{tab:decor}
@@ -386,7 +387,7 @@ As an example of \textbf{false negative}, we have in \textsc{Columba} the method
 
 \section{Threats to Validity}
 
-Here are the threats to validity of our study, based on the guidelines for case study research \citep{yin2013case}. We identified 5 threats: construct, internal, conclusion, reliability and external validity threat.
+Here are the threats to validity of our research, based on the guidelines for case study research \citep{yin2013case}. We identified 5 threats: construct, internal, conclusion, reliability and external validity threat.
 
 \subsection{Construct validity}
 
@@ -406,7 +407,7 @@ This aspect can be detrimental and beneficial for TEDIOUS. On one side, the lear
 
 The fact that machine learners were built with default configurations only means that better results could have been obtained with a proper parameter optimization. In the worst case, this only means that our results are the lower-bound of what could be obtained. For Checkstyle, the default rules provided by the tool were used, the same goes for PMD. Similarly to the machine learners, a proper calibration of rules could have resulted in a different set of warnings which would have depicted a more accurate view of the systems. Consequently, the usefulness of checks could have been improved for the prediction. In fact, we plan to use SATD to help customize CheckStyle and PMD rules.
 
-Source code metrics were computed using srcML \citep{Collard2013} (except for the readability metric which was computed using the tool of \citet{buse2008metric}), therefore, other metric extractors could provide different results. However, the purpose of this study was not to evaluate our approach for specific static analysis tools and metri extractors. These tools were selected because of their ease of use and their popularity. They were complementary to the realisation of TEDIOUS. The main purpose of our work was to highlight the potential of learning technical debt to self-admit from source code features.
+Source code metrics were computed using srcML \citep{Collard2013} (except for the readability metric which was computed using the tool of \citet{buse2008metric}), therefore, other metric extractors could provide different results. However, the purpose of this thesis was not to evaluate our approach for specific static analysis tools and metri extractors. These tools were selected because of their ease of use and their popularity. They were complementary to the realisation of TEDIOUS. The main purpose of our work was to highlight the potential of learning technical debt to self-admit from source code features.
 
 We did not include \textsc{EMF} project to our dataset because we were unable to download the archive release 2.4.1. Since we already have 9 systems, some with similar amounts of classes (\textsc{ArgoUML}, \textsc{Hibernate} and \textsc{Columba}) or a smaller amount (\textsc{Squirrel}), we believe skipping \textsc{EMF} will not bias our results, even though it is the largest in terms of LOC.
 
@@ -420,7 +421,7 @@ We did not include \textsc{EMF} project to our dataset because we were unable to
 
 %1 page
 
-\textit{Reliability validity} threats concern the replicability of our study. We attempt to provide, as far as we can, all the necessary information to replicate our study. We plan to share a replication package containing: source code, raw data and scripts.
+\textit{Reliability validity} threats concern the replicability of our research. We attempt to provide, as far as we can, all the necessary information to replicate our approach. We plan to share a replication package containing: source code, raw data and scripts.
 
 \subsection{External validity}
 
