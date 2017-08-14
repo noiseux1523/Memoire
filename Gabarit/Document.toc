@@ -34,38 +34,38 @@
 \contentsline {subsubsection}{Feature Selection and Normalization}{17}{section*.17}
 \contentsline {subsubsection}{Re-Balancing}{17}{section*.18}
 \contentsline {subsection}{\numberline {3.1.4}Building and Applying Machine Learning Models}{18}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Study Definition}{20}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Dataset}{20}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Analysis Method}{23}{subsection.3.2.2}
-\contentsline {chapter}{\numberline {4}ANALYSIS OF STUDY RESULTS AND THREATS TO VALIDITY}{26}{chapter.4}
-\contentsline {section}{\numberline {4.1}Study Results}{26}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}How does TEDIOUS work for recommending SATD within-project?}{26}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}How does TEDIOUS work for recommending SATD across-project?}{30}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}How would a method-level smell detector compare with TEDIOUS?}{33}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Qualitative discussion of false positive and false negatives}{35}{subsection.4.1.4}
-\contentsline {section}{\numberline {4.2}Threats to Validity}{36}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Construct validity}{36}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Internal validity}{37}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Conclusion validity}{38}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Reliability validity}{38}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}External validity}{38}{subsection.4.2.5}
-\contentsline {chapter}{\numberline {5}CONVOLUTIONAL NEURAL NETWORK WITH COMMENTS AND SOURCE CODE}{39}{chapter.5}
-\contentsline {section}{\numberline {5.1}Convolutional Neural Network}{39}{section.5.1}
-\contentsline {section}{\numberline {5.2}The Approach}{40}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Source Code}{41}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Identification of Self-Admitted Technical Debt}{42}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Source Code Preprocessing and Word Embeddings}{43}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Building and Applying CNN}{44}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Study Definition}{47}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Dataset}{47}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Analysis Method}{48}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Study Results}{48}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Source Code Comments Only}{48}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Source Code With Comments}{50}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Source Code Without Comments}{50}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}Source Code Partially With Comments}{52}{subsection.5.4.4}
-\contentsline {chapter}{\numberline {6}CONCLUSION}{54}{chapter.6}
-\contentsline {section}{\numberline {6.1}Summary of Work}{54}{section.6.1}
-\contentsline {section}{\numberline {6.2}Limitations of the Proposed Solution}{55}{section.6.2}
-\contentsline {section}{\numberline {6.3}Future Work}{55}{section.6.3}
-\contentsline {compteur}{BIBLIOGRAPHY}{57}{chapter*.19}
+\contentsline {section}{\numberline {3.2}Study Definition}{21}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Dataset}{21}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Analysis Method}{24}{subsection.3.2.2}
+\contentsline {chapter}{\numberline {4}ANALYSIS OF STUDY RESULTS AND THREATS TO VALIDITY}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}Study Results}{27}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}How does TEDIOUS work for recommending SATD within-project?}{27}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}How does TEDIOUS work for recommending SATD across-project?}{31}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}How would a method-level smell detector compare with TEDIOUS?}{34}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Qualitative discussion of false positive and false negatives}{36}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Threats to Validity}{37}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Construct validity}{37}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Internal validity}{38}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Conclusion validity}{39}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Reliability validity}{39}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}External validity}{39}{subsection.4.2.5}
+\contentsline {chapter}{\numberline {5}CONVOLUTIONAL NEURAL NETWORK WITH COMMENTS AND SOURCE CODE}{40}{chapter.5}
+\contentsline {section}{\numberline {5.1}Convolutional Neural Network}{40}{section.5.1}
+\contentsline {section}{\numberline {5.2}The Approach}{41}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Source Code}{42}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Identification of Self-Admitted Technical Debt}{43}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Source Code Preprocessing and Word Embeddings}{44}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Building and Applying CNN}{45}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Study Definition}{48}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Dataset}{48}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Analysis Method}{49}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Study Results}{49}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Source Code Comments Only}{49}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Source Code With Comments}{51}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Source Code Without Comments}{51}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Source Code Partially With Comments}{53}{subsection.5.4.4}
+\contentsline {chapter}{\numberline {6}CONCLUSION}{55}{chapter.6}
+\contentsline {section}{\numberline {6.1}Summary of Work}{55}{section.6.1}
+\contentsline {section}{\numberline {6.2}Limitations of the Proposed Solution}{56}{section.6.2}
+\contentsline {section}{\numberline {6.3}Future Work}{56}{section.6.3}
+\contentsline {compteur}{BIBLIOGRAPHY}{58}{chapter*.19}
