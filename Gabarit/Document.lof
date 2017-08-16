@@ -1,5 +1,6 @@
 \select@language {english}
 \contentsline {figure}{\numberline {Figure\nobreakspace 3.1}{\ignorespaces Proposed approach for recommending SATD with TEDIOUS.}}{13}{figure.3.1}
 \contentsline {figure}{\numberline {Figure\nobreakspace 3.2}{\ignorespaces Process for building and applying machine learners.}}{20}{figure.3.2}
-\contentsline {figure}{\numberline {Figure\nobreakspace 5.1}{\ignorespaces Proposed approach for recommending SATD with a CNN.}}{42}{figure.5.1}
-\contentsline {figure}{\numberline {Figure\nobreakspace 5.2}{\ignorespaces Process for building and applying a CNN.}}{46}{figure.5.2}
+\contentsline {figure}{\numberline {Figure\nobreakspace 5.1}{\ignorespaces An example of a convolutional neural network \citep {Cong2014MinimizingCI}.}}{41}{figure.5.1}
+\contentsline {figure}{\numberline {Figure\nobreakspace 5.2}{\ignorespaces Proposed approach for recommending SATD with a CNN.}}{42}{figure.5.2}
+\contentsline {figure}{\numberline {Figure\nobreakspace 5.3}{\ignorespaces Process for building and applying a CNN.}}{47}{figure.5.3}

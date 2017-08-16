@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  14 AUG 2017 14:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  16 AUG 2017 15:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1416,7 +1416,7 @@ although it is yet undefined on input line 31.
 
  (./7-Theme1.tex
 Chapter 3.
-<figs/approach.pdf, id=729, 232.36812pt x 128.48pt>
+<figs/approach.pdf, id=735, 232.36812pt x 128.48pt>
 File: figs/approach.pdf Graphic file (type pdf)
  <use figs/approach.pdf>
 Package pdftex.def Info: figs/approach.pdf used on input line 13.
@@ -1434,7 +1434,7 @@ Package acronym Info: Label `acro:SMOTE' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 93.
  [18] [19]
-<figs/MachineLearning.pdf, id=885, 1798.72pt x 1000.73875pt>
+<figs/MachineLearning.pdf, id=891, 1798.72pt x 1000.73875pt>
 File: figs/MachineLearning.pdf Graphic file (type pdf)
 
 <use figs/MachineLearning.pdf>
@@ -1492,49 +1492,55 @@ Overfull \hbox (15.18187pt too wide) in paragraph at lines 19--20
 or im-age clas-si-fi-ca-tion ([]Krizhevsky
  []
 
-[40
+<figs/CNN-example.png, id=1067, 949.5475pt x 318.18875pt>
+File: figs/CNN-example.png Graphic file (type png)
+
+<use figs/CNN-example.png>
+Package pdftex.def Info: figs/CNN-example.png used on input line 23.
+(pdftex.def)             Requested size: 472.03111pt x 158.17635pt.
+ [40
 
 
 
-] <figs/CNN.png, id=1071, 732.7375pt x 537.00626pt>
+]
+<figs/CNN.png, id=1081, 732.7375pt x 537.00626pt>
 File: figs/CNN.png Graphic file (type png)
  <use figs/CNN.png>
-Package pdftex.def Info: figs/CNN.png used on input line 31.
+Package pdftex.def Info: figs/CNN.png used on input line 39.
 (pdftex.def)             Requested size: 472.03111pt x 345.94438pt.
-
-[41] [42 <./figs/CNN.png>] [43] [44]
-<figs/CNNProcess.png, id=1104, 921.4425pt x 1003.75pt>
+ [41 <./figs/CNN-example.png (PNG copy)>] [42 <./figs/CNN.png>] [43] [44]
+<figs/CNNProcess.png, id=1114, 921.4425pt x 1003.75pt>
 File: figs/CNNProcess.png Graphic file (type png)
 
 <use figs/CNNProcess.png>
-Package pdftex.def Info: figs/CNNProcess.png used on input line 90.
+Package pdftex.def Info: figs/CNNProcess.png used on input line 100.
 (pdftex.def)             Requested size: 472.03111pt x 514.18782pt.
- [45] [46 <./figs/CNNProcess.png>] [47] [48
+ [45] [46] [47 <./figs/CNNProcess.png>] [48] [49
 
 
-] [49]
-[50] [51] [52]
-Overfull \hbox (24.21082pt too wide) in paragraph at lines 306--307
+]
+[50] [51] [52] [53]
+Overfull \hbox (24.21082pt too wide) in paragraph at lines 316--317
 \T1/lmr/bx/n/12 LIES AUX METH-ODS SATD SONT EN-LEVES POUR EVITER SELF PROPHECY 
 
  []
 
-[53]) [54]
+[54]) [55]
 \openout2 = `8-Conclusion.aux'.
 
  (./8-Conclusion.tex
 Chapter 6.
-[55
+[56
 
 
 
-] [56]
+] [57]
 Package acronym Info: Label `acro:RNN' newly defined as it shall be overridden
 although it is yet undefined on input line 54.
-) [57] (./Document.bbl [58
+) [58] (./Document.bbl [59
 
 
-] [59] [60] [61] [62]) [63]
+] [60] [61] [62] [63]) [64]
 \openout2 = `9-Annexes.aux'.
 
  (./9-Annexes.tex)
@@ -1554,13 +1560,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19585 strings out of 493014
- 332657 string characters out of 6133351
- 461474 words of memory out of 5000000
- 22485 multiletter control sequences out of 15000+600000
+ 19598 strings out of 493014
+ 332923 string characters out of 6133351
+ 461562 words of memory out of 5000000
+ 22494 multiletter control sequences out of 15000+600000
  58500 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,17n,92p,10412b,646s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,17n,92p,10412b,648s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
 cal/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/20
 16/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2016/texmf-dist/
@@ -1579,10 +1585,10 @@ e/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2016/tex
 mf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fo
 nts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 public/lm/lmtt12.pfb>
-Output written on Document.pdf (83 pages, 643115 bytes).
+Output written on Document.pdf (84 pages, 758037 bytes).
 PDF statistics:
- 1334 PDF objects out of 1440 (max. 8388607)
- 1189 compressed objects within 12 object streams
- 231 named destinations out of 1000 (max. 500000)
- 509 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1349 PDF objects out of 1440 (max. 8388607)
+ 1201 compressed objects within 13 object streams
+ 234 named destinations out of 1000 (max. 500000)
+ 514 words of extra memory for PDF output out of 10000 (max. 10000000)
 
