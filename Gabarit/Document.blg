@@ -20,7 +20,12 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Document.bib
-Repeated entry---line 1899 of file Document.bib
+I was expecting a `,' or a `}'---line 1709 of file Document.bib
+ :  
+ :  author={Britz, Denny}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1933 of file Document.bib
  : @article{chawla2002smote
  :                         ,
 I'm skipping whatever remains of this entry
@@ -32,50 +37,49 @@ Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Warning--to sort, need author, organization, or key in checkstyle
 Warning--to sort, need author, organization, or key in pmd
-Warning--to sort, need author, organization, or key in word2vec
 Name 2 in "Suryanarayana, Girish and , and Samarthyam, Ganesh and Sharma, Tushar" has a comma at the end for entry Suryanarayana20151
 while executing---line 2900 of file IEEEtranSN-francais.bst
 
 Done.
 You've used 58 entries,
             5261 wiz_defined-function locations,
-            1553 strings with 25284 characters,
-and the built_in function-call counts, 60778 in all, are:
-= -- 5563
-> -- 2114
-< -- 428
-+ -- 921
-- -- 514
-* -- 3334
-:= -- 8806
+            1556 strings with 25396 characters,
+and the built_in function-call counts, 61834 in all, are:
+= -- 5660
+> -- 2176
+< -- 441
++ -- 948
+- -- 529
+* -- 3405
+:= -- 8966
 add.period$ -- 141
 call.type$ -- 58
-change.case$ -- 285
-chr.to.int$ -- 1012
-cite$ -- 122
-duplicate$ -- 3706
-empty$ -- 4419
-format.name$ -- 630
-if$ -- 13768
+change.case$ -- 290
+chr.to.int$ -- 1042
+cite$ -- 120
+duplicate$ -- 3753
+empty$ -- 4456
+format.name$ -- 647
+if$ -- 14003
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 568
+missing$ -- 574
 newline$ -- 209
-num.names$ -- 222
-pop$ -- 1720
+num.names$ -- 226
+pop$ -- 1727
 preamble$ -- 1
-purify$ -- 227
+purify$ -- 232
 quote$ -- 2
-skip$ -- 4451
+skip$ -- 4524
 stack$ -- 0
-substring$ -- 2387
-swap$ -- 2653
-text.length$ -- 84
+substring$ -- 2456
+swap$ -- 2713
+text.length$ -- 87
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 1374
-warning$ -- 3
-while$ -- 347
+type$ -- 1377
+warning$ -- 2
+while$ -- 354
 width$ -- 0
-write$ -- 699
-(There were 2 error messages)
+write$ -- 705
+(There were 3 error messages)

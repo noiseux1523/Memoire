@@ -30,10 +30,6 @@
 \bibitem[pmd()]{pmd}
 ``{PMD}. \url{https://pmd.github.io/} (last access: 03/30/2017)''.
 
-\bibitem[wor()]{word2vec}
-``{word2vec}. \url{https://code.google.com/archive/p/word2vec/} (last access:
-  06/21/2017)''.
-
 \bibitem[Allman(2012)]{allman2012managing}
 E.~Allman, ``Managing technical debt'', \emph{Communications of the ACM},
   vol.~55, no.~5, pp. 50--55, 2012.
@@ -327,6 +323,13 @@ A.~Potdar et E.~Shihab, ``An exploratory study on self-admitted technical
 \bibitem[Quinlan(1993)]{Quinlan1993}
 R.~Quinlan, \emph{C4.5: Programs for Machine Learning}.\hskip 1em plus 0.5em
   minus 0.4em\relax San Mateo, CA: Morgan Kaufmann Publishers, 1993.
+
+\bibitem[Srivastava et~al.(2014)Srivastava, Hinton, Krizhevsky, Sutskever, and
+  Salakhutdinov]{srivastava2014dropout}
+N.~Srivastava, G.~E. Hinton, A.~Krizhevsky, I.~Sutskever, et R.~Salakhutdinov,
+  ``Dropout: a simple way to prevent neural networks from overfitting.''
+  \emph{Journal of machine learning research}, vol.~15, no.~1, pp. 1929--1958,
+  2014.
 
 \bibitem[Suryanarayana et~al.(2015)Suryanarayana, Samarthyam, and
   Sharma]{Suryanarayana20151}

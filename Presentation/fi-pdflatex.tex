@@ -1,0 +1,251 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% I, the copyright holder of this work, release this work into the
+%% public domain. This applies worldwide. In some countries this may
+%% not be legally possible; if so: I grant anyone the right to use
+%% this work for any purpose, without any conditions, unless such
+%% conditions are required by law.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+\usetheme[faculty=fi]{fibeamer}
+\usepackage{framed}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=Java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+\usepackage[
+  main=english, %% By using `czech` or `slovak` as the main locale
+                %% instead of `english`, you can typeset the
+                %% presentation in either Czech or Slovak,
+                %% respectively.
+  czech, slovak %% The additional keys allow foreign texts to be
+]{babel}        %% typeset as follows:
+%%
+%%   \begin{otherlanguage}{czech}   ... \end{otherlanguage}
+%%   \begin{otherlanguage}{slovak}  ... \end{otherlanguage}
+%%
+%% These macros specify information about the presentation
+\title{
+RECOMMENDING WHEN DESIGN TECHNICAL DEBT SHOULD BE SELF-ADMITTED} %% that will be typeset on the
+\subtitle{Computer Engineering} %% title page.
+\author{Cedric Noiseux}
+\date{December 5, 2017}
+\defbeamertemplate*{title page}{customized}
+{
+	\centering
+	\begin{framed}
+		\usebeamerfont{title}\inserttitle\par
+	\end{framed}
+	\usebeamerfont{subtitle}\textcolor{white}{\insertsubtitle}\par
+	\begin{figure}[t]
+		\centering
+		\includegraphics[width=45mm]{resources/logo}
+		\vspace{-4mm}
+	\end{figure}
+	\usebeamerfont{author}\textcolor{white}{\insertauthor}\par
+	%\usebeamerfont{institute}\textcolor{lightgray}{\insertinstitute}\par
+	\usebeamerfont{date}\textcolor{white}{\insertdate}\par
+}
+%% These additional packages are used within the document:
+\usepackage{ragged2e}  % `\justifying` text
+\usepackage{booktabs}  % Tables
+\usepackage{tabularx}
+\usepackage{tikz}      % Diagrams
+\usetikzlibrary{calc, shapes, backgrounds}
+\usepackage{amsmath, amssymb}
+\usepackage{url}       % `\url`s
+\usepackage{listings}  % Code listings
+\frenchspacing
+\begin{document}
+	\begin{darkframes}
+		%%%%%%%%%
+		% Title Page %
+		%%%%%%%%%
+		
+		\frame{\maketitle}
+  
+  		%%%%%%%%%%%%%
+  		% Table of Content %
+  		%%%%%%%%%%%%%
+  		
+				\begin{frame}[allowframebreaks]
+					\frametitle{Table of Contents}
+					\tableofcontents[sections={1-2}]
+						\framebreak
+					\tableofcontents[sections={3-4}]
+				\end{frame}
+	
+		\section{INTRODUCTION}
+		
+			%%%%%%%%%%%%%%%%%%
+			% Concepts and Definitions %
+			%%%%%%%%%%%%%%%%%%
+	
+			\subsection{Concepts and Definitions}	  
+				\begin{frame}{Concepts and Definitions}		
+					\begin{block}{Technical Debts}
+						They are not quite right code which we postpone making it right~\cite{cunn92}. They are temporary and suboptimal solutions or workarounds.
+					\end{block}
+					\begin{block}{Reasons}
+						Quickly fix an issue\\
+						Early conception stages\\
+						Lack of comprehension, skill or experience	
+					\end{block}
+				\end{frame}
+						
+				\begin{frame}{Concepts and Definitions}	
+					\begin{block}{Types}
+						Design\\
+						Requirement\\
+						Code\\
+						Test\\
+						Documentation
+					\end{block}	
+				\end{frame}
+			
+			
+			Technical Debts (defintion, impact)
+			Types of Debts
+			Self-Admitted Technical Debts (definition, exploratory study)
+						
+			\subsection{Elements of the Problematic}
+			
+			Low prediction (many FP)
+			Inefficient strategies (refactoring, tracking, etc)
+			Ineficient approaches (pattern matching, ML)
+			Research questions (main and 3 sub-questions)
+	
+			\subsection{Objectives}
+			
+			Research objective (main and 2 application scenarios)
+			Design objectives (5 objectives)
+
+	    \section{TEDIOUS}
+	    
+	    	\subsection{Study Definition}	
+	    	
+	    	9 OOS + Java
+	    	More method-related than class-related
+		    Unbalance
+		    
+		    \subsection{The Approach}
+		    
+		    Method-level
+		    Image du process (separer en differents process et expliquer)
+		    	- Training and test sets
+		    	- SATD matching
+		    	- Features
+		    	- Preprocessing
+		    	- Building and applying machine learners (training and testing)
+		    
+		    \subsection{Study Results}
+		    
+		    Analysis Method
+		    Within project performance
+		    Cross project performance
+		    TEDIOUS vs method level
+		    Qualitative analysis
+		    
+	\end{darkframes}
+
+	\section{CONVOLUTIONAL NEURAL NETWORK}
+	
+		\subsection{Introduction}
+		
+		Inspirations (Kim, Dos Santos)
+		Description
+
+		\subsection{The Approach}
+		
+		Method-level
+		Image du process (separer en differents process et expliquer)
+		- Training and test sets
+		- SATD matching
+		- Source code
+		- Preprocessing/Word Embedings
+		- Building and applying machine learners (training and testing)
+
+		\subsection{Study Definition}	
+		
+		Research questions (main and 3 sub-questions)
+		9 OOS + Java
+		More method-related than class-related
+		Unbalance
+
+		\subsection{Study Results}
+		
+		Source code comments only
+		Source code with comments
+		Source code without comments
+		Source code partially with comments
+			
+	\section{CONCLUSION}
+	
+		\subsection{Threats to Validity}
+		
+		Construct
+		Internal
+		Conclusion
+		Reliability
+		External
+
+		\subsection{Limitations}	
+		
+		Number of metrics/warning
+		Number of LOC
+		Process inherent errors
+		Default configurations (no real optimizations)
+		Generalization of results
+		Only in Java
+		Performance evaluation can be better for CNN
+		
+		\subsection{Summary and Future Work}	
+	
+		TEDIOUS approach
+		CNN approach
+		Dataset
+		TEDIOUS results
+		CNN results
+		Applicability scenarios
+			- Recommendation system
+			- Complement to smell detectors
+		Improvements
+			- Optimization
+			- Pattern matching process
+			- More examples to train
+			- More positive examples
+			- More metrics/warnings and source code
+			- Other TD types
+			- Extend to other languages and domains
+			
+		\begin{frame}[label=bibliography]{Bibliography}
+		\framesubtitle{\TeX, \LaTeX, and Beamer}
+		\begin{thebibliography}{9}
+			\bibitem{cunn92}
+			W~Cunningham.
+			\emph{The wycash portfolio management system}.
+			dans Addendum to the Proceedings on Object-oriented Programming Systems, Languages, and Applications (Addendum), s\'{e}rie OOPSLA ’92, New York, NY, USA: ACM, 1992, pp 29–30, DOI: 10.1145/157709.157715. En ligne: http://doi.acm.org/10.1145/157709.157715.
+			\end{thebibliography}
+		\end{frame}
+	
+\end{document}

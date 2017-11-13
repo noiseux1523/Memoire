@@ -1,6 +1,10 @@
 \select@language {english}
 \contentsline {figure}{\numberline {Figure\nobreakspace 3.1}{\ignorespaces Proposed approach for recommending SATD with TEDIOUS.}}{13}{figure.3.1}
 \contentsline {figure}{\numberline {Figure\nobreakspace 3.2}{\ignorespaces Process for building and applying machine learners.}}{20}{figure.3.2}
-\contentsline {figure}{\numberline {Figure\nobreakspace 5.1}{\ignorespaces An example of a convolutional neural network \citep {Cong2014MinimizingCI}.}}{41}{figure.5.1}
-\contentsline {figure}{\numberline {Figure\nobreakspace 5.2}{\ignorespaces Proposed approach for recommending SATD with a CNN.}}{42}{figure.5.2}
-\contentsline {figure}{\numberline {Figure\nobreakspace 5.3}{\ignorespaces Process for building and applying a CNN.}}{47}{figure.5.3}
+\contentsline {figure}{\numberline {Figure\nobreakspace 5.1}{\ignorespaces An example of a convolutional neural network \citep {Cong2014MinimizingCI}.}}{43}{figure.5.1}
+\contentsline {figure}{\numberline {Figure\nobreakspace 5.2}{\ignorespaces Proposed approach for recommending SATD with a CNN.}}{44}{figure.5.2}
+\contentsline {figure}{\numberline {Figure\nobreakspace 5.3}{\ignorespaces Process for building and applying a CNN.}}{49}{figure.5.3}
+\contentsline {figure}{\numberline {Figure\nobreakspace 5.4}{\ignorespaces Comments only predictions.}}{54}{figure.5.4}
+\contentsline {figure}{\numberline {Figure\nobreakspace 5.5}{\ignorespaces Comments and methods predictions.}}{56}{figure.5.5}
+\contentsline {figure}{\numberline {Figure\nobreakspace 5.6}{\ignorespaces Methods without comments predictions.}}{58}{figure.5.6}
+\contentsline {figure}{\numberline {Figure\nobreakspace 5.7}{\ignorespaces Methods and comments without SATD-comments predictions.}}{60}{figure.5.7}

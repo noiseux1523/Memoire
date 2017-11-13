@@ -6,12 +6,12 @@
 
 This section reports study results in the context of each research question. Tables provide visual representations and summarize the main results. More in depth analysis is discussed for the three research questions and the qualitative analysis.
 
-\subsection{How does TEDIOUS work for recommending SATD within-project?}
+\subsection{How does TEDIOUS work for recommending SATD within project?}
 
 %4.5 pages
 
 \begin{table}[t]
-	\caption{Average performance of different machine learners for within-project prediction.}
+	\caption{Average performance of different machine learners for within project prediction.}
 	\label{tab:avgWithin}
 	\centering\tiny
 	\resizebox{\textwidth}{!}{
@@ -41,7 +41,7 @@ This section reports study results in the context of each research question. Tab
 	\vspace{-3mm}
 \end{table}
 
-Table \ref{tab:avgWithin} presents the average performance results of a 10-fold cross validation within-project executed 10 times and with five different machine learners. The average was computed for the 9 studied projects. The 10-fold cross validation was performed with balancing using SMOTE and without balancing.
+Table \ref{tab:avgWithin} presents the average performance results of a 10-fold cross validation within project executed 10 times and with five different machine learners. The average was computed for the 9 studied projects. The 10-fold cross validation was performed with balancing using SMOTE and without balancing.
 
 On the unbalanced dataset, the best classifier is the one using the Random Forests algorithm. It achieves the best balance between precision ($49.97\%$) and recall ($52.19\%$), obtaining a $F_{1}$ score of $47.15\%$, the highest of all machine learners. We also notice that the Bagging algorithm is performing almost as well as Random Forests, even obtaining a slightly better precision but a weaker $F_{1}$ score. The accuracy of Random Forests, which includes the correct classification of negatives (the vast majority of the data), is $93.32\%$ and almost all the other machine learners obtain an accuracy higher than $90\%$, between $[89.01\%-93.35\%]$. MCC is on average $>0.4$, which is translated into a moderate correlation, and AUC is $>0.9$ (close to a perfect classifier) for Random Forests, Bagging and Bayesian, and $>0.7$ for j48 and Random Trees.
 
@@ -87,7 +87,7 @@ On the balanced dataset, the best classifier is still Random Forests, with a pre
 	\vspace{-3mm}
 \end{table}
 
-Table \ref{tab:bysyswithin} highlights the within-project prediction results for each system, using Random Forests, and using balancing or not. Random Forests only was used since it was the best classifier based on Table \ref{tab:avgWithin}. If we look at the unbalanced dataset, two systems are performing way worse than the others, namely \textsc{Ant} and \textsc{jEdit}. There is a reason behind this if we look back at Table 3.1. The analyzed projects, other than \textsc{jFreeChart} with 18\%, all have a percentage of their methods containing SATD below or equal to 5\%. \textsc{Ant} only has 0.5\% of its methods containing SATD and \textsc{jEdit} only 2\%. This explains the low performance values of \textsc{Ant} (precision $0.91\%$, recall $16.39\%$ and $F_1$ score $1.73\%$) and \textsc{jEdit} (precision $5.24\%$, recall $25.71\%$ and $F_1$ score $8.71\%$). The AUC values are still decent, respectively with $0.77$ and $0.81$, but the MCC values, respectively with $0$ and $0.06$, clearly prove us that the classifier is as good as a random one.
+Table \ref{tab:bysyswithin} highlights the within project prediction results for each system, using Random Forests, and using balancing or not. Random Forests only was used since it was the best classifier based on Table \ref{tab:avgWithin}. If we look at the unbalanced dataset, two systems are performing way worse than the others, namely \textsc{Ant} and \textsc{jEdit}. There is a reason behind this if we look back at Table 3.1. The analyzed projects, other than \textsc{jFreeChart} with 18\%, all have a percentage of their methods containing SATD below or equal to 5\%. \textsc{Ant} only has 0.5\% of its methods containing SATD and \textsc{jEdit} only 2\%. This explains the low performance values of \textsc{Ant} (precision $0.91\%$, recall $16.39\%$ and $F_1$ score $1.73\%$) and \textsc{jEdit} (precision $5.24\%$, recall $25.71\%$ and $F_1$ score $8.71\%$). The AUC values are still decent, respectively with $0.77$ and $0.81$, but the MCC values, respectively with $0$ and $0.06$, clearly prove us that the classifier is as good as a random one.
 
 \textsc{jFreeChart} is the project containing the most number of SATD and is consequently the project where the classifier performs the best. It obtains high precision and recall ($84.58\%$ and  $82.52\%$) as well as high MCC and AUC ($0.83$ and $0.99$). Performance values on the other 6 projects are also decent, the $F_1$ score is almost always $>50\%$, the MCC is between $[0.47-0.64]$ which translates to a moderate to strong correlation, and the AUC is in the interval $[0.91-0.97]$. We notice that the prediction performance of TEDIOUS is dependent on the system and not only the number of SATD it is trained on. \textsc{Squirrel} has a slightly higher percentage of SATD methods than \textsc{Ant} and slightly lower than \textsc{jEdit}, but it still performs significantly better than these two projects ($73.33\%$ precision and $44.44\%$ recall). 
 
@@ -95,7 +95,7 @@ If we look at the balanced dataset, the same trend is observed as in the balance
 
 %\begin{landscape}
 \begin{table*}[t]
-	\caption{Top 10 discriminant features (within-project prediction). (M): source code metrics,  (CS): CheckStyle checks, (P): PMD checks.}
+	\caption{Top 10 discriminant features (within project prediction). (M): source code metrics,  (CS): CheckStyle checks, (P): PMD checks.}
 	\label{tab:top10features}
 	\centering\scriptsize
 	\resizebox{\linewidth}{!}{
@@ -193,19 +193,19 @@ If we look at the balanced dataset, the same trend is observed as in the balance
 \end{table*}
 %\end{landscape}
 
-Table \ref{tab:top10features} reports the top 10 features in within-project prediction according to the MDI technique. The importance of each feature is ranked for each system. Four features are in the top 10 of all projects, and they are all source code metrics. The most important one is the readability metric of \citet{buse2008metric}, which is the top feature for 7 systems. This observation is contrasting with the work of \citet{BavotaR16} where they found that there was little correlation between SATD and code quality metrics as well as readability. The difference may lie in the fact that TEDIOUS works at method-level and not class-level like in the study of \citet{BavotaR16}. A class contains several methods, some can be readable and others not really. This previous study may not have been able to work at granularity fine enough to detect these potential SATDs. The other three top features are the number of declarations (\textit{DeclNbr}), number of of parameters (\textit{ParNbr}) and the number of lines of code (\textit{LOC}). Having \textit{ParNbr} and \textit{LOC} in the top features is interesting because they are typical metrics used in smell detectors. In fact, for \textbf{RQ$_3$}, we studied how a smell detector compares with TEDIOUS by relying solely on \textit{Long Method} and \textit{Long Parameter List} smell detection.
+Table \ref{tab:top10features} reports the top 10 features in within project prediction according to the MDI technique. The importance of each feature is ranked for each system. Four features are in the top 10 of all projects, and they are all source code metrics. The most important one is the readability metric of \citet{buse2008metric}, which is the top feature for 7 systems. This observation is contrasting with the work of \citet{BavotaR16} where they found that there was little correlation between SATD and code quality metrics as well as readability. The difference may lie in the fact that TEDIOUS works at method-level and not class-level like in the study of \citet{BavotaR16}. A class contains several methods, some can be readable and others not really. This previous study may not have been able to work at granularity fine enough to detect these potential SATDs. The other three top features are the number of declarations (\textit{DeclNbr}), number of parameters (\textit{ParNbr}) and the number of lines of code (\textit{LOC}). Having \textit{ParNbr} and \textit{LOC} in the top features is interesting because they are typical metrics used in smell detectors. In fact, for \textbf{RQ$_3$}, we studied how a smell detector compares with TEDIOUS by relying solely on \textit{Long Method} and \textit{Long Parameter List} smell detection.
 	
 Other important features, which appears in the top 10 of over half of the systems, are the number of expressions (\textit{ExprStmtNbr}), the McCabe cyclomatic complexity (\textit{McCabe}) and the number of comments (\textit{CommentNbr}). For \textit{CommentNbr}, the SATD comments were excluded in order to keep the prediction unbiased. All these metrics are also source code metrics.
 
-The other features are all warning checks from CheckStyle and PMD. The length of lines (\textit{LineLength}) and \textit{LocalVariableCouldBeFinal} warnings are the most common, with the others being relevant for specific systems. Most of these features relate to poorly written code. For example, \textit{LineLength} checks for long lines, which are hard to read in printouts or if the coding screen space is limited. \textit{LocalVariableCouldBeFinal} refers to a variable that is assigned only once. \textit{LocalVariableName} is the most important feature for \textsc{Columba} and it checks for single-character variables or local variables with same name in different scopes. \textit{UseStringBufferForStringAppends} is the most important feature in \textsc{Ant} and it checks if their is a non-trivial amount of the operator \textsc{+=} for appending strings in the source code. For further details on the meaning of each warning, you can refer to the documentation of CheckStyle\footnote{\url{http://checkstyle.sourceforge.net/checks.html}} and PMD\footnote{\url{https://pmd.github.io/pmd-5.5.5/pmd-java/rules/index.html}}.
+The other features are all warning checks from CheckStyle and PMD. The length of lines (\textit{LineLength}) and \textit{LocalVariableCouldBeFinal} warnings are the most common, with the others being relevant for specific systems. Most of these features relate to poorly written code. For example, \textit{LineLength} checks for long lines, which are hard to read in printouts or if the coding screen space is limited. \textit{LocalVariableCouldBeFinal} refers to a variable that is assigned only once. \textit{LocalVariableName} is the most important feature for \textsc{Columba} and it checks for single-character variables or local variables with the same name in different scopes. \textit{UseStringBufferForStringAppends} is the most important feature in \textsc{Ant} and it checks if there is a non-trivial amount of the operator \textsc{+=} for appending strings in the source code. For further details on the meaning of each warning, you can refer to the documentation of CheckStyle\footnote{\url{http://checkstyle.sourceforge.net/checks.html}} and PMD\footnote{\url{https://pmd.github.io/pmd-5.5.5/pmd-java/rules/index.html}}.
 
-We notice that two Checkstyle warnings, \textit{ParameterNumber} and \textit{MethodLength}, are very similar to two source code metrics, namely \textit{ParNbr} and \textit{LOC}. Intuitively, they should have been removed by the Spearman's analysis since they seem strongly correlated to these source code metrics. However, differently from the metrics, the warnings are boolean features. CheckStyle looks if there are over 7 parameters for \textit{ParameterNumber} and over 150 LOC for \textit{LOC}, returning \textit{TRUE} or \textit{FALSE} accordingly. This is why these warnings were not remove by Spearman's analysis.
+We notice that two Checkstyle warnings, \textit{ParameterNumber} and \textit{MethodLength}, are very similar to two source code metrics, namely \textit{ParNbr} and \textit{LOC}. Intuitively, they should have been removed by the Spearman's analysis since they seem strongly correlated to these source code metrics. However, differently from the metrics, the warnings are boolean features. CheckStyle looks if there are over 7 parameters for \textit{ParameterNumber} and over 150 LOC for \textit{LOC}, returning \textit{TRUE} or \textit{FALSE} accordingly. This is why these warnings were not removed by Spearman's analysis.
 
 \begin{mdframed}
-	{\bf RQ$_1$ summary:} Random Forests classifiers achieve the best average performance for within-project prediction of design technical debts to recommend. Precision of 49.97\%, recall of 52.19\% and $F_1$ score of 47.15\% are achieved for an unbalanced dataset. When using Random Forests on each system, high MCC and AUC values indicate healthy classifiers except for the ones with a small number of SATD instances. Balancing does improve recall but it does not result in better classifiers because of a substantial decrease in precision. Code readability, complexity and size are the most useful features in building the predictors, for all systems, in addition to some system-specific analysis checks.
+	{\bf RQ$_1$ summary:} Random Forests classifiers achieve the best average performance for within project prediction of design technical debts to recommend. Precision of 49.97\%, recall of 52.19\% and $F_1$ score of 47.15\% are achieved for an unbalanced dataset. When using Random Forests on each system, high MCC and AUC values indicate healthy classifiers except for the ones with a small number of SATD instances. Balancing does improve recall but it does not result in better classifiers because of a substantial decrease in precision. Code readability, complexity and size are the most useful features in building the predictors, for all systems, in addition to some system-specific analysis checks.
 \end{mdframed}
 
-\subsection{How does TEDIOUS work for recommending SATD across-project?}
+\subsection{How does TEDIOUS work for recommending SATD across projects?}
 
 %4 pages
 
@@ -240,9 +240,9 @@ We notice that two Checkstyle warnings, \textit{ParameterNumber} and \textit{Met
 	\vspace{-3mm}
 \end{table}
 
-Table \ref{tab:avgCross} highlights the average performance of different machine learners for cross-project prediction. The process is similar to \textbf{RQ1}, instead of performing a cross-validation on each system individually, the classifier is trained on 8 systems and tested on 1 system. The classifiers are trained with a balanced dataset (top section of the table) and with an unbalanced one (bottom section). The same trend is observed for within-project and cross-project predictions: Random Forests outperforms the other machine learners and rebalancing does not provide a significant payoff. 
+Table \ref{tab:avgCross} highlights the average performance of different machine learners for cross-project prediction. The process is similar to \textbf{RQ1}, instead of performing a cross-validation on each system individually, the classifier is trained on 8 systems and tested on 1 system. The classifiers are trained with a balanced dataset (top section of the table) and with an unbalanced one (bottom section). The same trend is observed for within project and cross-project predictions: Random Forests outperforms the other machine learners and rebalancing does not provide a significant payoff. 
 
-On the unbalanced dataset, the best classifier is the one using the Random Forests algorithm. It achieves the best precision ($67.22\%$), a good recall ($54.89\%$), and the best $F_{1}$ score ($55.43\%$). Compared to the within-project results, the improvement in precision is $+17.25\%$, in recall $+2.70\%$ and in $F_1$ score $+8.28\%$. For the other machine learners, the precision vary between $[48.31\%-58.85\%]$ and the recall between $[51.62\%-64.25\%]$. MCC is always $>0.4$ (moderate correlation) and AUC $>0.7$.
+On the unbalanced dataset, the best classifier is the one using the Random Forests algorithm. It achieves the best precision ($67.22\%$), a good recall ($54.89\%$), and the best $F_{1}$ score ($55.43\%$). Compared to the within project results, the improvement in precision is $+17.25\%$, in recall $+2.70\%$ and in $F_1$ score $+8.28\%$. For the other machine learners, the precision varies between $[48.31\%-58.85\%]$ and the recall between $[51.62\%-64.25\%]$. MCC is always $>0.4$ (moderate correlation) and AUC $>0.7$.
 
 On the balanced dataset, the best classifier is still Random Forests, with a precision of $47.49\%$, recall of $78.75\%$ and $F_{1}$ score of $56.45\%$. The $F_{1}$ score is slightly better than without balancing, but as expected precision suffers a large loss in order to obtain higher recall. We also notice that MCC and AUC values are slightly lower than without balancing. A similar trend is observed for the other machine learners, with Bayesian suffering the most from rebalancing, performing almost like a random classifier (MCC near $0$). It is important to notice that, other than Random Forests, none of the other algorithms obtain a higher $F_1$ score with balancing.
 
@@ -285,27 +285,23 @@ On the balanced dataset, the best classifier is still Random Forests, with a pre
 	\vspace{-3mm}
 \end{table}
 
-Table \ref{tab:bysyscross} reports the cross-project prediction results for each system, using the best classifier, Random Forests, and using balancing or not. The top part of the table is without balancing results and the bottom part is with rebalancing using SMOTE. For the balanced dataset, Random Forests machine learner performs the best on the same systems as in within-project prediction. Systems with the lowest percentage of SATD methods are also the ones with the weakest performance results, namely \textsc{jRuby}, \textsc{jEdit} and \textsc{Ant}. These systems have a low percentage of SATD methods ($<2.15\%$) and can't achieve a $F_1$ score $>37\%$, the other 6 systems all have a $F_1$ score $>53\%$. \textsc{jRuby}'s performance metrics are significantly worse than in within-project prediction but it is the only system that experiences this decrease, the 8 others are almost all improving. We notice that, even though \textsc{Squirrel} also have a small amount of SATD methods ($1.42\%$), it still achieves a precision of $48.75\%$ and a recall of $70.62\%$. It shows that not only the number of SATDs but also the features and context of these SATDs is important for the prediction quality of a classifier. 
+Table \ref{tab:bysyscross} reports the cross-project prediction results for each system, using the best classifier, Random Forests, and using balancing or not. The top part of the table is without balancing results and the bottom part is with rebalancing using SMOTE. For the balanced dataset, Random Forests machine learner performs the best on the same systems as in within project prediction. Systems with the lowest percentage of SATD methods are also the ones with the weakest performance results, namely \textsc{jRuby}, \textsc{jEdit} and \textsc{Ant}. These systems have a low percentage of SATD methods ($<2.15\%$) and can't achieve a $F_1$ score $>37\%$, the other 6 systems all have a $F_1$ score $>53\%$. \textsc{jRuby}'s performance metrics are significantly worse than in within project prediction but it is the only system that experiences this decrease, the 8 others are almost all improving. We notice that, even though \textsc{Squirrel} also has a small number of SATD methods ($1.42\%$), it still achieves a precision of $48.75\%$ and a recall of $70.62\%$. It shows that not only the number of SATDs but also the features and context of these SATDs is important for the prediction quality of a classifier. 
 
-Further analysis of methods' characteristics labeled as SATD in \textsc{jRuby, jEdit} and \textsc{Ant} would be necessary to try and understand their low performance results. One possible explanation is that SATDs from the testing set could greatly differ from the ones in the training set, making the training phase not optimal for proper classification of unlabeled data. Finally, \textsc{jFreeChart} still have the best performance values (precision of $94.89\%$, recall of $95.98\%$ and $F_1$ score of $95.43\%$) with \textsc{ArgoUML} being pretty close (precision of $94.46\%$, recall of $88.29\%$ and $F_1$ score of $91.27\%$). They both have MCC values $>0.85$, which translates to very strong correlation.
+Further analysis of methods' characteristics labeled as SATD in \textsc{jRuby, jEdit} and \textsc{Ant} would be necessary to try and understand their low performance results. One possible explanation is that SATDs from the testing set could greatly differ from the ones in the training set, making the training phase not optimal for proper classification of unlabeled data. Finally, \textsc{jFreeChart} still have the best performance values (precision of $94.89\%$, recall of $95.98\%$ and $F_1$ score of $95.43\%$) with \textsc{ArgoUML} being pretty close (precision of $94.46\%$, recall of $88.29\%$ and $F_1$ score of $91.27\%$). They both have MCC values $>0.85$, which translates to a very strong correlation.
 
 For the balanced dataset, results do not seem to be improving. Some systems benefit from the rebalancing on certain levels and others do not. In other words, the results are in line or lower than what is obtained without balancing. As expected, recall increases at the expense of precision. Accuracy is generally lower and no real benefits are observed on MCC and AUC values. \textsc{ArgoUML} achieves the highest $F_1$ score ($91.18\%$) with \textsc{jFreeChart} being really close to it ($90.44\%$). The only system that really benefits from rebalancing is \textsc{jRuby} with the following improvements: recall $+87.99\%$ and $F_1$ score $+55.79\%$. Precision obviously decreased but is still at a reasonable value of $50.50\%$. 
 
-To summarize, we can conclude that SMOTE rebalancing does not help a lot because (i) the very limited samples of positive examples is not enough to act as a seed for the generation of articifial instances  and (ii) static analysis warnings are sparse and have a boolean nature, which is not appropriate for a proper usage of SMOTE. We can also conclude that cross-project prediction can be very beneficial, except for systems with a small amount of SATDs. The main reason is that, for cross-project prediction, the number of SATD methods in the training set is larger than for within-project prediction.
+To summarize, we can conclude that SMOTE rebalancing does not help a lot because (i) the very limited samples of positive examples are not enough to act as a seed for the generation of articifial instances  and (ii) static analysis warnings are sparse and have a boolean nature, which is not appropriate for a proper usage of SMOTE. We can also conclude that cross-project prediction can be very beneficial, except for systems with a small amount of SATDs. The main reason is that, for cross-project prediction, the number of SATD methods in the training set is larger than for within project prediction.
 
 %\begin{landscape}
 
 %\end{landscape}
 
-Table \ref{tab:top10featuresac} reports the top 10 features in cross-project prediction according to the MDI technique. The same features as in within-project predictions are at the top, the most important being the source code metrics. \textit{Readability} is still the feature playing the biggest role, for all the systems, followed by \textit{LOC} once again and \textit{CommentNbr} which moves up 4 ranks. \textit{ParNbr} drops some ranks and becomes less important than other metrics capturing the code size and complexity, namely \textit{DeclNbr}, \textit{ExprStmtNbr} and \textit{McCabe}. In within-project prediction, 22 warning checks were in the top 10 of at least one system, in cross-project prediction, there are only 4 of them (\textit{LocalVariableCouldBeFinal}, \textit{MethodArgumentCouldBeFinal}, \textit{FinalParameters} and \textit{LineLength}). However, these checks are in the top 10 of more systems ($>4 systems$). These checks are related to declaring final variables, parameters not being reassigned and the length of lines. Again, two checks seem correlated, namely \textit{FinalParameters} and \textit{MethodArgumentCouldBeFinal}. Both were kept after the Spearman's analysis because the latter recommends the argument to be \textsc{final} only if it is not reassigned, \textit{FinalParameters} does not.
+Table \ref{tab:top10featuresac} reports the top 10 features in cross-project prediction according to the MDI technique. The same features as in within project predictions are at the top, the most important being the source code metrics. \textit{Readability} is still the feature playing the biggest role, for all the systems, followed by \textit{LOC} once again and \textit{CommentNbr} which moves up 4 ranks. \textit{ParNbr} drops some ranks and becomes less important than other metrics capturing the code size and complexity, namely \textit{DeclNbr}, \textit{ExprStmtNbr} and \textit{McCabe}. In within project prediction, 22 warning checks were in the top 10 of at least one system, in cross-project prediction, there are only 4 of them (\textit{LocalVariableCouldBeFinal}, \textit{MethodArgumentCouldBeFinal}, \textit{FinalParameters} and \textit{LineLength}). However, these checks are in the top 10 of more systems ($>4 systems$). These checks are related to declaring final variables, parameters not being reassigned and the length of lines. Again, two checks seem correlated, namely \textit{FinalParameters} and \textit{MethodArgumentCouldBeFinal}. Both were kept after the Spearman's analysis because the latter recommends the argument to be \textsc{final} only if it is not reassigned, \textit{FinalParameters} does not.
 
 \begin{mdframed}
-	{\bf RQ$_2$ summary:} Results from the cross-project prediction are similar to within-project predictions: Random Forests is the machine learner which performs the best, rebalancing does not provide significant performance improvements and the same systems achieve the best results. However, cross-project prediction globally achieves better performance values in recommending technical debts to self admit because of a larger and more diverse dataset. Code readability, size and complexity are the most important characteristics used to recommend design SATD.
+	{\bf RQ$_2$ summary:} Results from the cross-project prediction are similar to within project predictions: Random Forests is the machine learner which performs the best, rebalancing does not provide significant performance improvements and the same systems achieve the best results. However, cross-project prediction globally achieves better performance values in recommending technical debts to self admit because of a larger and more diverse dataset. Code readability, size and complexity are the most important characteristics used to recommend design SATD.
 \end{mdframed}
-
-\subsection{How would a method-level smell detector compare with TEDIOUS?}
-
-%1.5 pages
 
 \begin{landscape}
 \begin{table*}[t]
@@ -367,12 +363,16 @@ Table \ref{tab:top10featuresac} reports the top 10 features in cross-project pre
 \end{table*}
 \end{landscape}
 
+\subsection{How would a method-level smell detector compare with TEDIOUS?}
+
+%1.5 pages
+
 Table \ref{tab:decor} reports the overall DECOR performances in predicting SATD. They rely in the detection of \textit{Long Method} and \textit{Long Parameter List} smells by DECOR, and the union of both. In other terms, we want to know how well this smell detector can recommend technical debts based on the detection of these smells. DECOR was tested with thresholds at different percentiles of LOC and number of parameters. The unions of the two smells are done for same threshold values.
 
 As we see in the table, DECOR's performances are never as good as TEDIOUS's performances. Precision is always $<25\%$, recall is always $<70\%$, $F_1$ score is at most $23.05\%$ and MCC values are all $<0.17$, which translates to low correlation. \textit{Long Parameter List} gives a better balance than \textit{Long Method} between precision and recall, and slightly better results. The union of both gives decent recall values but generally low precision and it does not seem beneficial to the predictions' performances.
 
 \begin{mdframed}
-	{\bf RQ$_3$ summary:} \textit{LOC} and \textit{number of parameters} metrics play an important role in within-project and cross-project predictions using TEDIOUS. However, Long Method and Long Parameter List smell detectors of DECOR are not able to achieve performances comparable to TEDIOUS.
+	{\bf RQ$_3$ summary:} \textit{LOC} and \textit{number of parameters} metrics play an important role in within project and cross-project predictions using TEDIOUS. However, Long Method and Long Parameter List smell detectors of DECOR are not able to achieve performances comparable to TEDIOUS.
 \end{mdframed}
 
 \subsection{Qualitative discussion of false positive and false negatives}
@@ -381,11 +381,70 @@ As we see in the table, DECOR's performances are never as good as TEDIOUS's perf
 
 In this section, we discuss some examples out of 100 reported SATD methods that we manually inspected. The purpose behind this analysis is to explain cases where TEDIOUS correctly or incorrectly classified SATDs.
 
-As examples of \textbf{true positives}, we have in \textsc{ArgoUML} two methods labeled as SATD with different source code metrics values: \textit{createFlow} in class \textsc{CoreFactoryEUMLImpl} and \textit{invokeFeature} in class \textsc{ModelAccessModelInterpreter}. The first method has a $Readability\approx1$, $LOC=2$ and $McCabe=1$. The second method has a $Readability=0$, $LOC=755$ and $McCabe=178$. Even though both methods have obvious differences in the values of features defining them, TEDIOUS was still able to detect them as being SATD prone. It proves that our approach can detect a wide variety of methods containing a technical debt based on their characteristics.
+As examples of \textbf{true positives}, we have in \textsc{ArgoUML} two methods labeled as SATD with different source code metrics values: \textit{createFlow} in class \textsc{CoreFactoryEUMLImpl} and \textit{invokeFeature} in class \textsc{ModelAccessModelInterpreter}. 
 
-As an example of a \textbf{false positive}, we have in \textsc{jEdit} the method \textit{initialize} in class \textsc{RE} with the following characteristics: $LOC=511$, $NbParameters=5$, $NbCalls=197$, $NbDeclarations=32$, $NbExpressions=618$, $NbComments=97$, $McCabe=102$ and $Readability=0$. The readability is obviously null considering the size of the method. TEDIOUS clearly classified this method has a SATD while it is not. In fact, this method plays a major role in the class and is intrinsically complex. It may not contain a technical debt, but it may require some improvements to make it more understandable. Recommendations on such long and complex methods should not be worthless or annoying for developers. It should be taken as a hint that this kind of method has to be carefully implemented because of their complex nature, making sure that it is as readable and understandable as it can be. 
+\begin{mdframed}
+	\begin{lstlisting}
+	public Object createFlow() {
+		// TODO: Is this removed from UML2 ?
+		throw new NotImplementedException();
+	}
+	\end{lstlisting}
+\end{mdframed}
 
-As an example of a \textbf{false negative}, we have in \textsc{Columba} the method \textit{start} in class \textsc{ColumbaServer} that is labeled as a design SATD but that was classified as a non-SATD method by TEDIOUS. The SATD comment linked to the method is positioned immediately after an \textsc{IF} statement and it says \textit{"something is very wrong here"}. The developer intentionally mentions that the block of code is problematic, consequently leading external viewers to believing that a technical debt may be present. However, if such viewers analyze the structure of the method, nothing could justify the presence of a technical debt. This means that there is a deeper level to the characteristics defining a technical debt, other than structural and source code metrics. The TD in this case could be justified if we look at the bigger picture of the class or its context, not only its metrics. In other words, there are cases where TEDIOUS could not properly identify the presence of technical debts only using source code and structural metrics, which limits it applicability.
+The first method has a $Readability\approx1$, $LOC=2$ and $McCabe=1$ and is shown above. The second method has a $Readability=0$, $LOC=755$ and $McCabe=178$. Considering the high number of lines, it was added to the Appendix. Even though both methods have obvious differences in the values of features defining them, TEDIOUS was still able to detect them as being SATD prone. It proves that our approach can detect a wide variety of methods containing a technical debt based on their characteristics.
+
+As an example of a \textbf{false positive}, we have in \textsc{jEdit} the method \textit{initialize} in class \textsc{RE} with the following characteristics: $LOC=511$, $NbParameters=5$, $NbCalls=197$, $NbDeclarations=32$, $NbExpressions=618$, $NbComments=97$, $McCabe=102$ and $Readability=0$. Again, considering the high number of lines, this method was added to the Appendix. The readability is obviously null considering the size of the method. TEDIOUS clearly classified this method has a SATD while it is not. In fact, this method plays a major role in the class and is intrinsically complex. It may not contain a technical debt, but it may require some improvements to make it more understandable. Recommendations on such long and complex methods should not be worthless or annoying for developers. It should be taken as a hint that this kind of method has to be carefully implemented because of their complex nature, making sure that it is as readable and understandable as it can be. 
+
+As an example of a \textbf{false negative}, we have in \textsc{Columba} the method \textit{start} in class \textsc{ColumbaServer} that is labeled as a design SATD but that was classified as a non-SATD method by TEDIOUS. The sample code is shown below.
+
+\begin{mdframed}
+	\begin{lstlisting}
+	/**
+	* Starts the server.
+	* 
+	* @throws IOException
+	*/
+	public synchronized void start() throws IOException {
+		if (!isRunning()) {
+			int port;
+			int count = 0;
+	
+			while (serverSocket == null) {
+				// create random port number within range
+				port = random.nextInt(65536 - LOWEST_PORT) + LOWEST_PORT;
+	
+				try {
+					serverSocket = new ServerSocket(port);
+	
+					// store port number in file
+					SessionController.serializePortNumber(port);
+				} catch (SocketException se) { // port is in use, try next
+					count++;
+	
+					if (count == 10) { // something is very wrong here
+						JOptionPane.showMessageDialog(null,
+						GlobalResourceLoader.getString(RESOURCE_PATH,
+						"session", "err_10se_msg"),
+						GlobalResourceLoader.getString(RESOURCE_PATH,
+						"session", "err_10se_title"),
+						JOptionPane.ERROR_MESSAGE);
+	
+						// this is save because the only shutdown plugin
+						// to stop this server, the configuration isn't touched
+						System.exit(1);
+					}
+				}
+			}
+	
+			serverSocket.setSoTimeout(2000);
+			thread.start();
+		}
+	}
+	\end{lstlisting}
+\end{mdframed}
+
+The SATD comment linked to the method is positioned immediately after an \textsc{IF} statement and it says \textit{"something is very wrong here"}. The developer intentionally mentions that the block of code is problematic, consequently leading external viewers to believing that a technical debt may be present. However, if such viewers analyze the structure of the method, nothing could justify the presence of a technical debt. This means that there is a deeper level to the characteristics defining a technical debt, other than structural and source code metrics. The TD in this case could be justified if we look at the bigger picture of the class or its context, not only its metrics. In other words, there are cases where TEDIOUS could not properly identify the presence of technical debts only using source code and structural metrics, which limits it applicability.
 
 \section{Threats to Validity}
 
@@ -397,7 +456,7 @@ Here are the threats to validity of our research, based on the guidelines for ca
 
 \textit{Construct validity} threats concern the relationship between theory and observation. These threats are mainly due to measurement errors of metrics and labeled design SATD. Different calculation processes can result in different values of source code metrics, and the same goes for warnings obtained from static analysis tools. We used CheckStyle and PMD, but several other tools are available. 
 
-As for the SATD, we used the dataset from \citet{maldonado17}, where they annotated comments, labeling them as SATD or not. We used this information to build our oracle and some preprocessing had to be done because the information was gathered at file-level, and not method-level. Pattern matching was performed to link SATD comments to their respective methods, which may have introduced some imprecisions. We established a strict threshold to match SATD comments, which could be revised. Indeed, we only accepted the exact identity of comments from the dataset of \citet{maldonado17} with the ones from the source code. Not all comments were matched using this approach because of a different processing chain, consequently, some methods which are in fact containing a technical debt were not tagged as such. In the future, we plan to revise those matches which are close to being perfect but are not, to draw a more accurate picture of the systems. 
+As for the SATD, we used the dataset from \citet{maldonado17}, where they annotated comments, labeling them as SATD or not. We used this information to build our oracle and some preprocessing had to be done because the information was gathered at file-level, and not method-level. Pattern matching was performed to link SATD comments to their respective methods, which may have introduced some imprecision. We established a strict threshold to match SATD comments, which could be revised. Indeed, we only accepted the exact identity of comments from the dataset of \citet{maldonado17} with the ones from the source code. Not all comments were matched using this approach because of a different processing chain, consequently, some methods which are in fact containing a technical debt were not tagged as such. In the future, we plan to revise those matches which are close to being perfect but are not, to draw a more accurate picture of the systems. 
 
 However, this aspect can be detrimental and beneficial for TEDIOUS. On one side, the learning phase is more difficult since the process creates more false negatives (methods tagged as non-SATD but that are SATD). On the other side, these false negatives would make a more balanced dataset, if they can be traced back by our approach, leading to improved performance. Additionally, any errors made by \citet{maldonado17} when analyzing the systems would have an impact on the accuracy of our approach. Finally, some comments in the dataset exactly matched more than one comment in the source code. When we encountered such cases, we tagged these comments as \textit{Maybe}, since we could not exactly classify them.
 
@@ -411,7 +470,7 @@ The fact that machine learners were built with default configurations only means
 
 Source code metrics were computed using srcML \citep{Collard2013} (except for the readability metric which was computed using the tool of \citet{buse2008metric}), therefore, other metrics extractors could have provided different results. However, the purpose of this thesis was not to evaluate our approach for specific static analysis tools and metrics extractors. These tools were selected because of their ease of use and their popularity. They were complementary to the realization of TEDIOUS. The main purpose of our work was to highlight the potential of learning technical debts to self-admit from source code features.
 
-We did not include \textsc{EMF} project to our dataset because we were unable to download the archive release 2.4.1. Since we already have 9 systems, some with similar amounts of classes (\textsc{ArgoUML}, \textsc{Hibernate} and \textsc{Columba}) or a smaller amount (\textsc{Squirrel}), we believe omitting \textsc{EMF} will not bias our results, even though it is the largest in terms of LOC.
+We did not include \textsc{EMF} project to our dataset because we were unable to download the archive release 2.4.1. Since we already have 9 systems, some with similar numbers of classes (\textsc{ArgoUML}, \textsc{Hibernate} and \textsc{Columba}) or a smaller amount (\textsc{Squirrel}), we believe omitting \textsc{EMF} will not bias our results, even though it is the largest in terms of LOC.
 
 \subsection{Conclusion validity}
 

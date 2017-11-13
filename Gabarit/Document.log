@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  16 AUG 2017 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  6 NOV 2017 12:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -441,18 +441,46 @@ Package zref Info: New property: mdf@pagevalue on input line 895.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/xr.sty
 Package: xr 1994/05/28 v5.02 eXternal References (DPC)
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count129
+\lst@gtempboxa=\box49
+\lst@token=\toks18
+\lst@length=\count130
+\lst@currlwidth=\dimen156
+\lst@column=\count131
+\lst@pos=\count132
+\lst@lostspace=\dimen157
+\lst@width=\dimen158
+\lst@newlines=\count133
+\lst@lineno=\count134
+\lst@maxwidth=\dimen159
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count135
+\lst@skipnumbers=\count136
+\lst@framebox=\box50
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip119
-\fb@frw=\dimen156
-\fb@frh=\dimen157
-\FrameRule=\dimen158
-\FrameSep=\dimen159
+\fb@frw=\dimen160
+\fb@frh=\dimen161
+\FrameRule=\dimen162
+\FrameSep=\dimen163
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks18
-\inpenc@posthook=\toks19
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
@@ -813,12 +841,12 @@ Language: frenchb 2016/05/14 v3.2c French support from the babel system
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2016/04/23 3.9r Babel common definitions
-\babel@savecnt=\count129
-\U@D=\dimen160
+\babel@savecnt=\count137
+\U@D=\dimen164
 )
 \l@acadian = a dialect from \language\l@french 
 \l@canadien = a dialect from \language\l@french 
-\FB@nonchar=\count130
+\FB@nonchar=\count138
 \FBcolonskip=\skip120
 \FBthinskip=\skip121
 Package babel Info: Making : an active character on input line 365.
@@ -826,20 +854,24 @@ Package babel Info: Making ; an active character on input line 366.
 Package babel Info: Making ! an active character on input line 367.
 Package babel Info: Making ? an active character on input line 368.
 \FBguillskip=\skip122
-\FBguill@level=\count131
-\FB@everypar=\toks20
-\FB@Mht=\dimen161
-\std@mcc=\count132
-\dec@mcc=\count133
+\FBguill@level=\count139
+\FB@everypar=\toks21
+\FB@Mht=\dimen165
+\std@mcc=\count140
+\dec@mcc=\count141
 
 
 Package frenchb.ldf Warning: Please load the "caption" package
 (frenchb.ldf)                AFTER babel/frenchb; reported on input line 909.
 
+
+Package frenchb.ldf Warning: Please load the "listings" package
+(frenchb.ldf)                AFTER babel/frenchb; reported on input line 967.
+
 \listindentFB=\skip123
 \labelwidthFB=\skip124
 \leftmarginFB=\skip125
-\parindentFFN=\dimen162
+\parindentFFN=\dimen166
 \FBfnindent=\skip126
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2012/08/20 v3.3p English support from the babel system
@@ -879,7 +911,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip127
 \bibsep=\skip128
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count134
+\c@NAT@ctr=\count142
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/03/10 v2.15b AMS math features
@@ -891,51 +923,51 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks21
-\ex@=\dimen163
+\@emptytoks=\toks22
+\ex@=\dimen167
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen164
+\pmbraise@=\dimen168
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count135
+\inf@bad=\count143
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count136
-\leftroot@=\count137
+\uproot@=\count144
+\leftroot@=\count145
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count138
-\DOTSCASE@=\count139
+\classnum@=\count146
+\DOTSCASE@=\count147
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
-\Mathstrutbox@=\box49
-\strutbox@=\box50
-\big@size=\dimen165
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+\big@size=\dimen169
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count140
-\c@MaxMatrixCols=\count141
+\macc@depth=\count148
+\c@MaxMatrixCols=\count149
 \dotsspace@=\muskip16
-\c@parentequation=\count142
-\dspbrk@lvl=\count143
-\tag@help=\toks22
-\row@=\count144
-\column@=\count145
-\maxfields@=\count146
-\andhelp@=\toks23
-\eqnshift@=\dimen166
-\alignsep@=\dimen167
-\tagshift@=\dimen168
-\tagwidth@=\dimen169
-\totwidth@=\dimen170
-\lineht@=\dimen171
-\@envbody=\toks24
+\c@parentequation=\count150
+\dspbrk@lvl=\count151
+\tag@help=\toks23
+\row@=\count152
+\column@=\count153
+\maxfields@=\count154
+\andhelp@=\toks24
+\eqnshift@=\dimen170
+\alignsep@=\dimen171
+\tagshift@=\dimen172
+\tagwidth@=\dimen173
+\totwidth@=\dimen174
+\lineht@=\dimen175
+\@envbody=\toks25
 \multlinegap=\skip130
 \multlinetaggap=\skip131
-\mathdisplay@stack=\toks25
+\mathdisplay@stack=\toks26
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
 )
@@ -944,15 +976,15 @@ Package: soulutf8 2016/05/16 v1.1 Permit use of UTF-8 characters in soul (HO)
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
-\SOUL@word=\toks26
-\SOUL@lasttoken=\toks27
-\SOUL@cmds=\toks28
-\SOUL@buffer=\toks29
-\SOUL@token=\toks30
+\SOUL@word=\toks27
+\SOUL@lasttoken=\toks28
+\SOUL@cmds=\toks29
+\SOUL@buffer=\toks30
+\SOUL@token=\toks31
 \SOUL@spaceskip=\skip132
-\SOUL@ttwidth=\dimen172
-\SOUL@uldp=\dimen173
-\SOUL@ulht=\dimen174
+\SOUL@ttwidth=\dimen176
+\SOUL@uldp=\dimen177
+\SOUL@ulht=\dimen178
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
@@ -960,17 +992,17 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip134
 \LTpre=\skip135
 \LTpost=\skip136
-\LTchunksize=\count147
-\LTcapwidth=\dimen175
-\LT@head=\box51
-\LT@firsthead=\box52
-\LT@foot=\box53
-\LT@lastfoot=\box54
-\LT@cols=\count148
-\LT@rows=\count149
-\c@LT@tables=\count150
-\c@LT@chunks=\count151
-\LT@p@ftn=\toks31
+\LTchunksize=\count155
+\LTcapwidth=\dimen179
+\LT@head=\box53
+\LT@firsthead=\box54
+\LT@foot=\box55
+\LT@lastfoot=\box56
+\LT@cols=\count156
+\LT@rows=\count157
+\c@LT@tables=\count158
+\c@LT@chunks=\count159
+\LT@p@ftn=\toks32
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -994,12 +1026,12 @@ Package: suffix 2006/07/15 1.5a Variant command support
 (/usr/local/texlive/2016/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/local/texlive/2016/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write3
-\integerpart=\count152
-\decimalpart=\count153
+\integerpart=\count160
+\decimalpart=\count161
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\AC@clearlist=\toks32
+\AC@clearlist=\toks33
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip137
@@ -1048,16 +1080,16 @@ Package hobsub Info: Skipping package `atbegshi' (already loaded).
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
-\@linkdim=\dimen176
-\Hy@linkcounter=\count154
-\Hy@pagecounter=\count155
+\@linkdim=\dimen180
+\Hy@linkcounter=\count162
+\Hy@pagecounter=\count163
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count156
+\Hy@SavedSpaceFactor=\count164
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1070,12 +1102,12 @@ Package hyperref Info: Plain pages OFF on input line 4461.
 Package hyperref Info: Backreferencing OFF on input line 4466.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4691.
-\c@Hy@tempcnt=\count157
+\c@Hy@tempcnt=\count165
 LaTeX Info: Redefining \url on input line 5044.
-\XeTeXLinkMargin=\dimen177
-\Fld@menulength=\count158
-\Field@Width=\dimen178
-\Fld@charsize=\dimen179
+\XeTeXLinkMargin=\dimen181
+\Fld@menulength=\count166
+\Field@Width=\dimen182
+\Fld@charsize=\dimen183
 Package hyperref Info: Hyper figures OFF on input line 6298.
 Package hyperref Info: Link nesting OFF on input line 6303.
 Package hyperref Info: Hyper index ON on input line 6306.
@@ -1085,18 +1117,18 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6323.
 Package hyperref Info: PDF/A mode OFF on input line 6328.
 LaTeX Info: Redefining \ref on input line 6368.
 LaTeX Info: Redefining \pageref on input line 6372.
-\Hy@abspage=\count159
-\c@Item=\count160
-\c@Hfootnote=\count161
+\Hy@abspage=\count167
+\c@Item=\count168
+\c@Hfootnote=\count169
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2016/05/05 v6.83n Hyperref driver for pdfTeX
-\HyAnn@Count=\count162
-\Fld@listcount=\count163
-\c@bookmark@seq@number=\count164
+\HyAnn@Count=\count170
+\Fld@listcount=\count171
+\c@bookmark@seq@number=\count172
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -1113,49 +1145,46 @@ ter titles)
 \openout2 = `0-Definitions_Etudiant.aux'.
 
 (./0-Definitions_Etudiant.tex)
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 91.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 115.
+
  (./Document.aux (./1-Dedicace.aux)
 (./2-Remerciements.aux) (./3-Resume_sujet.aux) (./3-Abstract.aux)
 (./4-Sigles_Abrev.aux) (./5-Introduction.aux) (./6-Revue_litterature.aux)
-(./7-Theme1.aux) (./7-Theme2.aux) (./7-Theme3.aux
-
-LaTeX Warning: Label `tab:projects' multiply defined.
-
-) (./8-Conclusion.aux) (./9-Annexes.aux))
+(./7-Theme1.aux) (./7-Theme2.aux) (./7-Theme3.aux) (./8-Conclusion.aux)
+(./9-Annexes.aux))
 \openout1 = `Document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 95.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 119.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count165
-\scratchdimen=\dimen180
-\scratchbox=\box55
-\nofMPsegments=\count166
-\nofMParguments=\count167
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count168
-\MPscratchDim=\dimen181
-\MPnumerator=\count169
-\makeMPintoPDFobject=\count170
-\everyMPtoPDFconversion=\toks34
+\scratchcounter=\count173
+\scratchdimen=\dimen184
+\scratchbox=\box57
+\nofMPsegments=\count174
+\nofMParguments=\count175
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count176
+\MPscratchDim=\dimen185
+\MPnumerator=\count177
+\makeMPintoPDFobject=\count178
+\everyMPtoPDFconversion=\toks35
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: Incompatible package detected (regarding \caption).
@@ -1175,51 +1204,53 @@ Package caption Warning: \caption will not be redefined since it's already
 See the caption package documentation for explanation.
 
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box56
-LaTeX Info: Redefining \degres on input line 95.
-LaTeX Info: Redefining \dots on input line 95.
+\AtBeginShipoutBox=\box58
+\c@lstlisting=\count179
+LaTeX Info: Redefining \degres on input line 119.
+LaTeX Info: Redefining \dots on input line 119.
 
 
 Package frenchb.ldf Warning: Please load the "natbib" package
-(frenchb.ldf)                BEFORE babel/frenchb; reported on input line 95.
+(frenchb.ldf)                BEFORE babel/frenchb; reported on input line 119.
 
-LaTeX Info: Redefining \up on input line 95.
-Package hyperref Info: Link coloring OFF on input line 95.
+LaTeX Info: Redefining \up on input line 119.
+Package hyperref Info: Link coloring OFF on input line 119.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count171
+\c@section@level=\count180
 )
-LaTeX Info: Redefining \ref on input line 95.
-LaTeX Info: Redefining \pageref on input line 95.
-LaTeX Info: Redefining \nameref on input line 95.
+LaTeX Info: Redefining \ref on input line 119.
+LaTeX Info: Redefining \pageref on input line 119.
+LaTeX Info: Redefining \nameref on input line 119.
 
 (./Document.out) (./Document.out)
 \@outlinefile=\write4
 \openout4 = `Document.out'.
 
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 118.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 142.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 118
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 142
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 118.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 142.
  [1
 
 
@@ -1270,7 +1301,7 @@ although it is yet undefined on input line 25.
 ]
 Overfull \hbox (7.18713pt too wide) in paragraph at lines 33--33
 []\T1/lmr/m/n/12 Les mod-èles d'apprentissage ma-chine sont con-stru-its à par-
-tir de l'ensemble d'entrainement
+tir de l'ensemble d'entraînement
  []
 
 
@@ -1416,7 +1447,7 @@ although it is yet undefined on input line 31.
 
  (./7-Theme1.tex
 Chapter 3.
-<figs/approach.pdf, id=735, 232.36812pt x 128.48pt>
+<figs/approach.pdf, id=755, 232.36812pt x 128.48pt>
 File: figs/approach.pdf Graphic file (type pdf)
  <use figs/approach.pdf>
 Package pdftex.def Info: figs/approach.pdf used on input line 13.
@@ -1434,7 +1465,7 @@ Package acronym Info: Label `acro:SMOTE' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 93.
  [18] [19]
-<figs/MachineLearning.pdf, id=891, 1798.72pt x 1000.73875pt>
+<figs/MachineLearning.pdf, id=911, 1798.72pt x 1000.73875pt>
 File: figs/MachineLearning.pdf Graphic file (type pdf)
 
 <use figs/MachineLearning.pdf>
@@ -1481,7 +1512,7 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 [30] [31] [32] [33] [34] [35] [36
 
 
-] [37] [38]) [39]
+] [37] [38] [39] [40]) [41]
 \openout2 = `7-Theme3.aux'.
 
  (./7-Theme3.tex
@@ -1492,81 +1523,118 @@ Overfull \hbox (15.18187pt too wide) in paragraph at lines 19--20
 or im-age clas-si-fi-ca-tion ([]Krizhevsky
  []
 
-<figs/CNN-example.png, id=1067, 949.5475pt x 318.18875pt>
+<figs/CNN-example.png, id=1144, 949.5475pt x 318.18875pt>
 File: figs/CNN-example.png Graphic file (type png)
 
 <use figs/CNN-example.png>
 Package pdftex.def Info: figs/CNN-example.png used on input line 23.
 (pdftex.def)             Requested size: 472.03111pt x 158.17635pt.
- [40
+ [42
 
 
 
 ]
-<figs/CNN.png, id=1081, 732.7375pt x 537.00626pt>
+<figs/CNN.png, id=1157, 732.7375pt x 537.00626pt>
 File: figs/CNN.png Graphic file (type png)
  <use figs/CNN.png>
 Package pdftex.def Info: figs/CNN.png used on input line 39.
 (pdftex.def)             Requested size: 472.03111pt x 345.94438pt.
- [41 <./figs/CNN-example.png (PNG copy)>] [42 <./figs/CNN.png>] [43] [44]
-<figs/CNNProcess.png, id=1114, 921.4425pt x 1003.75pt>
+ [43 <./figs/CNN-example.png (PNG copy)>] [44 <./figs/CNN.png>] [45] [46]
+Package mdframed Info: Not enough space on this page on input line 95.
+ [47]
+<figs/CNNProcess.png, id=1205, 921.4425pt x 1003.75pt>
 File: figs/CNNProcess.png Graphic file (type png)
 
 <use figs/CNNProcess.png>
-Package pdftex.def Info: figs/CNNProcess.png used on input line 100.
+Package pdftex.def Info: figs/CNNProcess.png used on input line 118.
 (pdftex.def)             Requested size: 472.03111pt x 514.18782pt.
- [45] [46] [47 <./figs/CNNProcess.png>] [48] [49
+ [48] [49 <./figs/CNNProcess.png>] [50] [51] [52]
+[53] <figs/comment-only-pred.pdf, id=1255, 794.97pt x 614.295pt>
+File: figs/comment-only-pred.pdf Graphic file (type pdf)
 
+<use figs/comment-only-pred.pdf>
+Package pdftex.def Info: figs/comment-only-pred.pdf used on input line 268.
+(pdftex.def)             Requested size: 397.48402pt x 307.14674pt.
+ [54 <./figs/comment-only-pred.pdf>] [55]
+<figs/all-comments-pred.pdf, id=1272, 794.97pt x 614.295pt>
+File: figs/all-comments-pred.pdf Graphic file (type pdf)
 
-]
-[50] [51] [52] [53]
-Overfull \hbox (24.21082pt too wide) in paragraph at lines 316--317
-\T1/lmr/bx/n/12 LIES AUX METH-ODS SATD SONT EN-LEVES POUR EVITER SELF PROPHECY 
+<use figs/all-comments-pred.pdf>
+Package pdftex.def Info: figs/all-comments-pred.pdf used on input line 322.
+(pdftex.def)             Requested size: 397.48402pt x 307.14674pt.
+ [56 <./figs/all-comments-pred.pdf>] [57]
+<figs/no-comments-pred.pdf, id=1288, 794.97pt x 614.295pt>
+File: figs/no-comments-pred.pdf Graphic file (type pdf)
 
- []
+<use figs/no-comments-pred.pdf>
+Package pdftex.def Info: figs/no-comments-pred.pdf used on input line 374.
+(pdftex.def)             Requested size: 397.48402pt x 307.14674pt.
+ [58 <./figs/no-comments-pred.pdf>]
+<figs/no-satd-pred.pdf, id=1299, 794.97pt x 614.295pt>
+File: figs/no-satd-pred.pdf Graphic file (type pdf)
 
-[54]) [55]
+<use figs/no-satd-pred.pdf>
+Package pdftex.def Info: figs/no-satd-pred.pdf used on input line 416.
+(pdftex.def)             Requested size: 397.48402pt x 307.14674pt.
+ [59] [60 <./figs/no-satd-pred.pdf>]) [61]
 \openout2 = `8-Conclusion.aux'.
 
- (./8-Conclusion.tex
+
+(./8-Conclusion.tex
 Chapter 6.
-[56
+[62
 
 
 
-] [57]
+] [63]
 Package acronym Info: Label `acro:RNN' newly defined as it shall be overridden
 although it is yet undefined on input line 54.
-) [58] (./Document.bbl [59
+ [64]) [65] (./Document.bbl [66
 
 
-] [60] [61] [62] [63]) [64]
+] [67] [68] [69] [70]) [71]
 \openout2 = `9-Annexes.aux'.
 
- (./9-Annexes.tex)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 184.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 184.
+
+(./9-Annexes.tex
+Appendix A.
+Package hyperref Info: bookmark level for unknown annexe defaults to 0 on input
+ line 10.
+[72
+
+
+] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86]
+[87] [88] [89] [90] [91]
+Overfull \hbox (1.07306pt too wide) in paragraph at lines 891--892
+[][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (12.57053pt too wide) in paragraph at lines 1079--1080
+[][][][][][][][][][][][][][][][][][]  
+ []
+
+[92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105]
+[106] [107]) [108]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 208.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 208.
  (./Document.aux (./1-Dedicace.aux) (./2-Remerciements.aux)
 (./3-Resume_sujet.aux) (./3-Abstract.aux) (./4-Sigles_Abrev.aux)
 (./5-Introduction.aux) (./6-Revue_litterature.aux) (./7-Theme1.aux)
 (./7-Theme2.aux) (./7-Theme3.aux) (./8-Conclusion.aux) (./9-Annexes.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 184.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 184.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 208.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 208.
 Package rerunfilecheck Info: File `Document.out' has not changed.
-(rerunfilecheck)             Checksum: 9D1B314BE9AEF2EC9737C5D4CEEE9A28;4614.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
+(rerunfilecheck)             Checksum: 1C121FF5E28CF2FAD8BC0F8CBA85D6E1;4663.
  ) 
 Here is how much of TeX's memory you used:
- 19598 strings out of 493014
- 332923 string characters out of 6133351
- 461562 words of memory out of 5000000
- 22494 multiletter control sequences out of 15000+600000
- 58500 words of font info for 48 fonts, out of 8000000 for 9000
+ 22992 strings out of 493014
+ 382076 string characters out of 6133351
+ 2076268 words of memory out of 5000000
+ 24459 multiletter control sequences out of 15000+600000
+ 61809 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,17n,92p,10412b,648s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,17n,92p,10412b,1299s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
 cal/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/20
 16/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2016/texmf-dist/
@@ -1585,10 +1653,10 @@ e/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2016/tex
 mf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fo
 nts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 public/lm/lmtt12.pfb>
-Output written on Document.pdf (84 pages, 758037 bytes).
+Output written on Document.pdf (128 pages, 867334 bytes).
 PDF statistics:
- 1349 PDF objects out of 1440 (max. 8388607)
- 1201 compressed objects within 13 object streams
- 234 named destinations out of 1000 (max. 500000)
- 514 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3254 PDF objects out of 3580 (max. 8388607)
+ 3036 compressed objects within 31 object streams
+ 1643 named destinations out of 1728 (max. 500000)
+ 542 words of extra memory for PDF output out of 10000 (max. 10000000)
 

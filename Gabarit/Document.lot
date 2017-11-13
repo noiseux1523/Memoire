@@ -1,14 +1,14 @@
 \select@language {english}
 \contentsline {table}{\numberline {Table\nobreakspace 3.1}{\ignorespaces Characteristics of the studied projects.}}{22}{table.3.1}
-\contentsline {table}{\numberline {Table\nobreakspace 4.1}{\ignorespaces Average performance of different machine learners for within-project prediction.}}{28}{table.4.1}
+\contentsline {table}{\numberline {Table\nobreakspace 4.1}{\ignorespaces Average performance of different machine learners for within project prediction.}}{28}{table.4.1}
 \contentsline {table}{\numberline {Table\nobreakspace 4.2}{\ignorespaces Within-project prediction: results of Random Forests for each system, without and with SMOTE balancing.}}{29}{table.4.2}
-\contentsline {table}{\numberline {Table\nobreakspace 4.3}{\ignorespaces Top 10 discriminant features (within-project prediction). (M): source code metrics, (CS): CheckStyle checks, (P): PMD checks.}}{30}{table.4.3}
+\contentsline {table}{\numberline {Table\nobreakspace 4.3}{\ignorespaces Top 10 discriminant features (within project prediction). (M): source code metrics, (CS): CheckStyle checks, (P): PMD checks.}}{30}{table.4.3}
 \contentsline {table}{\numberline {Table\nobreakspace 4.4}{\ignorespaces Average performance of different machine learners for cross-project prediction.}}{32}{table.4.4}
 \contentsline {table}{\numberline {Table\nobreakspace 4.5}{\ignorespaces Cross-project prediction: results of Random Forests for each system, without and with SMOTE balancing.}}{33}{table.4.5}
 \contentsline {table}{\numberline {Table\nobreakspace 4.6}{\ignorespaces Top 10 discriminant features (cross-project prediction). (M): source code metrics, (CS): CheckStyle checks, (P): PMD checks.}}{35}{table.4.6}
 \contentsline {table}{\numberline {Table\nobreakspace 4.7}{\ignorespaces Overall DECOR Performances in predicting SATD (the last line reports results for default thresholds).}}{35}{table.4.7}
-\contentsline {table}{\numberline {Table\nobreakspace 5.1}{\ignorespaces Characteristics of the studied projects.}}{48}{table.5.1}
-\contentsline {table}{\numberline {Table\nobreakspace 5.2}{\ignorespaces Within-project prediction: results of CNN for each system using source code comments only}}{51}{table.5.2}
-\contentsline {table}{\numberline {Table\nobreakspace 5.3}{\ignorespaces Within-project prediction: results of CNN for each system using source code with comments}}{53}{table.5.3}
-\contentsline {table}{\numberline {Table\nobreakspace 5.4}{\ignorespaces Within-project prediction: results of CNN for each system using source code without comments}}{54}{table.5.4}
-\contentsline {table}{\numberline {Table\nobreakspace 5.5}{\ignorespaces Within-project prediction: results of CNN for each system using source code partially with comments}}{55}{table.5.5}
+\contentsline {table}{\numberline {Table\nobreakspace 5.1}{\ignorespaces Characteristics of the studied projects.}}{52}{table.5.1}
+\contentsline {table}{\numberline {Table\nobreakspace 5.2}{\ignorespaces Within-project prediction: results of CNN for each system using source code comments only}}{53}{table.5.2}
+\contentsline {table}{\numberline {Table\nobreakspace 5.3}{\ignorespaces Within-project prediction: results of CNN for each system using source code with comments}}{55}{table.5.3}
+\contentsline {table}{\numberline {Table\nobreakspace 5.4}{\ignorespaces Within-project prediction: results of CNN for each system using source code without comments}}{57}{table.5.4}
+\contentsline {table}{\numberline {Table\nobreakspace 5.5}{\ignorespaces Within-project prediction: results of CNN for each system using source code partially with comments}}{59}{table.5.5}
