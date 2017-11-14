@@ -88,12 +88,12 @@ RECOMMENDING WHEN DESIGN TECHNICAL DEBT SHOULD BE SELF-ADMITTED} %% that will be
   		% Table of Content %
   		%%%%%%%%%%%%%
   		
-				\begin{frame}[allowframebreaks]
-					\frametitle{Table of Contents}
-					\tableofcontents[sections={1-2}]
-						\framebreak
-					\tableofcontents[sections={3-4}]
-				\end{frame}
+		\begin{frame}[allowframebreaks]
+			\frametitle{Table of Contents}
+			\tableofcontents[sections={1-2}]
+				\framebreak
+			\tableofcontents[sections={3-4}]
+		\end{frame}
 	
 		\section{INTRODUCTION}
 		
@@ -102,9 +102,10 @@ RECOMMENDING WHEN DESIGN TECHNICAL DEBT SHOULD BE SELF-ADMITTED} %% that will be
 			%%%%%%%%%%%%%%%%%%
 	
 			\subsection{Concepts and Definitions}	  
-				\begin{frame}{Concepts and Definitions}		
-					\begin{block}{Technical Debts}
-						They are not quite right code which we postpone making it right~\cite{cunn92}. They are temporary and suboptimal solutions or workarounds.
+				\begin{frame}{Concepts and Definitions}	
+					\framesubtitle{Technical Debt (TD)}	
+					\begin{block}{Definition}
+						TDs are not quite right code which we postpone making it right~\cite{cunn92}. They are temporary and suboptimal solutions or workarounds.
 					\end{block}
 					\begin{block}{Reasons}
 						Quickly fix an issue\\
@@ -114,36 +115,159 @@ RECOMMENDING WHEN DESIGN TECHNICAL DEBT SHOULD BE SELF-ADMITTED} %% that will be
 				\end{frame}
 						
 				\begin{frame}{Concepts and Definitions}	
-					\begin{block}{Types}
-						Design\\
-						Requirement\\
-						Code\\
-						Test\\
-						Documentation
-					\end{block}	
+					\framesubtitle{Technical Debt (TD)}	
+					\begin{exampleblock}{Types}
+						\begin{columns}[onlytextwidth]
+							\column{.25\textwidth}
+							\small 
+							Design\\
+							Requirement\\
+							Code\\
+							Test\\
+							Documentation\\
+							Defect
+							\column{.75\textwidth}
+							\small
+							\alert{Object-Oriented design principles} \\
+							\alert{Functional and non functional requirement trade-offs}\\
+							\alert{Quality of source code}\\
+							\alert{Quality of testing activities}\\
+							\alert{Misleading Information}\\
+							\alert{Known and possible defects}
+						\end{columns}
+					\end{exampleblock}	
+					\begin{exampleblock}{Impacts}
+						Slower conception and execution\\
+						Lower maintainability and quality\\
+						Higher production cost
+					\end{exampleblock}	
 				\end{frame}
 			
+				\begin{frame}{Concepts and Definitions}	
+					\framesubtitle{Self-Admitted Technical Debt (SATD)}	
+					\begin{block}{Definition}
+						SATDs are technical debts which are consciously introduced and explicitly documented by developers.
+					\end{block}
+					\begin{framed}
+						\centering
+						\alert{\textbf{31\% of files contain SATD}}\\
+						\alert{\textbf{Persistent through time}}\\
+						\alert{\textbf{Experienced developers introduce them}}
+					\end{framed}
+				\end{frame}
 			
-			Technical Debts (defintion, impact)
-			Types of Debts
-			Self-Admitted Technical Debts (definition, exploratory study)
+			%Technical Debts (defintion, impact)
+			%Types of Debts
+			%Self-Admitted Technical Debts (definition, exploratory study)
+						
+			%%%%%%%%%%%%%%%%%%%%
+			% Elements of the Problematic %
+			%%%%%%%%%%%%%%%%%%%%
 						
 			\subsection{Elements of the Problematic}
 			
-			Low prediction (many FP)
-			Inefficient strategies (refactoring, tracking, etc)
-			Ineficient approaches (pattern matching, ML)
-			Research questions (main and 3 sub-questions)
+			\begin{frame}{Elements of the Problematic}	
+				\framesubtitle{Self-Admitted Technical Debt (SATD)}	
+				\begin{alertblock}{Issues}
+					\alert{Weak Performance Results}\\
+					\alert{Ineffective Strategies}
+					\begin{itemize}
+						\small
+						\item Code Refactoring
+						\item Continuous Tracking
+						\item Proactiveness
+					\end{itemize}
+					\alert{Flawed or Incomplete Approaches}
+					\begin{itemize}
+						\small
+						\item Pattern Matching
+						\item Machine Learning with Natural Language Processing
+					\end{itemize}
+				\end{alertblock}
+			\end{frame}
+			
+%			Low prediction (many FP)
+%			Inefficient strategies (refactoring, tracking, etc)
+%			Ineficient approaches (pattern matching, ML)
+
+			%%%%%%%%%
+			% Objectives %
+			%%%%%%%%%
 	
 			\subsection{Objectives}
 			
-			Research objective (main and 2 application scenarios)
-			Design objectives (5 objectives)
+			\begin{frame}{Objectives}
+				\framesubtitle{Main Research Question}	
+				\begin{framed}
+					\large
+					How can we identify and detect \alert{technical debts} in a software project using \alert{source code or features} and known \alert{self-admitted technical debts} with a \alert{machine learning} approach?
+				\end{framed}
+				\smallskip
+				\begin{table}[!b]
+					{
+						\carlitoTLF % Use monospaced lining figures
+						\begin{tabularx}{\textwidth}{*2{>{\centering\arraybackslash}X}@{}}
+							\textbf{TEDIOUS} & \textbf{CNN}  \\
+							\toprule
+							Metrics and Warnings & Source Code \\
+							Machine Learners & Neural Network \\
+							\bottomrule
+						\end{tabularx}
+					}
+				\end{table}
+			\end{frame}
+		
+			\begin{frame}{Objectives}
+				\framesubtitle{Application Objectives}	
+				\begin{exampleblock}{Recommendation System}
+					To encourage self-admitting technical debts\\
+					To ease tracking\\
+					To fix issues faster
+				\end{exampleblock}		
+				\begin{exampleblock}{Complement to existing smell detectors}
+					Or use as an alternative
+				\end{exampleblock}	
+				\begin{table}[!b]
+						{
+							\carlitoTLF % Use monospaced lining figures
+							\begin{tabularx}{\textwidth}{*3{>{\centering\arraybackslash}X}@{}}
+								\bottomrule
+								\color{dkgreen}\large\textbf{Tracking} & \color{dkgreen}\large\textbf{Managing} & \color{dkgreen}\large\textbf{Improving} \\
+							\end{tabularx}
+						}
+				\end{table}
+			\end{frame}
+			
+			\begin{frame}{Objectives}
+				\framesubtitle{Design Objectives}	
+				\begin{block}{\small Defining and Extracting Features}
+					\small
+					\textbf{TEDIOUS} : Metrics and Warnings\\
+					\textbf{CNN} : Source Code
+				\end{block}
+				\begin{block}{\small Identifying SATDs}
+
+				\end{block}
+				\begin{block}{\small Preprocessing Features}
+					\small
+					\textbf{TEDIOUS} : Multi-Collinearity, Feature Selection, Normalization, Rebalancing\\
+					\textbf{CNN} : Tokenization, Word Embedding
+				\end{block}
+				\begin{block}{\small Building and Applying Machine Learners}
+					\small
+					\textbf{TEDIOUS} : Machine Learning Models\\
+					\textbf{CNN} : Neural Network
+				\end{block}
+			\end{frame}
+	
+			%Research objective (main and 2 application scenarios)
+			%Design objectives (5 objectives)
 
 	    \section{TEDIOUS}
 	    
 	    	\subsection{Study Definition}	
 	    	
+	    	Research questions (main and 3 sub-questions)
 	    	9 OOS + Java
 	    	More method-related than class-related
 		    Unbalance

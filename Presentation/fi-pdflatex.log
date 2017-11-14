@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  13 NOV 2017 12:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  14 NOV 2017 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1882,14 +1882,9 @@ LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
 ] [4
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5
-
-]
-LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 242.
-LaTeX Font Info:    Try loading font information for OT1+zavm on input line 242
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 144.
+LaTeX Font Info:    Try loading font information for OT1+zavm on input line 144
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/arev/ot1zavm.fd
@@ -1900,10 +1895,10 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `OT1/zavm/m/n/12'.
+(microtype)             in font `OT1/zavm/m/n/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `OT1/zavm/m/n/12'.
+(microtype)             in font `OT1/zavm/m/n/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `OT1/zavm/m/n/8'.
@@ -1918,30 +1913,30 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/6'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 10.20007pt on input line 242.
+(Font)              scaled to size 9.30756pt on input line 144.
 <<oml.cmap>>
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 6.80005pt on input line 242.
+(Font)              scaled to size 6.80005pt on input line 144.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 5.10004pt on input line 242.
-LaTeX Font Info:    Try loading font information for OMS+zavm on input line 242
+(Font)              scaled to size 5.10004pt on input line 144.
+LaTeX Font Info:    Try loading font information for OMS+zavm on input line 144
 .
  (/usr/local/texlive/2016/texmf-dist/tex/latex/arev/omszavm.fd
 File: omszavm.fd 2006/05/30 Fontinst v1.929 font definitions for OMS/zavm.
 )<<oms.cmap>>
-LaTeX Font Info:    Try loading font information for OMX+iwona on input line 24
-2.
+LaTeX Font Info:    Try loading font information for OMX+iwona on input line 14
+4.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/iwona/omxiwona.fd
 File: omxiwona.fd 2008/07/22 v0.995 font definition file for OMX/iwona (MW)
 )<<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 242.
+LaTeX Font Info:    Try loading font information for U+msa on input line 144.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 242.
+LaTeX Font Info:    Try loading font information for U+msb on input line 144.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1950,16 +1945,106 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 242.
+(Font)              scaled to size 8.0pt on input line 144.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 242.
+(Font)              scaled to size 10.95pt on input line 144.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 6.0pt on input line 242.
+(Font)              scaled to size 8.0pt on input line 144.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
+(Font)              scaled to size 6.0pt on input line 144.
+ [5
+
+]
+LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <10.95> not availab
+le
+(Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
+157.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
+(Font)              scaled to size 10.95pt on input line 157.
+
+[6
+
+]
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `OT1/zavm/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `OT1/zavm/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `OT1/zavm/m/n/7'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `OT1/zavm/m/n/7'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `OT1/zavm/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `OT1/zavm/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
+(Font)              scaled to size 8.50006pt on input line 187.
+LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
+(Font)              scaled to size 5.95004pt on input line 187.
+LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
+(Font)              scaled to size 4.25003pt on input line 187.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 187.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
+(Font)              scaled to size 5.0pt on input line 187.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 187.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
+(Font)              scaled to size 7.0pt on input line 187.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
+(Font)              scaled to size 5.0pt on input line 187.
+ [7
+
+]
+LaTeX Font Info:    Try loading font information for T1+Carlito-TLF on input li
+ne 218.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/carlito/T1Carlito-TLF.fd
+File: T1Carlito-TLF.fd 2014/08/20 (autoinst) Font definitions for T1/Carlito-TL
+F.
+)
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 218.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `Carlito-TLF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+[8
+
+] [9
+
+]
+LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <10> not available
+(Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
+261.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 261.
+ [10
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11
+
+]
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `OT1/zavm/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `OT1/zavm/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
+(Font)              scaled to size 10.20007pt on input line 373.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
-[7]
+ [12]
+[13]
 \tf@nav=\write6
 \openout6 = `fi-pdflatex.nav'.
 
@@ -1969,32 +2054,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \tf@snm=\write8
 \openout8 = `fi-pdflatex.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 375.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 375.
  (./fi-pdflatex.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 244.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 244.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 375.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 375.
 Package rerunfilecheck Info: File `fi-pdflatex.out' has not changed.
-(rerunfilecheck)             Checksum: 8ED993828EB1A25291AB15AD2607FFD7;1104.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 244.
+(rerunfilecheck)             Checksum: 2E00BB9B2BF18273D320004D0CD4B86C;1114.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 375.
  ) 
 Here is how much of TeX's memory you used:
- 30756 strings out of 493014
- 584431 string characters out of 6133351
- 697744 words of memory out of 5000000
- 33489 multiletter control sequences out of 15000+600000
- 109213 words of font info for 83 fonts, out of 8000000 for 9000
+ 31018 strings out of 493014
+ 590452 string characters out of 6133351
+ 699748 words of memory out of 5000000
+ 33681 multiletter control sequences out of 15000+600000
+ 209516 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,16n,76p,963b,1087s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/carlito/crlt_csjzgd.enc}<
-/usr/local/texlive/2016/texmf-dist/fonts/type1/typoland/carlito/Carlito-Bold.pf
-b></usr/local/texlive/2016/texmf-dist/fonts/type1/typoland/carlito/Carlito-Ital
-ic.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/typoland/carlito/Carlito
-.pfb>
-Output written on fi-pdflatex.pdf (7 pages, 768560 bytes).
+ 70i,16n,76p,963b,1182s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/carlito/crlt_z7vml3.enc}{
+/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/carlito/crlt_csjzgd.enc}</us
+r/local/texlive/2016/texmf-dist/fonts/type1/typoland/carlito/Carlito-Bold.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/typoland/carlito/Carlito-Italic.
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/typoland/carlito/Carlito.pf
+b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-ch
+b7y.pfb>
+Output written on fi-pdflatex.pdf (13 pages, 788345 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 22232 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 219 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 35544 words of extra memory for PDF output out of 35830 (max. 10000000)
 

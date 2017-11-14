@@ -11,31 +11,43 @@
 \headcommand {\beamer@subsectionentry {0}{1}{1}{4}{Concepts and Definitions}}\headcommand {\beamer@subsectionpages {4}{3}}
 \headcommand {\slideentry {1}{1}{1}{4/4}{Concepts and Definitions}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{5}{Elements of the Problematic}}\headcommand {\beamer@subsectionpages {4}{4}}
-\headcommand {\beamer@subsectionentry {0}{1}{3}{5}{Objectives}}\headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\sectionentry {2}{TEDIOUS}{5}{TEDIOUS}{0}}
-\headcommand {\beamer@sectionpages {4}{4}}
-\headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{5}{Study Definition}}\headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{5}{The Approach}}\headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{5}{Study Results}}\headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\sectionentry {3}{CONVOLUTIONAL NEURAL NETWORK}{5}{CONVOLUTIONAL NEURAL NETWORK}{0}}
-\headcommand {\beamer@sectionpages {1}{4}}
-\headcommand {\beamer@subsectionpages {1}{4}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{5}{Introduction}}\headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{5}{The Approach}}\headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{6}{Study Definition}}\headcommand {\beamer@subsectionpages {5}{5}}
-\headcommand {\beamer@subsectionentry {0}{3}{4}{6}{Study Results}}\headcommand {\beamer@subsectionpages {6}{5}}
-\headcommand {\sectionentry {4}{CONCLUSION}{6}{CONCLUSION}{0}}
-\headcommand {\beamer@sectionpages {5}{5}}
-\headcommand {\beamer@subsectionpages {6}{5}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{6}{Threats to Validity}}\headcommand {\beamer@subsectionpages {6}{5}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{6}{Limitations}}\headcommand {\beamer@subsectionpages {6}{5}}
-\headcommand {\beamer@subsectionentry {0}{4}{3}{6}{Summary and Future Work}}\headcommand {\beamer@subsectionpages {6}{5}}
-\headcommand {\slideentry {4}{3}{1}{6/6}{Summary and Future Work}{0}}
+\headcommand {\slideentry {1}{1}{2}{5/5}{Concepts and Definitions}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\slideentry {1}{1}{3}{6/6}{Concepts and Definitions}{0}}
 \headcommand {\beamer@framepages {6}{6}}
-\headcommand {\beamer@partpages {1}{7}}
-\headcommand {\beamer@subsectionpages {6}{7}}
-\headcommand {\beamer@sectionpages {6}{7}}
-\headcommand {\beamer@documentpages {7}}
-\headcommand {\def \inserttotalframenumber {5}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{7}{Elements of the Problematic}}\headcommand {\beamer@subsectionpages {4}{6}}
+\headcommand {\slideentry {1}{2}{1}{7/7}{Elements of the Problematic}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{8}{Objectives}}\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\slideentry {1}{3}{1}{8/8}{Objectives}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\slideentry {1}{3}{2}{9/9}{Objectives}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {1}{3}{3}{10/10}{Objectives}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\sectionentry {2}{TEDIOUS}{11}{TEDIOUS}{0}}
+\headcommand {\beamer@sectionpages {4}{10}}
+\headcommand {\beamer@subsectionpages {8}{10}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{11}{Study Definition}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{11}{The Approach}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{11}{Study Results}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\sectionentry {3}{CONVOLUTIONAL NEURAL NETWORK}{11}{CONVOLUTIONAL NEURAL NETWORK}{0}}
+\headcommand {\beamer@sectionpages {1}{10}}
+\headcommand {\beamer@subsectionpages {1}{10}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{11}{Introduction}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{11}{The Approach}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{11}{Study Definition}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{11}{Study Results}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\sectionentry {4}{CONCLUSION}{11}{CONCLUSION}{0}}
+\headcommand {\beamer@sectionpages {11}{10}}
+\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{11}{Threats to Validity}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{11}{Limitations}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{12}{Summary and Future Work}}\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\slideentry {4}{3}{1}{12/12}{Summary and Future Work}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\beamer@partpages {1}{13}}
+\headcommand {\beamer@subsectionpages {12}{13}}
+\headcommand {\beamer@sectionpages {11}{13}}
+\headcommand {\beamer@documentpages {13}}
+\headcommand {\def \inserttotalframenumber {11}}
